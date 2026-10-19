@@ -1,0 +1,153 @@
+{
+    "titulo": "DicionarioDados_Linha_Transmissao",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Subsistema da subestação do terminal DE da linha de transmissão.",
+            "codigo": "id_subsistema_terminalde"
+        },
+        {
+            "descricao": "Nome do subsistema da subestação do terminal DE da linha de transmissão.",
+            "codigo": "nom_subsistema_terminalde"
+        },
+        {
+            "descricao": "Subsistema da subestação do terminal PARA da linha de transmissão.O conteúdo NULL (ou vazio) refere-se a ramais (ou taps de linha)",
+            "codigo": "id_subsistema_terminalpara"
+        },
+        {
+            "descricao": "Nome do subsistema da subestação do terminal PARA da linha de transmissão.O conteúdo NULL (ou vazio) refere-se a ramais (ou taps de linha)",
+            "codigo": "nom_subsistema_terminalpara"
+        },
+        {
+            "descricao": "Estado da subestação do terminal DE da linha de transmissão.",
+            "codigo": "id_estado_terminalde"
+        },
+        {
+            "descricao": "Nome do estado da subestação do terminal DE da linha de transmissão.",
+            "codigo": "nom_estado_de"
+        },
+        {
+            "descricao": "Estado da subestação do terminal PARA da linha de transmissão.O conteúdo NULL (ou vazio) refere-se a ramais (ou taps de linha)",
+            "codigo": "id_estado_terminalpara"
+        },
+        {
+            "descricao": "Nome do estado da subestação do terminal PARA da linha de transmissão.O conteúdo NULL (ou vazio) refere-se a ramais (ou taps de linha)",
+            "codigo": "nom_estado_para"
+        },
+        {
+            "descricao": "Nome da subestação do terminal DE da linha de transmissão.",
+            "codigo": "nom_subestacao_de"
+        },
+        {
+            "descricao": "Nome da subestação do terminal PARA da linha de transmissão.O conteúdo NULL (ou vazio) refere-se a ramais (ou taps de linha)",
+            "codigo": "nom_subestacao_para"
+        },
+        {
+            "descricao": "Nível de tensão nominal da linha de transmissão, em kV",
+            "codigo": "val_niveltensao_kv"
+        },
+        {
+            "descricao": "Nome do tipo de rede da linha de transmissão",
+            "codigo": "nom_tipoderede"
+        },
+        {
+            "descricao": "Tipo da linha (AC, DC ou ramal de linha)",
+            "codigo": "nom_tipolinha"
+        },
+        {
+            "descricao": "Nome do agente proprietário da linha de transmissão",
+            "codigo": "nom_agenteproprietario"
+        },
+        {
+            "descricao": "Nome da linha de transmissão",
+            "codigo": "nom_linhadetransmissao"
+        },
+        {
+            "descricao": "Código do Equipamento – Unidade Geradora",
+            "codigo": "cod_equipamento"
+        },
+        {
+            "descricao": "Data de liberação da linha de transmissão para operação do ONS.",
+            "codigo": "dat_entradaoperacao"
+        },
+        {
+            "descricao": "Data de desativação da linha de transmissão. O motivo mais comum para a desativação de uma linha de transmissão é o seccionamento.",
+            "codigo": "dat_desativacao"
+        },
+        {
+            "descricao": "Data prevista de entrada em operação da linha de transmissão.",
+            "codigo": "dat_prevista"
+        },
+        {
+            "descricao": "Comprimento da linha de transmissão, em km",
+            "codigo": "val_comprimento"
+        },
+        {
+            "descricao": "Resistência de sequência positiva",
+            "codigo": "val_resistencia"
+        },
+        {
+            "descricao": "Reatância de sequência positiva",
+            "codigo": "val_reatancia"
+        },
+        {
+            "descricao": "Susceptância de sequência positiva (SHUNT)",
+            "codigo": "val_shunt"
+        },
+        {
+            "descricao": "Capacidade Operativa de Longa duração contratada no CPST, SEM fator Limitante, em ampere.",
+            "codigo": "val_capacoperlongasemlimit"
+        },
+        {
+            "descricao": "Capacidade Operativa de Longa duração contratada no CPST, COM fator Limitante, em ampere.",
+            "codigo": "val_capacoperlongacomlimit"
+        },
+        {
+            "descricao": "Descrição: Capacidade Operativa de Curta duração contratada no CPST, SEM Limitação, em ampere.",
+            "codigo": "val_capacopercurtasemlimit"
+        },
+        {
+            "descricao": "Capacidade Operativa de Curta duração contratada no CPST, COM Limitação, em ampere.",
+            "codigo": "val_capacopercurtacomlimit"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Verão Dia-VD) em Regime de Longa Duração (LD)",
+            "codigo": "val_capacidadeoperveraodialonga"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Verão Noite-VN) em Regime de Longa Duração (LD)",
+            "codigo": "val_capacidadeoperveraonoitelonga"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Inverno Dia-ID) em Regime de Longa Duração (LD)",
+            "codigo": "val_capacoperinvernodialonga"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Inverno Noite-IN) em Regime de Longa Duração (LD)",
+            "codigo": "val_capacoperinvernonoitelonga"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Verão Dia-VD) em Regime de Curta Duração (CD)",
+            "codigo": "val_capacoperveradiacurta"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Verão Noite-VN) em Regime de Curta Duração (CD)",
+            "codigo": "val_capacoperveraonoitecurta"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Inverno Dia-ID) em Regime de Curta Duração (CD)",
+            "codigo": "val_capacoperinvernodiacurta"
+        },
+        {
+            "descricao": "Capacidade Operativa Sazonal (Inverno Noite-IN) em Regime de Curta Duração (CD)",
+            "codigo": "val_capacoperinvernonoitecurta"
+        },
+        {
+            "descricao": "Número do Barramento De.Observação: A informação pode divergir para linhas com capacitores série e linhas que tenham segmentos aéreos e subterrâneos.",
+            "codigo": "num_barra_de"
+        },
+        {
+            "descricao": "Número do Barramento Para.Observação: A informação pode divergir para linhas com capacitores série e linhas que tenham segmentos aéreos e subterrâneos.",
+            "codigo": "num_barra_para"
+        }
+    ]
+}

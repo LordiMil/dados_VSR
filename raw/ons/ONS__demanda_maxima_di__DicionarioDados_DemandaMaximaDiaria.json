@@ -1,0 +1,33 @@
+{
+    "titulo": "DicionarioDados_DemandaMaximaDiaria",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Subsistema da Usina",
+            "codigo": "id_subsistema"
+        },
+        {
+            "descricao": "Nome do Subsistema",
+            "codigo": "nom_subsistema"
+        },
+        {
+            "descricao": "Data de referência",
+            "codigo": "dat_referencia"
+        },
+        {
+            "descricao": "Data da medida da demanda máxima integralizada",
+            "codigo": "din_demandaintegralizada"
+        },
+        {
+            "descricao": "Valor da demanda integralizada na hora da demanda máxima instantânea do subsistema medido em MWhmedio",
+            "codigo": "val_demandaintegralizada"
+        },
+        {
+            "descricao": "Data da medida da demanda máxima instantânea",
+            "codigo": "din_demandainstantanea"
+        },
+        {
+            "descricao": "Valor da demanda máxima instantânea do subsistema medido em MW",
+            "codigo": "val_demandainstantanea"
+        }
+    ]
+}

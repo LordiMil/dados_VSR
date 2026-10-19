@@ -1,0 +1,4 @@
+﻿cenario;ops_fixo_ano;ops_vsr_ano;manobras_evitadas_ano;anos_ate_revisao_fixo;anos_ate_revisao_vsr;anos_ate_troca_fixo;anos_ate_troca_vsr;taps_vsr_ano;anos_entre_manut_oltc;falhas_maiores_disj_fixo_30a;falhas_maiores_disj_vsr_30a
+urbano;729.5661;0.0;729.5661;9.0129;20.0;9.262;100.0;32563.6226;9.2127;0.7376;0.075
+campo;591.7875;3.356;591.7895;11.1113;20.0;11.4184;100.0;32097.3765;9.3466;0.6125;0.078
+polo_eolico;582.8503;42.3513;582.8755;11.2816;20.0;11.5934;100.0;37949.8766;7.9052;0.6044;0.1135

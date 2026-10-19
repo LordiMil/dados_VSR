@@ -1,0 +1,37 @@
+{
+    "titulo": "DicionarioDados_Balanco_Dessem_Geral",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Data de Referência da Programação Diária",
+            "codigo": "din_programacaodia"
+        },
+        {
+            "descricao": "Número do Patamar",
+            "codigo": "num_patamar"
+        },
+        {
+            "descricao": "Código do Subsistema",
+            "codigo": "cod_subsistema"
+        },
+        {
+            "descricao": "Valor da Demanda, em (MW)",
+            "codigo": "val_demanda"
+        },
+        {
+            "descricao": "Valor da Geração de usina Renovável, em (MW)",
+            "codigo": "val_geracao_renovavel"
+        },
+        {
+            "descricao": "Valor da Geração de usina Hidráulica, em (MW)",
+            "codigo": "val_geracao_hidraulica"
+        },
+        {
+            "descricao": "Valor da Geração de usina Térmica, em (MW)",
+            "codigo": "val_geracao_termica"
+        },
+        {
+            "descricao": "Valor de Consumo de usina Elevatória, em (MW)",
+            "codigo": "val_cons_elevatoria"
+        }
+    ]
+}

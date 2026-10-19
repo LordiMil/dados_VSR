@@ -1,0 +1,18 @@
+﻿id;o_que_falta;melhor_fonte_provavel;acesso;impacto_no_modelo;acao
+G01;"Custo de manutenção de disjuntor no Brasil (R$ por intervenção; troca de contatos e bocais)";"CIGRÉ TB 165 ""Life management of circuit breakers"" (2000); Heising et al., IEEE IAS 1994 (DOI 10.1109/IAS.1994.377738); anais do SNPTEE";pago / CIGRÉ Brasil;OPEX do fixo (slider);"Manter a premissa de 10% com Jeromin 2009 como âncora; perguntar a concessionárias"
+G02;Taxa de falha maior em função do número de operações;"CIGRÉ TB 510; TB 947 (WG A3.48, 2024); força-tarefa IEEE C37.015";pago;Forma λ = λ0 + β·N;Usar β derivado como premissa declarada, com sensibilidade
+G03;Distribuição da indisponibilidade após falha maior;"CIGRÉ TB 510; TB 83 (1994); Heising et al. 1994; Energiforsk 2023:974 §7";pago / parcial;PVI e energia não suprida;Lognormal como premissa (mediana ~24 h, cauda ~100 h, mais semanas se a câmara vai à fábrica)
+G04;Fração de falhas maiores com fogo ou explosão;"CIGRÉ TB 510 (tabela ""MaF – fires/explosions"")";pago;Cauda da distribuição;Sensibilidade explícita, rotulada como premissa
+G05;Duração do desligamento programado de manutenção do disjuntor;"Vikesjö 2008 §11.5; dados de intervenções do ONS";aberto / parcial;Parcela Variável programada;Buscar
+G06;Custo e duração de uma intervenção no OLTC;"CIGRÉ TB 445 ""Guide for Transformer Maintenance"" (2011); serviços MR; planos de ativos Transgrid/Powerlink";pago / aberto;OPEX do VSR;Perguntar à Hitachi Energy
+G07;Taxa de falha específica de VSR;"CIGRÉ TB 939 (2024); TB 655 (WG A2.48, 2016); CIGRÉ A2-204/2018";pago;Névoa do VSR;Perguntar à Hitachi Energy
+G08;Faixa de regulação a 230 kV e 500 kV de fabricante tradicional;"CIGRÉ A2-207/2016 (Kirchner et al., Maschinenfabrik Reinhausen); TB 655";pago;Mínimo de regulação;Perguntar à Hitachi Energy
+G09;Prêmio de CAPEX explícito (VSR contra fixo equivalente, só equipamento);"AEMO Transmission Cost Database v3.1; Hitachi Energy";cadastro / privado;VPL e prêmio de equilíbrio;Prioridade: perguntar à Hitachi Energy
+G10;Operações de tap por dia em VSR em serviço;"CIGRÉ 12-308/1998; ISH2015-20; CIGRÉ A2-204/2018";pago;OPEX do OLTC;Derivar do modelo físico (3.1)
+G11;Preço do reator 230 kV e do reator como equipamento (UC 330);"Planilha completa do BPR (bpr@aneel.gov.br); Resoluções Autorizativas de reforço com reator 230 kV";sob pedido;Base do prêmio;Usar o custo de referência EPE (500 kV) e pedir a planilha à ANEEL
+G12;Texto primário das taxas de depreciação do MCPSE;"REN 474/2012 (Tabela XVI); REN 674/2015";aberto (site bloqueado no ambiente da pesquisa);Valor residual;Confirmar
+G13;Regra escrita: RAP do reforço até o fim da concessão e valor residual;"Regras dos Serviços de Transmissão, Módulo 3 (REN 905/2020); PRORET Submódulo 9.1; NT 428-SCT/ANEEL";aberto;P2;Confirmar
+G14;Interrupções de carga atribuídas a disjuntor;Relatórios de análise de perturbação do ONS (SIPER);restrito;Visão SIN;Usar a energia não suprida geral (Interrupcoes_ENS) com fração atribuída como premissa
+G15;"Efeito da manobra controlada na taxa de falha e no desgaste; custo do controlador";"CIGRÉ WG A3.07 / 13.07 (controlled switching); Hitachi Energy Switchsync";aberto / parcial;Contrafactual 2.8;Pesquisar
+G16;Estratégia de reserva para VSR trifásico (custo e prazo);"Hitachi Energy; concessionárias com VSR (Statnett, Energinet)";privado;Risco 2.9;Perguntar à Hitachi Energy
+G17;Valor em R$/MWh de energia não suprida próprio do planejamento da transmissão;Referência [17] do EPE-DEE-RE-057/2024;aberto;Visão SIN;"Buscar; por ora, custo do déficit"

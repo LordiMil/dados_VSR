@@ -1,0 +1,1 @@
+Documento Placeholder de Metodologia Estatística do PoliVSR.\n\nO arquivo PDF final contendo a demonstração estocástica do desgaste do disjuntor será inserido diretamente no repositório oficial da aplicação.

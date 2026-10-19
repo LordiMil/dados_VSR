@@ -1,0 +1,20 @@
+﻿secao;indicador;valor;unidade;nota
+Reatores;Reatores no cadastro (todos os registros);1220.0;un;
+Reatores;Reatores ativos (sem data de desativação);1149.0;un;
+Reatores;Reatores ativos ≥ 230 kV;1084.0;un;comparar com ~1.100 bancos do CIGRÉ A3-10747 (2026)
+Reatores;Potência total ativa ≥ 230 kV;126003.0;Mvar;
+Reatores;Idade mediana (ativos ≥ 230 kV);10.2;anos;
+Reatores;Reatores ativos ≥ 230 kV com 30+ anos;186.0;un;inclui os com data-padrão 1990-12-31 (idade real ≥ 35,8 anos)
+Reatores;Reatores ativos ≥ 230 kV com data-padrão 1990-12-31 (pré-1991);185.0;un;idade é limite inferior
+Reatores;Potência mediana por reator (≥ 230 kV);136.0;Mvar;
+Linhas;Linhas CA ativas analisadas (com susceptância);1671.0;un;"LINHA_TRANSMISSAO.csv; val_shunt = Mvar de carregamento (convenção ANAREDE)"
+Linhas;Extensão total das linhas analisadas;173541.0;km;
+Linhas;Grau de compensação shunt sistêmico 230 kV (reatores ÷ carregamento);0.366;pu;reatores 5496 Mvar / carregamento 15034 Mvar
+Linhas;Grau de compensação shunt sistêmico 345 kV (reatores ÷ carregamento);0.242;pu;reatores 1774 Mvar / carregamento 7339 Mvar
+Linhas;Grau de compensação shunt sistêmico 440-525 kV (reatores ÷ carregamento);0.832;pu;reatores 112299 Mvar / carregamento 135033 Mvar
+Linhas;Grau de compensação shunt sistêmico 765 kV (reatores ÷ carregamento);0.832;pu;reatores 6434 Mvar / carregamento 7736 Mvar
+Disponibilidade;FTRT - 230: disponibilidade média mensal;98.448;%;"189 meses, 2011-01 a 2026-09; dp 0.8331"
+Disponibilidade;FTRT - 345: disponibilidade média mensal;99.1675;%;"189 meses, 2011-01 a 2026-09; dp 1.5143"
+Disponibilidade;FTRT - 440: disponibilidade média mensal;98.1595;%;"189 meses, 2011-01 a 2026-09; dp 2.6744"
+Disponibilidade;FTRT - 500: disponibilidade média mensal;99.1008;%;"189 meses, 2011-01 a 2026-09; dp 0.6671"
+Disponibilidade;FTRT - 765: disponibilidade média mensal;95.9412;%;"189 meses, 2011-01 a 2026-09; dp 11.7674"

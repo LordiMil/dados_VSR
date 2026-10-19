@@ -1,0 +1,53 @@
+{
+    "titulo": "DicionarioDados_Subestacao_Rede_de_Operacao",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Identificador do subsistema",
+            "codigo": "id_subsistema"
+        },
+        {
+            "descricao": "Nome do subsistema",
+            "codigo": "nom_subsistema"
+        },
+        {
+            "descricao": "Sigla do estado",
+            "codigo": "id_estado"
+        },
+        {
+            "descricao": "Nome do estado",
+            "codigo": "nom_estado"
+        },
+        {
+            "descricao": "Nome do agente principal da subestação",
+            "codigo": "nom_agente_principal"
+        },
+        {
+            "descricao": "Identificador da subestação",
+            "codigo": "id_subestacao"
+        },
+        {
+            "descricao": "Nome da subestação",
+            "codigo": "nom_subestacao"
+        },
+        {
+            "descricao": "Tensão nominal, em kV",
+            "codigo": "val_niveltensao"
+        },
+        {
+            "descricao": "Identificador da estação",
+            "codigo": "id_estacao"
+        },
+        {
+            "descricao": "Número do Barramento",
+            "codigo": "num_barra"
+        },
+        {
+            "descricao": "Latitude da subestação",
+            "codigo": "val_latitude"
+        },
+        {
+            "descricao": "Longitude da subestação",
+            "codigo": "val_longitude"
+        }
+    ]
+}

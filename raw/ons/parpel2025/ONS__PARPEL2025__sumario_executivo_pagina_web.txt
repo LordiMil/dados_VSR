@@ -1,0 +1,882 @@
+Alexandre Nunes Zucarato
+Diretor de Planejamento - ONS
+Mensagem do Diretor
+
+O Operador Nacional do Sistema Elétrico elabora anualmente o Plano da Operação Elétrica de Médio Prazo do SIN (PAR/PEL) com as avaliações do desempenho elétrico do Sistema Interligado Nacional (SIN) num horizonte de cinco anos à frente, de tal forma que a operação futura ocorra com qualidade e equilíbrio entre segurança e custo. Se pelo aspecto conjuntural o PAR/PEL visa recomendar medidas operativas para mitigar eventuais problemas encontrados, pelo aspecto estrutural há indicação de obras de ampliações, reforços e melhorias, bem como a proposição de adequação cronológica do plano de expansão da transmissão.
+
+Este Sumário Executivo tem por objetivo apresentar os destaques das análises conjunturais e estruturais dos relatórios do PAR/PEL incluindo:
+
+A classificação de prioridade e ações de acompanhamento de 480 empreendimentos;
+A implantação de 62 novos SEP, muitos desses relacionados ao escoamento de geração, até que se efetive a integração dos empreendimentos de transmissão previstos para os próximos anos;
+A indicação de 5.301 km de novas linhas de transmissão e 24.314 MVA de novos transformadores em subestações novas e existentes, com investimentos estimados em 28,1 bilhões de reais;
+O cadastro de 318 equipamentos de grande porte em final de vida útil no Sistema de Gerenciamento dos Planos de Melhorias e Reforços.
+A evolução dos limites das interligações inter-regionais, máxima capacidade de transferência de energia do Norte e Nordeste para o Sudeste no período noturno, que parte de 18,5 GW em janeiro de 2026 e alcança 23 GW em janeiro de 2030;
+A síntese do atendimento às Áreas Geoelétricas do SIN.
+
+Como de praxe, este Sumário Executivo apresenta discussões acerca de dois temas adicionais que permeiam o ambiente de Planejamento da Operação Elétrica do SIN.
+
+A Projeção Futura dos Cortes de Geração, que já foi objeto de um relatório específico de diagnóstico e perspectiva no âmbito do grupo de trabalho coordenado pelo MME, é atualizada e aprofundada, incorporando dados históricos mais recentes e projeções de expansão de geração atualizadas. Também aprimoramos a representação do requisito de geração hidrelétrica mínima, que passa a ser variável mês a mês, tornando a avaliação mais aderente à sazonalidade do sistema e aos padrões observados de operação.
+
+Ainda em relação aos cortes de geração, incorporamos também uma análise de sensibilidade para avaliar o impacto da integração de grandes cargas na redução dos cortes de geração: mesmo com uma premissa propositalmente otimista, os resultados mostram que a integração de grandes consumidores reduz o corte de geração, porém em magnitude limitada quando comparada ao total de cortes projetados. Esse diagnóstico reforça que a eliminação ou redução substancial dos cortes de geração renovável não dependerá apenas da integração de grandes consumidores ou de recursos de flexibilidade, como armazenamento ou resposta da demanda. Será fundamental racionalizar políticas públicas, incentivos e subsídios, de modo que a expansão futura da oferta, sobretudo solar (centralizada e distribuída) não continue avançando em ritmo superior ao crescimento da carga diurna do SIN e se alinhe à capacidade real de absorção do sistema, contribuindo de forma efetiva para eficiência, otimização e segurança da operação eletroenergética do SIN.
+
+O segundo tema trata novamente de Impactos da Geração Distribuída na Segurança Elétrica do SIN. Esta edição revisita duas questões já abordadas em edições anteriores: (i) inversão de fluxo de potência nas transformações da rede básica de fronteira e (ii) impacto da MMGD na curva de carga supervisionada e apresenta uma terceira questão: impactos do aumento da MMGD no controle de tensão da Rede Básica. Além dos diagnósticos, esta edição elenca os principais projetos e iniciativas, em andamento ou concluídos, com participação do ONS, voltados a tratar os impactos dos REDs na operação do SIN com destaque para: o projeto Interface ONS/DSO, o Plano de Gestão de Excedentes de Energia na Rede de Distribuição, a atualização do Módulo 3 do PRODIST e o aprimoramento da modelagem de carga e MMGD para os estudos elétricos.
+
+Finalmente, mas não menos importante, é preciso destacar que os REDs não devem ser vistos apenas como fonte de risco, mas também como parte da solução. Quando equipados com funcionalidades de gerenciamento dinâmico, esses recursos podem fornecer flexibilidade operacional e contribuir ativamente para a estabilidade do sistema. Assim, é fundamental o engajamento de todas as partes interessadas, desde a governança setorial, associações, agentes incumbentes e entrantes até fabricantes e, principalmente, os prossumidores, pois gestão ativa dos REDs não visa apenas restringir geração, mas também habilitar maior participação desses recursos no Sistema Interligado Nacional.
+
+Boa leitura!
+
+01
+Apresentação e
+Destaques
+
+O Plano da Operação Elétrica de Médio Prazo (PAR/PEL) tem como objetivo avaliar o desempenho do Sistema Interligado Nacional (SIN), no horizonte de 5 anos, para que a operação futura seja realizada com níveis de segurança adequados, em consonância com os critérios de confiabilidade estabelecidos nos Procedimentos de Rede. Para tal, o Plano, estruturado sob os enfoques conjuntural e estruturante, deve conter as indicações de obras necessárias para o adequado atendimento à demanda, à integração das novas usinas geradoras e ao pleno funcionamento do mercado de energia elétrica no horizonte de médio prazo.
+
+O enfoque conjuntural ou operativo, que abrange os dois primeiros anos, busca apresentar as recomendações operativas que contornam os problemas identificados até que a solução estrutural esteja disponível, com base na avaliação do desempenho do SIN sob o ponto de vista do atendimento aos critérios e padrões estabelecidos nos Procedimentos de Rede.
+
+O enfoque estruturante, que abrange os três últimos anos do horizonte de cinco anos, visa adequar a cronologia do plano de expansão da transmissão estabelecido pelos condicionantes de curto prazo determinados pelas solicitações de acesso, ampliações, reforços e melhorias, bem como às variações nas previsões de carga em relação às previsões consideradas pelo planejamento da expansão de geração e transmissão pela Empresa de Pesquisa Energética (EPE). Além disso, procura mitigar possíveis restrições ou estrangulamentos de transmissão observados na operação em tempo real e nos estudos de planejamento de operação.
+
+Adicionalmente, o PAR/PEL apresenta os limites de intercâmbio entre regiões do SIN e os despachos de geração térmica para atendimento à segurança elétrica, ambos insumos para o planejamento energético e com o objetivo de compatibilizar as restrições elétricas com as políticas energéticas que visam a assegurar o menor custo da operação.
+
+Conforme estabelecido na Lei nº 9.648, de 27 de maio de 1998, art. 13º, e no Decreto nº 5.081, de 14 de maio de 2004, art. 3º, inciso IV, bem como nos Procedimentos de Rede – Submódulo 3.1, o Plano da Operação Elétrica de Médio Prazo do SIN (PAR/PEL) deve ser encaminhado anualmente ao Poder Concedente. Especificamente, o Tomo 2 do Volume I do PAR/PEL subsidiará a elaboração do Plano de Outorgas de Transmissão de Energia Elétrica – POTEE – Ampliações e Reforços de Grande Porte, realizado pelo Ministério de Minas e Energia (MME), com o apoio do ONS e da EPE.
+
+Para melhor comportar os resultados dos diversos estudos elétricos elaborados, o PAR/PEL 2025, ciclo 2026-2030, é apresentado em três volumes:
+
+Volume I: Plano da Operação Elétrica de Médio Prazo das Instalações de Transmissão do SIN, que apresenta o conjunto de obras, subdividindo-se em dois tomos conforme indicado a seguir:
+- Tomo 1 – Classificação das Obras do SIN.
+- Tomo 2 – Ampliações e Reforços de Grande Porte e Recomendações.
+Volume II: Evolução dos Limites de Transmissão nas Interligações Inter-Regionais, que apresenta os resultados dos valores de limites de transmissão nas interligações inter-regionais do SIN.
+Volume III: Análise de Desempenho e Condições de Atendimento a cada Área Geoelétrica do SIN, que apresenta os resultados das análises de desempenho e as condições de atendimento a cada área geoelétrica do SIN.
+
+Por oportuno, destaca-se a publicação do POTEE – Melhorias de Grande Porte e do POTEE – Reforços de Pequeno Porte, em atendimento à Portaria MME nº 215/2020, de 11 de maio de 2020, que delegou ao ONS a emissão destes documentos.
+
+Tendo em vista o horizonte de abrangência e, consequentemente, a grande quantidade de informações veiculadas ao Plano da Operação Elétrica de Médio Prazo do SIN (PAR/PEL), concentrou-se no Sumário Executivo os principais resultados dos estudos, além de orientar a leitura dos Volumes I, II e III, onde é possível encontrar o detalhamento dos resultados.
+
+Adicionalmente aos resultados do PAR/PEL, o Sumário Executivo traz informações de interesse do Setor Elétrico que permeiam o ambiente de Planejamento da Operação Elétrica do SIN, que nesta edição abrange: i) Impactos da Geração Distribuída (GD) na Segurança Elétrica do SIN e ii) Projeções Futuras do Curtailment.
+
+Para pronta referência, os principais destaques acerca do Plano da Operação Elétrica de Médio Prazo do SIN (PAR/PEL 2025), Ciclo 2026-2030, são sumarizados a seguir:
+
+Com relação à previsão de carga do SIN, projeta-se uma demanda máxima da ordem de 127 GW para o ano de 2030, que corresponde a um crescimento de 9,0% quando comparada à máxima carga, não coincidente, verificada em 2025.
+Segundo o PMO de outubro/2025, a capacidade instalada do SIN, em dezembro de 2025, é de aproximadamente 250 GW, dos quais cerca de 43,0% são de usinas hidrelétricas e pequenas centrais hidrelétricas. Até dezembro de 2025, a geração eólica atingirá aproximadamente 14,0% da matriz elétrica. Para os próximos anos, constata-se que a geração fotovoltaica centralizada apresenta um crescimento na capacidade instalada de aproximadamente 15,0% no horizonte 2026 a 2030. Para o final de 2029, estima-se que a capacidade instalada do SIN totalizará 269 GW, sendo que desse montante cerca de 61 GW serão de usinas eólicas e fotovoltaicas centralizadas, segundo dados do PMO de outubro/2025. Se forem consideradas as usinas com o Contrato de Uso do Sistema de Transmissão (CUST) assinado, a capacidade instalada do SIN totalizará em torno de 299 GW em 2030, e a participação de usinas eólicas e fotovoltaicas centralizadas chegará a valores de 87 GW.
+Todos os empreendimentos indicados no PAR/PEL 2025 são classificados conforme a severidade do problema, de forma a garantir o adequado atendimento à carga e o escoamento de geração segundo os critérios estabelecidos nos Procedimentos de Rede. Sob a ótica do atendimento à carga, ressalta-se a importância de 34 empreendimentos que estão associados a problemas de atendimento em condição normal de operação, em contingência simples de radiais singelos ou em contingência simples de transformadores que não operam com os barramentos de baixa tensão interligados.
+No PAR/PEL 2025 estão incluídas a implantação de 62 Sistemas Especiais de Proteção – SEP, a adequação de 3 SEP existentes e a possibilidade de desativação de 11 SEP, em virtude da entrada em operação de novos empreendimentos de transmissão. Muitos desses SEP que constam nesse ciclo estão relacionados ao escoamento de geração, até que se efetive a integração dos empreendimentos de transmissão que estão previstos para os próximos anos.
+O conjunto de obras que consta no PAR/PEL 2025 perfaz cerca de 5.301 km de novas linhas de transmissão e 24.314 MVA de acréscimo de capacidade de transformação em subestações novas e existentes. Esses empreendimentos representam um acréscimo de 3% na extensão das linhas de transmissão e de 5,7% na potência nominal instalada em transformadores da Rede Básica e da Rede Básica de Fronteira, em relação à rede existente. A estimativa dos investimentos necessários para a execução das obras relacionadas neste ciclo é de 28,1 bilhões de reais, sendo que, desse montante, 22,7 bilhões de reais referem-se a novas obras propostas nesse ciclo.
+Em relação aos limites de intercâmbio inter-regionais no horizonte de estudos do PAR/PEL 2025, destaca- se o aumento de aproximadamente 20% no limite de recebimento da região Sul a partir das regiões Sudeste/Centro-Oeste, evoluindo de 11.400 MW em janeiro/2026, para 13.500 MW em 2030, durante o período de ponta de carga do sistema. Destaca-se, ainda, o aumento de aproximadamente 25% no limite de recebimento da região Sudeste/Centro-Oeste a partir das regiões Norte/Nordeste, evoluindo de 18.500 MW em janeiro/2026 para 23.000 MW em janeiro/2030, também durante o período de ponta de carga. Cabe registrar que o limite de intercâmbio entre essas regiões será incrementado de forma significativa com a implementação de um conjunto de obras previstas para entrada em operação em julho de 2030, dentre as quais destaca-se o novo bipolo HVDC ±800 kVcc Graça Aranha – Silvânia, que agregará mais recursos para a otimização eletroenergética do SIN.
+A evolução das demais interligações, igualmente importantes, e seus respectivos limites de intercâmbios, que irão garantir a transferência de energia entre os subsistemas, com qualidade e equilíbrio entre segurança e custo global de operação, também são destaques nesse PAR/PEL 2025.
+Também é apresentado nesse Sumário Executivo os principais destaques sobre as condições de atendimento elétrico às áreas do Sistema Elétrico Brasileiro, abrangendo todas as unidades federativas do Brasil. O diagnóstico completo de atendimento a essas áreas está detalhado nos 15 Tomos do Volume III do PAR/PEL, disponíveis no SINtegre.
+Projeções Futuras do Curtailment: as análises realizadas para o horizonte 2026–2029 evidenciam que o curtailment do SIN permanece fundamentalmente associado à elevada penetração de geração renovável variável, centralizada e distribuída, concentrada no período diurno, especialmente entre 9h e 16h. Nesse intervalo, os cortes podem atingir montantes superiores a 40–50 GW nos cenários mais críticos, notadamente em fins de semana e feriados, quando a carga supervisionada no período diurno atinge seus valores mínimos. No período noturno, ao contrário, a frequência de cortes é significativamente reduzida, confirmando que o fenômeno decorre da coincidência entre forte produção solar e baixo consumo no SIN. A análise de sensibilidade demonstrou ainda que a integração de grandes consumidores contribui para mitigar o problema, mas em magnitude limitada quando comparada ao volume total de cortes observados: mesmo com a inserção de 4 GW de novas cargas em um cenário de sensibilidade avaliado, a redução obtida foi inferior a 800 MWmédios, reforçando que o curtailment é um fenômeno concentrado em determinados intervalos e com tendência estrutural.
+Nesse contexto, a redução substantiva dos cortes de geração renovável variável dependerá não apenas de recursos sistêmicos adicionais, como flexibilidade operativa, armazenamento, resposta da demanda e integração de novos consumidores, mas também de um alinhamento mais equilibrado entre a evolução da oferta renovável variável e o crescimento da carga no período diurno. A continuidade da expansão acelerada da MMGD e da geração fotovoltaica centralizada, em ritmo superior ao aumento da demanda neste período, tende a ampliar o excedente estrutural de energia e intensificar o curtailment, gerando um efeito próximo de “soma zero”, no qual novas fontes de geração deslocam a geração já existente sem produzir ganho líquido de energia útil ao SIN. Assim, torna-se essencial racionalizar políticas públicas, subsídios e mecanismos de incentivo, de modo a assegurar que a expansão futura da matriz renovável seja compatível com a capacidade real de absorção do sistema, garantindo eficiência e segurança operativa e um melhor aproveitamento dos recursos renováveis no médio prazo.
+Este Sumário Executivo evidencia que a rápida expansão da Micro e Minigeração Distribuída (MMGD), que já supera 43 GW de capacidade instalada, vem promovendo uma transformação estrutural na operação do SIN ao reduzir a demanda supervisionada mínima, aumentar a rampa intradiária necessária para atendimento à ponta de carga e ampliar a ocorrência de fluxo reverso de potência ativa nas transformações de fronteira. Embora a MMGD seja um vetor relevante da transição energética, sua difusão acelerada tem elevado a complexidade operativa, exigindo maior flexibilidade, reforço do controle rápido de tensão e coordenação do despacho de usinas síncronas para garantia dos serviços essenciais. Constata-se, adicionalmente, o aumento da necessidade de restrições de geração por razões elétricas e energéticas nas usinas centralizadas, decorrente da elevada participação da MMGD no atendimento à demanda diurna. Os estudos deste ciclo também apontam para o avanço do fluxo reverso em diversas regiões, a crescente concorrência entre geração distribuída e centralizada e a possibilidade de perda de controlabilidade do SIN, caso não sejam adotados instrumentos adicionais de gestão dos recursos distribuídos. Nesse contexto, destaca-se a necessidade de atuação mais ativa das distribuidoras como DSOs, em coordenação com o ONS, na gestão dos Recursos Energéticos Distribuídos. Por fim, o Sumário Executivo deste PAR/PEL apresenta os principais projetos em desenvolvimento com participação do ONS para lidar com os impactos da geração distribuída na operação do SIN. Entre essas iniciativas, destacam-se o projeto de atualização do Módulo 3 do PRODIST, o Plano de Gestão de Excedentes de Energia na Rede de Distribuição e o projeto de aprimoramento da modelagem de carga e MMGD para os estudos elétricos. Tais ações são essenciais para assegurar a integração segura dos Recursos Energéticos Distribuídos e preservar a confiabilidade do sistema elétrico em um cenário de crescente descentralização da geração.
+02
+Dados do Sistema
+Interligado Nacional
+PREVISÃO DE CARGA
+
+A previsão de carga das áreas elétricas e subsistemas para os estudos do PAR/PEL é definida considerando-se a soma da maior carga total dos barramentos por agente e por patamar de carga, para os períodos denominados de inverno e verão, que compreendem os meses de maio a outubro e novembro a abril, respectivamente. Além disso, são considerados os valores máximos de carga não coincidentes no mês e não coincidentes no horário.
+
+No gráfico abaixo é possível observar que a carga projetada para o ano de 2030 é da ordem de 129 GW, que corresponde a um crescimento de 17% quando comparada à máxima carga, não coincidente, verificada em 2025.
+
+CARGA MÁXIMA DO SIN (MW) – HORIZONTE 2030
+
+Figura 2.1 – Carga Máxima do SIN (MW) – Horizonte 2030
+
+MATRIZ DE ENERGIA ELÉTRICA
+
+A capacidade instalada no SIN, em dezembro/2025, totalizará 250,4 GW, dos quais 108,3 GW (43,3%) são de usinas hidrelétricas e PCHs; 25,3 GW (10,1%) são de usinas termelétricas convencionais e nucleares; 15,5 GW são de usinas a biomassa (6,1%); cerca de 55,1 GW (22%) são de usinas eólicas e solares; e 46,2 GW (18,5%) correspondem a Micro e Minigeração Distribuída (MMGD). Estima-se que, ao final de 2029, a capacidade instalada no SIN totalizará 269,4 GW, com um incremento de aproximadamente 5,2 GW nas usinas eólicas e solares, perfazendo um total de 60,3 GW; e em torno de mais 19 GW na MMGD, que totalizará 65,3 GW.
+
+Essa expansão da oferta de geração, considerada como premissa na elaboração do Plano da Operação Energética (PEN) do ONS, é definida nas reuniões mensais de Monitoramento da Expansão da Geração, sob coordenação da SFT/ANEEL, com participação do ONS, EPE e CCEE. Especificamente, nessas reuniões são estimadas as datas de tendência das usinas a serem consideradas dentro do horizonte de planejamento energético de médio prazo, tanto para as usinas do Ambiente de Contratação Regulado (ACR), vencedoras dos leilões de
+
+geração, como para aquelas participantes do Ambiente de Contratação Livre (ACL), referentes às usinas já em construção e com viabilidade alta de implantação.
+
+No âmbito do Plano da Operação Elétrica de Médio Prazo do SIN – PAR/PEL, visando avaliar a adequabilidade da expansão da transmissão frente ao crescimento da geração, a expansão da oferta de novos geradores considera todas as usinas que já possuem Contratos de Uso do Sistema de Transmissão (CUST) assinados. Nesse contexto, a previsão da capacidade instalada no SIN em 2029, considerada nos estudos do PAR/PEL 2025, resulta cerca de 12,5 GW superior a projeção do PEN, totalizando 282 GW. Especificamente em relação à geração eólica e fotovoltaica, tem-se um incremento de futuras usinas com contratos assinados de 16,7 GW até 2030, perfazendo um total de 77 GW, o que representa em torno de 36% a mais que os 60,3 GW projetados para o PEN 2025. Os números mencionados estão indicados no desenho na cor laranja ao lado da figura abaixo e detalhados em vermelho na tabela a seguir.
+
+MATRIZ DE ENERGIA ELÉTRICA
+CAPACIDADE INSTALADA NO SIN EM 2026 E 2030
+
+Fonte: Programa Mensal da Operação Energética - PMO (outubro/2025)
+
+EVOLUÇÃO DA CAPACIDADE INSTALADA NO SIN (MW)
+
+Fonte: Programa Mensal da Operação Energética - PMO (outubro/2025).
+
+Notas:
+
+(1) Térmica: As reduções na potência instalada em 2026, 2027, 2028 e 2029 refletem a premissa do PMO de não consideração das usinas com Contratos de Comercialização de Energia Elétrica no Ambiente Regulado (CCEAR) finalizados e que não possuem CVU válido.
+
+(2) MMGD: A previsão do PMO (linha superior) considera o Relatório de Acompanhamento da Expansão da Oferta de Geração de Energia Elétrica (RALIE) da ANEEL, e a previsão do PAR/PEL (linha inferior em vermelho) considera as informações enviadas pelas distribuidoras para o ciclo de estudos de médio prazo vigente.
+
+(3) Eólica e Solar: A previsão do PMO (linha superior) considera as reuniões mensais de Monitoramento da Expansão da Geração, sob coordenação da SFT/ANEEL, e a previsão do PAR/PEL (linha inferior em vermelho) considera a geração futura com CUST assinado, em que o ano de 2029 contempla ainda todas as usinas com data de implantação contratual anterior a 2025, mas que ainda não entraram em operação.
+
+Com a maior penetração de fontes renováveis variáveis na matriz de energia elétrica brasileira é fundamental a coordenação da entrada em operação dessas novas fontes com o sistema de transmissão. Além disso, para garantir uma operação segura do SIN, será necessário prover recursos que permitam assegurar a qualidade e a confiabilidade desejadas para o atendimento ao consumidor de energia elétrica, frente às intensas rampas de carga provenientes da variabilidade do vento, ou da transição do horário diurno e noturno. Para tal, é necessário um sistema de transmissão robusto, com capacidade de absorver as bruscas variações de potência e garantir ao sistema inércia sincronizada e reserva de potência operativa adequada, especialmente com o aumento da penetração de fontes renováveis variáveis conectadas ao sistema elétrico via conversores de potência.
+
+03
+PAR/PEL em Números
+CLASSIFICAÇÃO DAS OBRAS
+
+As obras integrantes do Planejamento Setorial, nas suas respectivas datas de necessidade, são fundamentais para atendimento aos critérios e padrões de segurança elétrica estabelecidos nos Procedimentos de Rede. Todavia, em virtude das dificuldades intrínsecas a todo o processo, que envolve desde o planejamento de um novo empreendimento até a sua efetiva entrada em operação comercial, o ONS realiza uma classificação das obras, levando em consideração a severidade dos possíveis impactos desses empreendimentos na operação do SIN. Essa análise tem como fundamento os critérios estabelecidos e apresentados no PAR/PEL 2025 – Volume 1 – Tomo 1, que contempla o Plano da Operação Elétrica de Médio Prazo das Instalações de Transmissão – Classificação das Obras do SIN.
+
+Nesse contexto, são classificadas as obras de grande porte que irão solucionar problemas já existentes na Rede ou que podem ocorrer nos próximos dois anos do ciclo de Planejamento, considerando as severidades detalhadas a seguir:
+
+P0: Problemas de controle de tensão ou de superação de nível de curto-circuito;
+
+P1: Necessidade de corte de carga em condição normal de operação, em contingência simples de radiais singelos ou em contingência simples de transformadores que não operam com os barramentos de baixa tensão interligados;
+
+P2: Necessidade de restrição de escoamento de geração;
+
+P3: Necessidade de geração térmica por razões elétricas;
+
+P4: Necessidade de corte de carga em contingências em capitais;
+
+P5: Substituição de equipamento por fim de vida útil (Reforços);
+
+P6: Problemas que não se enquadram nos critérios anteriores.
+
+Além disso, as obras são classificadas de acordo com as ações necessárias para viabilizar suas implantações, conforme descrito a seguir:
+
+Ações do poder concedente e/ou do órgão regulador para agilizar outorga;
+Ações do agente e órgãos ambientais para agilizar licenciamento ambiental;
+Ações do agente para agilizar implementação da instalação;
+Ações do poder concedente e/ou do órgão regulador para revisão de outorga.
+
+Os gráficos a seguir apresentam o quantitativo e a classificação dos empreendimentos, conforme os critérios mencionados, que podem impactar a continuidade do fornecimento de energia e a otimização eletroenergética do SIN para os próximos dois anos. Ressalta-se que, entre os 480 empreendimentos elencados, 92 estão sem outorga, 100 estão sem licença ambiental e 288 estão em implantação.
+
+CLASSIFICAÇÃO DE OBRAS E AÇÕES DE ACOMPANHAMENTO
+
+Total: 480 obras
+Tabela 3.1: Síntese dos Equipamentos
+
+SISTEMAS ESPECIAIS DE PROTEÇÃO – SEP
+
+A utilização de Sistemas Especiais de Proteção (SEP) possibilita maior exploração dos recursos do sistema, notadamente na ocorrência de atrasos na integração das soluções estruturais previstas, constituindo-se, portanto, em uma solução conjuntural.
+
+Neste ciclo do PAR/PEL 2025 foi proposta a implantação de 62 novos SEP, a adequação de 3 SEP existentes e a possibilidade de desativação de 11 SEP, em função da entrada em operação de novos empreendimentos. Muitos desses SEP indicados nesse ciclo estão relacionados ao escoamento de geração, até que se efetive a integração dos empreendimentos de transmissão que estão previstos para os próximos anos.
+
+EXPANSÃO DA OFERTA DE ENERGIA ELÉTRICA E DO SISTEMA DE TRANSMISSÃO
+
+O conjunto de obras recomendado neste ciclo do PAR/PEL 2025 contempla cerca de 5.301 km de novas linhas de transmissão e 24.314 MVA de novos transformadores em subestações novas e existentes. Esses empreendimentos representam um acréscimo, em relação à rede existente, da ordem de 3% na extensão das linhas de transmissão e 5,7% na potência nominal instalada em transformadores da Rede Básica e da Rede Básica de Fronteira.
+
+A estimativa dos investimentos necessários para a execução das obras relacionadas ao PAR/PEL 2025 é da ordem de 28,1 bilhões de reais, sendo que, desse montante, 22,7 bilhões de reais referem-se às novas obras propostas pela primeira vez neste ciclo de estudos. Ressalta-se que essa estimativa de custos tem como referência a publicação para o 1º semestre de 2025 do Programa de Expansão da Transmissão (PET) / Plano de Expansão de Longo Prazo (PELP) da EPE e a atualização de março/2024 para o Banco de Preços da ANEEL, conforme Resolução Homologatória no 2.514/2019.
+
+PAR/PEL 2025
+
+Os gráficos a seguir ilustram a extensão das linhas de transmissão (km) e a capacidade de transformação (MVA), considerando a rede existente e a prevista para entrar em operação até o horizonte de 2030. Para a rede prevista, os empreendimentos foram divididos em dois grupos, de forma a contemplar as obras já outorgadas, que têm como referência o acompanhamento da SFT/ANEEL de outubro/2025, e as obras ainda sem outorga, que constam do Tomo 2, Volume 1, deste PAR/PEL 2025.
+
+Cabe registrar que, dentre as obras outorgadas, estão contemplados os empreendimentos licitados no Leilão de Transmissão ANEEL nº 004/2025, realizado em outubro/2025, com previsão de assinatura dos contratos de concessão para janeiro/2026.
+
+Extensão das Linhas de Transmissão (km)
+
+Capacidade de Transformação (MVA)
+
+EQUIPAMENTOS EM FINAL DE VIDA ÚTIL
+
+A temática de envelhecimento dos ativos de transmissão do SIN é um assunto complexo, que exige ações coordenadas do Poder Concedente, planejamento setorial, operador do sistema, agência reguladora e empresas do setor, a fim de garantir segurança e confiabilidade do fornecimento de energia elétrica a longo prazo. Esse cenário tende a se tornar mais crítico no futuro, dado o tempo de utilização dos equipamentos que permanecerão em operação. Ao longo dos últimos anos, tem-se observado aumento significativo no número de equipamentos de grande porte em final de vida útil cadastrados pelas transmissoras no Sistema de Gerenciamento dos Planos de Melhorias e Reforços (SGPMR) do ONS. A título de comparação, no ciclo SGPMR 2023 foram realizados pelas transmissoras 163 cadastros de equipamentos de grande porte a serem substituídos, em sua maioria devido ao final de vida útil. No ciclo 2024 esse quantitativo foi de 173 cadastros e, em 2025, esse número subiu para 318 equipamentos cadastrados. Esta tendência naturalmente se reflete num grande desafio para o setor elétrico, com impactos imediatos no planejamento, na operação, na regulação, na modicidade tarifária (em função da substituição massiva de ativos) e na gestão de ativos das transmissoras. A partir dos cadastros no SGPMR, realizados pelas transmissoras responsáveis, dos equipamentos de grande porte e motivados por fatores como obsolescência, fim de vida útil, indisponibilidade de peças de reposição, risco de danos às instalações, desgastes prematuros ou restrições operativas intrínsecas, o ONS, em conjunto com a EPE, avalia as soluções propostas pelos agentes. Neste contexto, a análise do planejamento pode resultar em uma das seguintes conclusões:
+
+Substituição do equipamento sem ampliação de capacidade operativa (Melhoria);
+Substituição do equipamento com ampliação de capacidade operativa (Reforço);
+Desativação do equipamento.
+
+Em alguns casos, pode haver necessidade de postergação da recomendação de substituição do equipamento, como, por exemplo, quando há um estudo de planejamento da EPE em andamento. Nestes casos, é possível manter o cadastro ‘em análise’ para o ciclo seguinte.
+
+No que diz respeito ao ciclo SGPMR 2025, as 318 solicitações de cadastros efetuadas pelas transmissoras para substituição e desativação de equipamentos de grande porte estão distribuídas pelas regiões Norte/Nordeste, Sudeste/Centro-Oeste e Sul e MS, conforme Figura 1.
+
+CADASTRO CICLO SGPMR 2025
+
+Figura 1 – Relação de cadastros de equipamentos de grande porte no ciclo SGPMR 2025
+
+
+
+
+A avaliação conjunta ONS/EPE em seus respectivos horizontes de estudo resultou nos seguintes encaminhamentos para os equipamentos, conforme Figura 2.
+
+
+
+RESULTADO DA ANÁLISE DO CICLO SGPMR 2025
+
+Figura 2 – Resumo das recomendações para os cadastros do ciclo SGPMR 2025
+
+Com relação a essa análise, cabem as seguintes ressalvas:
+
+As análises deste ciclo também englobaram equipamentos que permaneceram em análise nos ciclos anteriores;
+Todas as recomendações decorrentes das análises dos equipamentos de grande porte cadastrados no SGPMR que não são enquadradas como melhorias de grande porte ficam documentadas no Anexo do POTEE, como parte integrante do Plano de Outorgas. Esse registro visa dar ciência às transmissoras sobre o encaminhamento a ser dado pelo planejamento setorial para os ativos cadastrados.
+Dentre os registros do Anexo do POTEE 2025, estão contemplados 17 (dezessete) cadastros de equipamentos sinistrados em instalações objeto de licitação que não estão em final de vida útil regulatória. Conforme previsto no Módulo 3 das Regras de Transmissão, apesar de serem classificados como melhorias de grande porte, não farão jus à receita para substituição do equipamento e, portanto, não estão incluídos na planilha do POTEE.
+
+Com relação a essa análise, cabem as seguintes ressalvas:
+
+As análises deste ciclo também englobaram equipamentos que permaneceram em análise nos ciclos anteriores;
+Todas as recomendações decorrentes das análises dos equipamentos de grande porte cadastrados no SGPMR que não são enquadradas como melhorias de grande porte ficam documentadas no Anexo do POTEE, como parte integrante do Plano de Outorgas. Esse registro visa dar ciência às transmissoras sobre o encaminhamento a ser dado pelo planejamento setorial para os ativos cadastrados.
+Dentre os registros do Anexo do POTEE 2025, estão contemplados 17 (dezessete) cadastros de equipamentos sinistrados em instalações objeto de licitação que não estão em final de vida útil regulatória. Conforme previsto no Módulo 3 das Regras de Transmissão, apesar de serem classificados como melhorias de grande porte, não farão jus à receita para substituição do equipamento e, portanto, não estão incluídos na planilha do POTEE.
+04
+Limites das Interligações
+Inter-Regionais
+
+As interligações inter-regionais, que compõem os maiores corredores de transmissão do país, permitem a transferência de energia entre os diversos subsistemas, viabilizando de forma plena a complementaridade das fontes ao longo do extenso território nacional. Essa malha de transmissão é essencial para a função objetivo de otimizar os recursos eletroenergéticos disponíveis em cada um dos subsistemas do SIN.
+
+Nesse contexto, os limites de intercâmbio se caracterizam pela máxima potência a ser transmitida entre subsistemas e são definidos considerando o desempenho em regimes permanente e dinâmico, seguindo premissas pré-estabelecidas e critérios estabelecidos nos Procedimentos de Rede para garantir a segurança da operação do SIN.
+
+Quanto aos cenários energéticos, esses vêm se alterando consideravelmente, em virtude do aumento da penetração das fontes eólicas e solares e da consequente redução percentual da geração hidrelétrica, que altera significativamente a matriz elétrica brasileira. Dessa forma, a região Nordeste, antes importadora de energia, passou a ser exportadora tanto para a região Norte como para o subsistema Sudeste/Centro-Oeste praticamente o ano inteiro. No período úmido, que acontece durante o primeiro semestre do ano, a região Norte soma-se à Nordeste como áreas exportadoras de energia para a região Sudeste/ Centro-Oeste. Com relação à interligação Sul – Sudeste/Centro-Oeste, historicamente, desde a primeira conexão entre essas regiões, o fluxo de energia pode ocorrer nos dois sentidos durante de todo o ano. Cabe registrar que, embora o cenário energético do subsistema Sul não apresente um comportamento tão marcante como o cenário energético da região Norte/Nordeste, ou seja, com períodos úmidos e secos bem determinados, em média, o primeiro semestre é caracterizado como a estação seca do Sul, refletindo uma complementariedade com o período úmido da região Norte/Nordeste.
+
+Atualmente, a despeito da complementariedade entre o regime hidrológico da região Norte e o período de maior oferta de geração eólica na região Nordeste, observa-se que a concorrência pela utilização do sistema de transmissão para atendimento ao centro de carga na região Sudeste é muito relevante para a otimização da operação eletroenergética. Isso se deve, sobretudo, devido a relação entre a localização das fontes de geração e os valores de limites de intercâmbio. Portanto, para cada ano de análise, os estudos para definição dos limites de exportação das regiões Norte e Nordeste para a região Sudeste/Centro-Oeste foram divididos em quatro cenários, quais sejam o período úmido, seco e outros dois cenários intermediários que representam a transição entre os dois primeiros. Isso foi feito visando-se capturar a participação cada vez mais expressiva das fontes de energia eólica e solar, bem como o caráter sazonal da geração das usinas hidráulicas de Belo Monte e Tucuruí. Além disso, devido à concorrência entre a geração solar na região Norte do Estado de Minas Gerais e o excedente de geração da região Nordeste, não é possível determinar apenas um valor de limite para uma dada interligação no período diurno. Dessa forma, foram feitas avaliações considerando três diferentes percentuais de despacho de geração das usinas fotovoltaicas do SIN, com valores de 40, 65 e 85%.
+
+Os limites de transmissão entre os subsistemas foram definidos considerando o cronograma de obras de transmissão e geração com concessão outorgada pela ANEEL, considerando as datas atualizadas na 7ª Reunião Mensal de Monitoramento da Expansão da Transmissão. A partir desse cronograma, foram selecionados os reforços nas interligações, além daqueles que poderiam ter alguma influência nos referidos valores de limites de transmissão e definidas três configurações para a interligação entre os subsistemas Sul e Sudeste/Centro-Oeste e sete configurações para a interligação entre os subsistemas Norte, Nordeste e Sudeste/ Centro-Oeste a serem analisadas dentro do horizonte 2026-2030.
+
+Nesse ciclo, o principal destaque é o novo Bipolo de Graça Aranha, com capacidade de 5.000 MW e tensão de operação em ±800 kV, que reforça significativamente a interligação Norte – Sudeste, conectando às subestações de Graça Aranha, no Maranhão, e Silvânia, em Goiás. Outro destaque é que, até o final do horizonte de estudos, a interligação Nordeste – Sudeste/Centro-Oeste será reforçada com o acréscimo de sete novos circuitos em 500 kV enquanto a interligação Nordeste – Norte contará com o reforço de três novos circuitos. Com relação à interligação entre as regiões Sul – Sudeste/Centro-Oeste, o destaque é a entrada da nova conexão entre os dois subsistemas com a operação dos dois circuitos em 525 kV entre as subestações Assis e Ponta Grossa.
+
+As configurações de transmissão analisadas para ambas as interligações são mostradas nas figuras a seguir.
+
+Por fim, é apresentada a evolução dos limites de transferência de energia entre todos os subsistemas do SIN. É importante destacar que esses limites são valores referenciais definidos com base em premissas previamente estabelecidas para o ciclo de estudos do médio prazo. Tais limites podem variar a depender das condições operativas do sistema, como, por exemplo, o número de máquinas sincronizadas, o perfil de geração das usinas hidráulicas e térmicas, o nível de tensão nos troncos de transmissão e o fluxo de potência ativa nos elos de corrente contínua (CC) do SIN. Dessa forma, nas diretrizes operativas de curto prazo, os limites de transferência são parametrizados e discretizados, podendo ser bonificados ou penalizados, de acordo com o valor das variáveis de influência.
+
+Para informações mais detalhadas sobre o cronograma de obras, os limites definidos para outros patamares de carga e os fatores limitantes na determinação dos limites de intercâmbio, recomenda-se a consulta ao Volume II do PAR/PEL 2025 – Evolução dos Limites de Transmissão nas Interligações Inter-Regionais.
+
+RSUL
+
+FSUL
+
+RSE
+
+ExpNE
+
+FNESE
+
+Recebimento da Região Sudeste/CO das Regiões N/NE = FNESE+FNS+Fluxo Xingu-->SE (Patamar máximo Noturno)
+
+05
+Síntese do Atendimento às
+Áreas Geoelétricas
+RIO GRANDE DO SUL
+
+Neste PAR/PEL, destacam-se as indicações da nova SE Boa Vista do Buricá 2 230/69 kV – (6+1R) x 33,3 MVA e dos reforços e melhorias para a adequação da SE Santa Marta 230/138/69/44/13,8 kV aos requisitos preconizados nos Procedimentos de Rede do ONS.
+
+A integração da SE Boa Vista do Buricá 2 230/69 kV à Rede Básica se dará pelo seccionamento da LT 230 kV Guarita – Santa Rosa 1, e à rede de distribuição, por meio do seccionamento da LD 69 kV Campo Novo – Boa Vista do Buricá 1, C1 e C2, a partir da solicitação de acesso da RGE a 4 ELs ao setor de 69 kV dessa subestação, com data de necessidade para dezembro/2029. Essa nova subestação proporcionará uma melhoria significativa no perfil de tensão e na redistribuição de fluxo da rede de 69 kV da Região Noroeste do Rio Grande do Sul, notadamente nas SEs 69 kV Campo Novo, Boa Vista do Buricá 1 e Santo Augusto 1. Também se observa uma redução importante no carregamento dos transformadores 230/69 kV – 3 x 83 MVA da SE Guarita, a partir do remanejamento de parte da carga atendida por esta subestação para o novo setor de 230/69 kV da SE Boa Vista do Buricá 2. Na Rede Básica constata- se uma redistribuição de fluxo pouco significativa nas linhas de transmissão de 230 kV que partem das SEs Guarita e Santa Rosa 1, não sendo previstas restrições de carregamento no horizonte analisado.
+
+Dentre as obras recomendadas para a adequação da SE Santa Marta, podem ser destacadas a substituição dos dois transformadores 230/69 kV de 83 MVA, por dois novos transformadores 230/69 kV de 165 MVA; a substituição dos dois transformadores 230/138 kV de 75 MVA, por dois novos transformadores 230/138 kV de igual capacidade operativa; a adequação das conexões desses transformadores em 230 kV e 138 kV; a substituição do transformador 138/44 kV de 33 MVA, por um novo transformador 138/44 kV de igual capacidade operativa; a substituição do transformador 138/13,8 kV de 12,5 MVA, por um novo transformador 138/13,8 kV de igual capacidade operativa; e a reconstrução de todo o setor de 138 kV dessa subestação. Essas obras aumentarão a confiabilidade no atendimento às cargas da região de Santa Marta, a partir do rearranjo e maior flexibilidade operativa da subestação; da substituição dos transformadores com indicação de final de vida útil; e do equacionamento de problemas de sobrecarga em contingência nos seus transformadores 230/69 kV.
+
+PARANÁ
+
+Nesse ciclo do PAR/PEL 2025, destaca-se no estado do Paraná a indicação de três novos pontos de atendimento em 138 kV, a partir de subestações de fronteira 230/138 kV, além da indicação do novo setor de 230 kV da SE Curitiba Oeste 525/230 kV. Essas ampliações somam investimentos previstos de mais de 1 bilhão de reais e foram motivadas por novas solicitações de acesso da COPEL DIS para atendimento à carga das regiões Oeste e Metropolitana de Curitiba, com data de necessidade para dezembro de 2030.
+
+As ampliações da região Metropolitana de Curitiba referem-se ao novo setor de 230 kV da SE Curitiba Oeste 525/230 kV, à futura SE Barigui 2 230/138 kV e ao novo setor 138 kV da SE Uberaba 230/138 kV, além das linhas de transmissão em 230 kV associadas.
+
+Na região Oeste refere-se à nova SE Iguaçu 525/230/138 kV, cuja solicitação de acesso da COPEL DIS ao setor de 138 kV visa aumentar a confiabilidade no atendimento às cargas da cidade de Foz do Iguaçu, atualmente suprida apenas pela subestação de Rede Básica de Fronteira Foz do Iguaçu Norte 230/138 kV.
+
+Por fim, destaca-se o elevado crescimento da capacidade instalada de MMGD prevista pela distribuidora nesse ciclo do PAR/PEL 2025, em relação aos montantes previstos para ciclo do PAR/PEL 2024. Observa-se, por exemplo, para o ano de 2029, que a capacidade instalada de MMGD prevista no PAR/PEL 2024 era de 3.443 MW, nesse mesmo ano de 2029 foi informado o montante de 6.720 MW para o atual ciclo do PAR/PEL 2025.
+
+SANTA CATARINA
+
+No presente ciclo do PAR/PEL 2025, destaca-se a elevação de carga, em relação ao ciclo do PAR/PEL 2024, notadamente no período noturno de verão, onde se configura a carga mais elevada do estado.
+
+Como reflexo, foram indicadas as substituições de três transformadores de 150 MVA por unidades de 225 MVA na SE Biguaçu 230/138 kV, que atende a Região Metropolitana de Florianópolis; as instalações do 4º ATF 230/138 kV – 150 MVA na SE Pinhalzinho 2 e do 3º ATF 230/138 kV – 225 MVA na SE Itajaí 2; e a substituição do TF2 138/69 kV da SE Joinville, de 33 MVA, por uma unidade de 66 MVA.
+
+MATO GROSSO DO SUL
+
+O estado do Mato Grosso do Sul tem apresentado saldo exportador de energia em determinados cenários, especialmente nos períodos diurnos e de menor demanda. Nos próximos anos, essa característica de exportação de potência do estado deve ser ainda mais acentuada devido à crescente procura de novos empreendedores de geração, notadamente de usinas fotovoltaicas.
+
+Nesses cenários de excesso de geração no estado, aliado a cargas reduzidas, observam-se elevados carregamentos na área elétrica, notadamente em regiões de fronteira com estados vizinhos. Um dos pontos com elevados carregamentos ocorre na fronteira com São Paulo através da SE Ilha Solteira 2 440/230 kV. Nessa subestação está prevista a implantação do 4º ATF 440/230 kV – 3 x 150 MVA, juntamente com a LT 230 kV Inocência – Ilha Solteira 2, C4, obras já outorgadas.
+
+Na fronteira com o estado do Paraná, verifica-se risco de sobrecarga, em regime normal de operação e em condições de contingência, na LT 230 kV Dourados – Guaíra. Nesse contexto, está sendo indicado neste ciclo do PAR/PEL um conjunto de obras estruturais, incluindo novos pátios de 500 kV nas SEs 230/138 kV Rio Brilhante e Chapadão, com um eixo de 500 kV da SE Sarandi, no Paraná, até a SE Jataí, em Goiás, interligando também as SEs Rio Brilhante e Chapadão e permitindo, dessa forma, o escoamento da geração do Mato Grosso do Sul para esses estados. Adicionalmente, foi indicado um Compensador Síncrono 500 kV na SE Rio Brilhante, melhorando o suporte de reativo na região.
+
+ACRE
+
+O sistema de transmissão do Acre desempenha papel estratégico na integração energética de localidades anteriormente atendidas de forma isolada do SIN. Destacam-se a SE Cruzeiro do Sul 230/69 kV e a LT 230 kV Feijó – Cruzeiro do Sul, cuja entrada em operação em dezembro de 2024 eliminou a necessidade de geração térmica local em condições normais e elevou a confiabilidade do suprimento ao segundo maior município do estado.
+
+O principal desafio atualmente é assegurar a continuidade e a confiabilidade do atendimento às regiões de Feijó e Cruzeiro do Sul em situações de contingência nas linhas de 230 kV do eixo Rio Branco – Feijó – Cruzeiro do Sul, devido ao término dos contratos das usinas termelétricas locais, em setembro de 2025.
+
+Nesse contexto, a EPE conduz estudos de planejamento voltados à definição de uma solução estrutural que garanta o suprimento sustentável à região. As alternativas em análise contemplam soluções de armazenamento de energia (SAE) e novas linhas de transmissão, alinhados à diretriz de ampliar a resiliência do sistema e reduzir a dependência de geração térmica.
+
+RONDÔNIA
+
+Em 2024, a região Norte enfrentou restrições hídricas severas no rio Madeira, reduzindo significativamente a geração das UHEs Santo Antônio e Jirau. A operação limitada dessas usinas elevou o risco de corte de carga e evidenciou a necessidade de reforços estruturais no sistema de transmissão para garantir a continuidade e a confiabilidade do suprimento elétrico em Rondônia.
+
+Em resposta, a EPE publicou, em outubro de 2024, o relatório EPE-DEE-RE-057/2024-REV0, que recomendou, em caráter determinativo, a implantação da SE Vilhena 3 500/230 kV, das LTs 500 kV Jauru – Vilhena 3 e 230 kV Vilhena – Vilhena 3, além da substituição do transformador TF-13 da SE Coletora Porto Velho. Essas obras, incluídas no Lote 4 do Leilão de Transmissão ANEEL nº 004/2025, têm por objetivo fortalecer a confiabilidade do sistema frente a condições hidrológicas extremas e ampliar a capacidade de intercâmbio entre as áreas Acre–Rondônia e Mato Grosso. O Lote 4 foi arrematado pela transmissora FIP DEVELOPMENT FUND WAREHOUSE, cujo prazo contratual para a início da operação comercial das instalações é 23/02/2031.
+
+Os estudos do PAR/PEL 2025 indicam que, com a entrada em operação da SE Vilhena 3 e das novas linhas associadas, a capacidade de intercâmbio da região deverá praticamente dobrar os limites de recebimento e fornecimento do sistema Acre-Rondônia. Os resultados evidenciam a robustez das soluções propostas e consolidam Rondônia como elemento - chave na expansão e resiliência do SIN.
+
+MATO GROSSO
+
+O estado de Mato Grosso destaca-se pelo rápido avanço da MMGD, que já supera 2,8 GW instalados, com projeção de ultrapassar 3,5 GW até 2030, majoritariamente de origem solar fotovoltaica. Esse montante equivale a cerca de 109% da demanda máxima prevista para o mesmo período (3,2 GW).
+
+Essa expansão da MMGD tem alterado o perfil de demanda diária, com redução acentuada da carga diurna e excedentes superiores a 900 MW por volta das 13h, resultando em inversão de fluxo em todas as 16 transformações da Rede Básica de Fronteira do estado. Paralelamente, o crescimento do setor agropecuário, especialmente em polos como Sinop, Sorriso, Lucas do Rio Verde, Nova Mutum, Rondonópolis e Nobres, tem elevado a demanda noturna, principalmente em razão das cargas de irrigação, exigindo operações temporárias em subestações críticas.
+
+No âmbito das obras estruturais, os nove reforços indicados no PAR/PEL 2024 já possuem ato autorizativo e previsão de entrada em operação comercial até o final de 2027.
+
+Por outro lado, as obras destinadas ao atendimento da região de Novo Progresso (PA) não possuem previsão de entrada em operação, sendo atualmente supridas de forma radial pela rede de 138 kV da Energisa Mato Grosso. As obras previstas incluem o setor 230/138 kV da SE Cláudia, a nova SE Novo Progresso 230/138 kV, a SE Cachimbo 230 kV e as LTs 230 kV Cláudia – Cachimbo – Novo Progresso C1. Essas obras foram objeto de caducidade em 2022 e relicitadas em 2023, e o atraso em sua implantação compromete significativamente o atendimento às cargas das regiões de Novo Progresso e do norte de Mato Grosso. Na 41ª Reunião Pública Ordinária da Diretoria da ANEEL de 2025 (realizada em 09/12/2025), a diretoria da Agência decidiu recomendar ao Ministério de Minas e Energia – MME a caducidade dessa concessão vinculada ao Contrato de Concessão de Serviço Público de Transmissão de Energia Elétrica nº 14/2022-ANEEL, celebrado entra a União e a Tangará Transmissão de Energia S.A. Portanto, é previsto que as obras sejam relicitadas no Lote 5 do Leilão de Transmissão nº 001/2026, considerando que a EPE e ONS emitiram o ofício conjunto CTA-ONS DPL 1216/2025 – Of. 0473 EPE, o qual mantém a recomendação de implantação integral do conjunto de empreendimentos previstos no referido lote.
+
+Adicionalmente, a futura SE Cuiabá Norte 500/138 kV com transformação de 600 MVA, no seccionamento do circuito 2 da LT 500 kV Jauru – Cuiabá, também não possui previsão de entrada em operação, podendo comprometer o atendimento às cargas da capital e região metropolitana. Para mitigar restrições no setor 230 kV, foi recomendada a instalação de um segundo autotransformador 500/230 kV – 750 MVA na SE Cuiabá.
+
+GOIÁS E DISTRITO FEDERAL
+
+A demanda de carga do estado de Goiás tem apresentado um crescimento expressivo, significativamente acima da média nacional nos últimos anos. Esse aumento é acompanhado pela expansão acelerada da geração centralizada e da micro e minigeração distribuída (MMGD), predominantemente fotovoltaica. Tal comportamento resulta em sobreoferta diurna e escassez noturna, comprometendo o equilíbrio do atendimento à carga e evidenciando a necessidade de reforços estruturais e operativos no sistema.
+
+Para mitigar essas restrições e ampliar a capacidade de suprimento, o planejamento setorial indicou a implantação de dois novos pontos de conexão à Rede Básica: a SE Matrinchã 2 230/138 kV, cujo estudo foi emitido no final de 2024, com data de necessidade de entrada em operação definida para 2028, e a SE Iaciara 2 230/138 kV, com estudo emitido em 2025 e data de necessidade definida para 2029. Esses empreendimentos melhoram significativamente o atendimento às cargas do estado, mas que ainda assim, permanece com demanda reprimida especialmente nos municípios de Nova Crixás, São Miguel do Araguaia e Novo Planalto, todos localizados no Noroeste do estado, cujo equacionamento depende da publicação do estudo “Análise de Atendimento do Noroeste de Goiás”, em elaboração pela EPE.
+
+O forte crescimento de carga deste ciclo também resultou em sobrecargas inadmissíveis inéditas (representa o carregamento superior à capacidade operativa de curta duração de transformadores ou linhas de transmissão) não verificadas em ciclos anteriores do PAR/PEL, notadamente no período noturno. Como exemplo, temos a SE Rio Verde (de propriedade da Axia Energia), que apresenta possibilidade de sobrecargas desde o início do horizonte, evidenciando a necessidade de soluções conjunturais e reforços estruturais.
+
+Por outro lado, a penetração da MMGD tem influência crescente sobre o comportamento do sistema durante o período diurno. A previsão para 2030 no estado de Goiás e no Distrito Federal é de 4.044 MW, equivalentes a 67% da carga máxima projetada (cerca de 6 GW). Essa elevada participação altera os fluxos de potência nas fronteiras, de modo que, entre as 27 subestações de Rede Básica consideradas — incluindo as previstas até 2030 —, 23 apresentam fluxo invertido no final do horizonte. Apesar disso, apenas a SE Barro Alto 230/69 kV apresentou violação de carregamento, exigindo um sistema especial de proteção para corte de geração em contingência simples.
+
+Por fim, destaca-se o aumento no número de equipamentos em final de vida útil cadastrados pelas transmissoras para avaliação conjunta pelo ONS e pela EPE. Neste ciclo, foram registrados cerca de 1.342 MVA de capacidade transformadora nessa condição, o maior valor já observado, demandando análises mais complexas e integradas e reforçando a importância de um planejamento coordenado e criterioso para substituição desses ativos.
+
+MINAS GERAIS
+
+Nos Leilões de Transmissão da ANEEL nº 001/2022, nº 001/2023, nº 002/2023 e nº 001/2024, foram investidos cerca de R$ 32 bilhões no sistema de transmissão para escoamento de geração em Minas Gerais e sul da Bahia, preparando a rede para uma expansão de geração em torno de 11 GW. No entanto, até 2030 Minas Gerais contará com aproximadamente 16,6 GW de geração solar fotovoltaica em operação ou com contrato assinado na Rede Básica e nas Demais Instalações de Transmissão (DIT).
+
+Os três compensadores síncronos (dois na SE 500 kV Nova Ponte 3 e um na SE 500 kV Paracatu 4) recomendados para o estado de Minas Gerais no PAR/PEL 2024 foram consolidados na Nota Técnica Conjunta ONS/EPE “Avaliação dos Benefícios Sistêmicos da Implantação de Compensadores Síncronos na Área Minas Gerais”. Estes equipamentos foram arrematados pela Axia Energia no Leilão de Transmissão nº 004/2025, realizado em 31/10/2025, e deverão ser implantados em até 42 meses após a assinatura dos contratos de concessão. Os síncronos trarão ganhos para o controle e estabilidade de tensão, estabilidade eletromecânica, bem como outros parâmetros de segurança e robustez do SIN.
+
+Dado o elevado montante de geração no estado e a escassez dos recursos de transmissão, ainda são identificadas algumas restrições de escoamento mesmo considerando todas as obras recomendadas pelo planejamento. Encontra-se em fase de emissão pela EPE o estudo de desempenho da malha de 345 kV da região de Belo Horizonte e Mantiqueira – Parte 1, o qual sanará boa parte das restrições de escoamento de geração na região da Mantiqueira. A segunda parte do estudo encontra-se em andamento com previsão de emissão até dezembro/2025. As obras que serão recomendadas na primeira parte do estudo foram incluídas no POTEE de Ampliações e Reforços de Grande Porte 2025 – 1ª Emissão, emitido em setembro/2025.
+
+Além disso, no PAR/PEL 2025 foi ratificada a necessidade de implantação de um novo reator na SE 500 kV Presidente Juscelino, recomendado referencialmente na mesma Nota Técnica Conjunta ONS/EPE que indicou os síncronos de Paracatu e Nova Ponte. Este novo reator será incluído na próxima emissão do POTEE de Ampliações e Reforços de Grande Porte. Ainda no que concerne ao diagnóstico da área Minas Gerais, identificou-se neste ciclo do PAR/PEL aumento significativo da carga da região Leste do estado, especialmente na região de João Monlevade e Itabira. Por esta razão, foi necessária a indicação de reforço na fronteira de João Monlevade 4 230/69 kV.
+
+Com relação à geração conectada na rede de distribuição, Minas Gerais conta atualmente com cerca de 6 GW de capacidade instalada de MMGD em operação, com projeção de um montante de 9 GW até 2030, o que corresponderá a 70% da carga máxima prevista para o Estado. O aumento desses Recursos Energéticos Distribuídos (RED) somados à geração distribuída (Tipo II-B e Tipo III) conectadas nas DIT e na Rede de Distribuição tem causado inversão do fluxo nos transformadores de fronteira da Rede Básica, principalmente nas regiões Norte e Triângulo Mineiro, onde o excesso de geração nos períodos de maior incidência solar pode causar até mesmo o esgotamento de algumas transformações de fronteira.
+
+SÃO PAULO
+
+Sob o ponto de vista de ampliação do sistema de transmissão, os principais destaques da área São Paulo para este ciclo de estudos do PAR/PEL concentram- se em três empreendimentos estruturantes voltados ao reforço da Rede Básica e à melhoria da confiabilidade do sistema elétrico regional.
+
+A primeira iniciativa refere-se à implantação da SE Nova Extrema 500/138 kV, 2x400/480 MVA, nova subestação de fronteira a ser conectada a partir do seccionamento do segundo circuito da LT 500 kV Estreito – Fernão Dias. O empreendimento tem como objetivo melhorar a qualidade e a confiabilidade do sistema de distribuição de energia em 138 kV no sudeste do estado de São Paulo e no sul de Minas Gerais, região sob concessão da Energisa Sul-Sudeste, que apresenta elevada densidade de carga, principalmente no segmento industrial (Ref.: relatório R1 nº EPE-DEE-RE-082/2024-rev0).
+
+A segunda obra em destaque é a SE Santana 500/345 kV, 3x1200/1440 MVA, nova subestação de rede básica com setor de 500 kV no seccionamento da LT 500 kV Tijuco Preto – Lorena e barramentos de 345 kV no seccionamento das LT 345 kV Tijuco Preto – Itapeti C1 e C2 e Santo Ângelo – Itapeti C1 e C2. O estudo correspondente, atualmente em fase de finalização pela EPE, tem como objetivo viabilizar o atendimento ao crescimento da demanda no estado de São Paulo e eliminar a possibilidade de sobrecargas associadas à capacidade de carregamento de curta duração em equipamentos da rede básica e da rede básica de fronteira nos eixos de 500 kV e 345 kV da área.
+
+Por fim, destacam-se as obras do estudo Reforços no Sistema DIT do Estado de São Paulo – Parte 2 (Ref.: relatório R1 EPE-DEE-RE-037/2025-r0), que configuram a solução estrutural para viabilizar o atendimento do aumento do Montante de Uso do Sistema de Transmissão (MUST) nas regiões de Araras, Atibaia e Mogi Mirim.
+
+Outro importante destaque no estado de São Paulo neste ciclo foi o crescimento exponencial do volume de solicitações de acesso para conexão de grandes cargas ao sistema de transmissão, sobretudo para conexão de Data Centers. Além das solicitações de acesso de Consumidores Livres na Rede Básica, o número de projetos de Data Centers nas redes de distribuição cresceu significativamente, o que tem refletido também em aumento expressivo das solicitações de aumento de MUST das distribuidoras do estado nas fronteiras com a Rede Básica.
+
+RIO DE JANEIRO
+
+Dentre os pontos de destaque para a área Rio de Janeiro, ressalta-se a importância da entrada em operação do último trecho entre as subestações Lagos e Terminal Rio, atualmente prevista para dezembro/2025. Compõe também este novo eixo em 500 kV as conexões interligando as subestações Mutum – Campos 2 – Lagos. Esses reforços são fundamentais para redução de restrição de geração térmica nas usinas da rede de 345 kV no período seco. Além disso, viabilizam o escoamento da potência de novas usinas termoelétricas a gás natural, associadas à exploração da camada pré-sal da bacia de Campos, configurando uma importante ligação em 500 kV entre Minas Gerais e o Rio de Janeiro que, por sua vez, possibilita o aumento do escoamento de energia das regiões Norte/Nordeste para o Sudeste/Centro-Oeste.
+
+Está prevista, para o ano de 2027, a entrada em operação de um transformador 500/345 kV, com capacidade de 1.500 MVA, a ser instalado no pátio da SE UTE GNA I. Esse equipamento foi recomendado em Nota Técnica Conjunta ONS/EPE emitida em 2022 e posteriormente leiloado em 2024. Sua instalação tem por finalidade reduzir de forma conjuntural o esgotamento da rede de transmissão em 345 kV que interliga a região metropolitana do Rio de Janeiro à subestação Vitória, no estado do Espírito Santo, situação agravada pela entrada em operação comercial da UTE GNA I. O novo transformador permitirá o escoamento da energia da UTE GNA I para o novo tronco em 500 kV supracitado, contribuindo para a redução dos carregamentos nas linhas de transmissão do tronco de 345 kV.
+
+Neste ciclo também está prevista a implantação dos dois circuitos da LT 500 kV Leopoldina 2 – Terminal Rio, importante reforço estrutural para o escoamento da geração renovável das usinas instaladas em Minas Gerais e na região Nordeste.
+
+Outro ponto relevante para a área Rio de Janeiro consiste na modernização da subestação São José, importante para o atendimento à capital, com a substituição de dois transformadores 500/138 kV que se encontram em final de vida útil. Para essa substituição, foram indicados dois bancos de transformadores de maior capacidade, dotados de reatância especial, de forma a mitigar as elevadas correntes de curto-circuito observadas na região.
+
+Cabe destacar a retomada do Grupo de Trabalho de Curto-Circuito (GT-CC), coordenado pela EPE, com a participação do ONS, da LIGHT, ELETROBRAS, LTTE e PETROBRAS, dando continuidade à segunda parte dos estudos voltados à redução dos níveis de curto-circuito para as instalações em condição de superação, no estado do Rio de Janeiro. Essa nova etapa será uma extensão do estudo original e concentrará as análises nas SE Nova Iguaçu, Zona Oeste e Grajaú.
+
+Por fim, é oportuno mencionar as análises de sensibilidade quanto aos carregamentos de transformações de fronteira associados à possível conexão de novos consumidores, em especial Data Centers que já possuem Parecer de Acesso emitidos, das quais destacam-se as subestações Nova Iguaçu, Adrianópolis e Jacarepaguá.
+
+ESPÍRITO SANTO
+
+No estado do Espírito Santo, destaca-se o reforço à SE Vitória, instalação fundamental para o atendimento à capital, por meio da substituição do transformador 345/138 kV de 225 MVA por nova unidade de 400 MVA, envolvendo intervenções de elevada complexidade.
+
+Outro ponto relevante é a entrada em operação do novo tronco em 500 kV interligando o estado da Bahia ao Espírito Santo, composto pelas LT 500 kV Medeiros Neto II – João Neiva 2 – Viana 2. Essa nova rede amplia a capacidade de intercâmbio energético entre as regiões N/NE e SE/CO, além de aumentar a confiabilidade de atendimento ao Espírito Santo.
+
+Além disso, destaca-se o novo comportamento operativo de algumas transformações de fronteira que, pela primeira vez, passarão a apresentar fluxo reverso em cenários de carga mínima diurna de domingo. Essa observação é relevante devido ao rápido crescimento de Micro e Minigeração Distribuída na região. Nesse contexto, cabe ressaltar a evolução da participação da capacidade instalada de MMGD no estado, chegando a cerca de 76% da demanda máxima prevista para o horizonte deste ciclo do PAR/PEL.
+
+RORAIMA
+
+Destaca-se a entrada em operação da interligação do estado de Roraima ao Sistema Interligado Nacional, ocorrida em setembro de 2025, por meio da LT 500 kV Lechuga – Equador – Boa Vista C1 e C2 e da nova transformação 500/230 kV da SE Boa Vista. Essa interligação representou um marco estrutural para o estado, ampliando a confiabilidade e a capacidade de atendimento às cargas locais, anteriormente supridas por geração térmica de maneira isolada.
+
+Com a operação interligada, podem ser verificadas restrições na transformação 230/69 kV da SE Boa Vista, que exigem o despacho de geração térmica no setor de 69 kV por razões elétricas para evitar sobrecarga em situação de contingências simples de transformadores nessa subestação. A solução anteriormente prevista, a instalação de um 4º TR de 100 MVA, foi reavaliada pelo ONS e pela EPE, que recomendaram uma solução estrutural, por meio de Nota Técnica Conjunta (NT ONS DPL 0034/2025 e EPE-DEE-NT-023/2025), com a instalação de dois transformadores 230/69 kV – 150 MVA na SE Boa Vista, sendo um em substituição ao BVTF6-02 de 100 MVA e outro como unidade adicional, já incorporados ao POTEE 2025 – 1ª Emissão.
+
+Ressalta-se, por fim, a necessidade de manter o despacho térmico para atendimento ao critério de perda dupla no eixo 500 kV Lechuga – Equador – Boa Vista, a fim de limitar o fluxo de importação e evitar perda descontrolada de carga em situação de contingências duplas. Reforça-se a importância da conclusão do estudo de planejamento em andamento na EPE, previsto para julho de 2026, que definirá a solução estrutural para eliminar essa restrição.
+
+AMAZONAS
+
+Destaca-se a recomendação das obras do estudo de planejamento que eliminarão a necessidade de despacho de geração térmica por razões elétricas para o atendimento ao critério de perda dupla na interligação em 500 kV entre as SEs Xingu e Lechuga. Atualmente, esse despacho é necessário nos estados do Amazonas e de Roraima para limitar o fluxo de importação e evitar a perda descontrolada de carga quando de contingências duplas em trechos desse eixo de transmissão.
+
+A solução estrutural recomendada pela EPE é composta pelos seguintes empreendimentos: LT 500 kV Xingu – Jurupari – Oriximiná – Silves C3 e C4, LT 500 kV Silves – Puraquequara – Lechuga C1 e C2 e SE Puraquequara 500/230/138 kV, seccionando a LT 230 kV Mauá III – Jorge Teixeira C1 e C2.
+
+Adicionalmente, foi recomendado um conjunto de obras na rede de distribuição de forma a viabilizar a redistribuição de cargas na região metropolitana de Manaus. Cabe destacar a importância de haver um acompanhamento diferenciado dessas obras de distribuição pela Agência Reguladora, de modo a garantir que entrem em operação nas datas indicadas no estudo de planejamento, garantindo assim a implementação da solução de mínimo custo global indicada pela EPE.
+
+AMAPÁ
+
+Destaca-se a entrada em operação, em dezembro de 2024, da SE Macapá III 230/69 kV e da LT 230 kV Macapá – Macapá III, obras que proporcionaram maior confiabilidade ao atendimento elétrico das cargas de Macapá e eliminaram a necessidade de manutenção do transformador 230/69 kV – 150 MVA como reserva sistêmica local na SE Macapá, que seria utilizado em caso de indisponibilidade prolongada de um dos transformadores existentes nessa subestação.
+
+Adicionalmente, ressalta-se a previsão atual de setembro de 2026 para entrada em operação da LT 230 kV Laranjal do Jari – Macapá III C1, empreendimento que eliminará os casos de ilhamento do sistema Amapá em relação ao SIN em situações de contingência dupla da LT 230 kV Macapá – Laranjal do Jari C1 e C2.
+
+PARÁ
+
+Destaca-se as dificuldades de regulação de tensão em condição normal de operação e de estabilidade de tensão em situações de contingências simples na região sudeste do Pará, decorrentes do aumento da demanda e da elevada concentração de cargas industriais na região. Como solução conjuntural foi recomendado a implantação de um banco de capacitores de 50 Mvar/230 kV na SE Onça Puma, com o objetivo de mitigar as dificuldades de controle de tensão e assegurar o atendimento adequado às cargas supridas por essa subestação. Entretanto, a medida proposta não amplia a capacidade de atendimento para novas cargas na área de influência da SE Onça Puma. Assim, reforça-se a importância da conclusão do estudo de planejamento em andamento na EPE, voltado à região de Onça Puma e ao sudeste do Pará.
+
+Além disso, existem dificuldades de atendimento às cargas da região Sul do Pará até a entrada em operação das obras na região de Novo Progresso (PA). As obras previstas incluem o setor 230/138 kV da SE Cláudia, a nova SE Novo Progresso 230/138 kV, a SE Cachimbo 230 kV e as LTs 230 kV Cláudia – Cachimbo – Novo Progresso C1. Essas obras foram objeto de caducidade em 2022 e relicitadas em 2023, e o atraso em sua implantação compromete significativamente o atendimento às cargas das regiões de Novo Progresso e do norte de Mato Grosso. Na 41ª Reunião Pública Ordinária da Diretoria da ANEEL de 2025 (realizada em 09/12/2025), a diretoria da Agência decidiu recomendar ao Ministério de Minas e Energia – MME a caducidade dessa concessão vinculada ao Contrato de Concessão de Serviço Público de Transmissão de Energia Elétrica nº 14/2022-ANEEL, celebrado entra a União e a Tangará Transmissão de Energia S.A. Portanto, é previsto que as obras sejam relicitadas no Lote 5 do Leilão de Transmissão nº 001/2026, considerando que a EPE e ONS emitiram o ofício conjunto CTA-ONS DPL 1216/2025 – Of. 0743 EPE, o qual mantém a recomendação de implantação integral do conjunto de empreendimentos previstos no referido lote.
+
+MARANHÃO
+
+Destaca-se a licitação dos empreendimentos destinados ao atendimento da região leste do Maranhão e centro-norte piauiense, constantes no Lote 2 do Leilão de Transmissão nº 004/2025, realizado em 31 de outubro de 2025, que contempla a LT 230 kV Caxias II – Teresina II C1 e a reconstrução da LT 230 kV Caxias II – Coelho Neto C1, além do Dispositivo de Controle Automático Rápido de Reativos (CARR), 1 x (-50/+50) Mvar/230 kV na SE Caxias II. Também compõem a solução estrutural recomendada no estudo de planejamento as desativações das seguintes linhas de transmissão: LT 230 kV Peritoró – Caxias II C1, LT 230 kV Caxias II – Coelho Neto C1 e LT 230 kV Coelho Neto – Teresina I C1. Tais obras solucionam questões de atendimento às cargas da região leste do estado do Maranhão, atualmente supridas pelas SEs 230/69 kV Caxias II e Coelho Neto.
+
+PIAUÍ
+
+Destaca-se a recomendação das obras que compõem a solução estrutural para o atendimento à capital Teresina, que consiste na substituição dos transformadores 230/69 kV – 2 x 100 MVA (04T3 e 04T5) da SE Teresina por duas unidades trifásicas de 200 MVA, além da implantação de nova subestação de distribuição 69/13,8 kV – 2 x 50 MVA, de propriedade da Equatorial Piauí. Essa solução elimina a ocorrência de corte de carga na contingência dos transformadores 230/13,8 kV – 2 x 40 MVA (04T1 ou 04T2), considerando que os barramentos de 13,8 kV operam atualmente abertos.
+
+Ressalta-se ainda a previsão de entrada em operação, no segundo semestre de 2026, das seguintes obras: SE 500 kV São João do Piauí II, seccionando as LTs 500 kV São João do Piauí – Ribeiro Gonçalves C1 e C2, LT 500 kV Curral Novo do Piauí II – São João do Piauí II C1 e LT 500 kV São João do Piauí II – Ribeiro Gonçalves – Colinas C3. Essas obras apresentam antecipação significativa em relação ao prazo legal de junho de 2029 e são fundamentais para ampliar o escoamento de geração na região Nordeste, solucionando questões de carregamento em situações de contingências simples e duplas no eixo 500 kV Colinas – Ribeiro Gonçalves – São João do Piauí.
+
+BAHIA
+
+Neste ciclo do PAR/PEL foi observado crescimento expressivo na previsão de carga para a região oeste da Bahia, especificamente nas subestações Rio Grande II, Rio Formoso II e Rio das Éguas, devido à conexão de novos consumidores na Rede Básica e no sistema de distribuição. Essa situação acarretou problemas de carregamento nas transformações das referidas subestações em situação de contingência simples. Para solucionar esses problemas, foram indicados nesse ciclo: o 3º AT 230/138 kV – 200 MVA na SE Rio Formoso II e o 3º AT 500/230 kV – 300 MVA na SE Rio das Éguas, já incorporados ao POTEE 2025 – 1ª Emissão, além do 4º AT 230/138 kV – 100 MVA da SE Rio Grande II, proposto nesse PAR/PEL.
+
+Outro destaque foi a criação de uma Força Tarefa composta por representantes do ONS, Neoenergia COELBA, MEZ Energia e Axia Energia Nordeste (antiga Eletrobrás CHESF), com o objetivo de assegurar o atendimento às cargas da Neoenergia Coelba diante da postergação da entrada em operação do 1º AT 500/230 kV da SE Olindina, cujo atraso poderia comprometer o atendimento ao crescimento de carga dos consumidores locais. Como resultado dessa atuação conjunta, foi definida e concluída, em agosto de 2025, uma solução provisória para conexão do setor 230/69 kV da SE Olindina, por meio de um tap simples na LT 230 kV Cícero Dantas – Alagoinhas II. Essa medida permitiu viabilizar o atendimento ao crescimento do mercado da região. Essa solução provisória deverá permanecer até a entrada em operação do 1º AT 500/230 kV da SE Olindina, que possibilitará a realização dos seccionamentos definitivos e, consequentemente, a desativação das LTs 230 kV Olindina – Cícero Dantas C1 e C2.
+
+SERGIPE
+
+Em virtude dos atrasos no cronograma de obras referente à implantação da SE Nossa Senhora da Glória II 230/69 kV – 3 x 150 MVA, seccionando a LT 230 kV Paulo Afonso III - Itabaiana C2 sob concessão da transmissora Serra Negra (Grupo Sterlite), a ANEEL instalou um processo, por meio da Superintendência de Fiscalização Técnica dos Serviços de Energia Elétrica (SFT), para apurar a responsabilidade da transmissora. Na 41ª Reunião Pública Ordinária da Diretoria da ANEEL de 2025 (realizada em 09/12/2025), a diretoria da Agência decidiu recomendar ao Ministério de Minas e Energia – MME a caducidade dessa concessão vinculada ao Contrato de Concessão de Serviço Público de Transmissão de Energia Elétrica nº 10/2022-ANEEL, celebrado entra a União e a Serra Negra Transmissão de Energia S.A.. Portanto, é previsto que as obras sejam relicitadas no Lote 4 do Leilão de Transmissão nº 001/2026, considerando que a EPE e ONS emitiram o ofício conjunto CTA-ONS DPL 1215/2025 – Of. 0744 EPE, o qual mantém a recomendação de implantação integral do conjunto de empreendimentos previstos no referido lote.
+
+A EPE e o ONS seguem realizando análises para assegurar o atendimento elétrico de forma segura à região até a entrada das obras estruturantes. Para viabilizar o atendimento às cargas da Energisa Sergipe em condição normal de operação, até a entrada da SE Nossa Senhora da Glória II, torna-se necessária a substituição dos transformadores da SE Itabaiana, prevista para janeiro de 2027, além da manutenção do terceiro transformador nessa subestação, sem o seu remanejamento para a SE Itabaianinha, conforme solução originalmente proposta no estudo de planejamento da EPE.
+
+CEARÁ
+
+Destaca-se a necessidade de restringir o escoamento da geração renovável variável para mitigar o risco de colapso de tensão no sistema de transmissão entre os estados do Ceará e Rio Grande do Norte, especialmente em contingências simples das LTs 500 kV Pacatuba – Jaguaruana II, Fortaleza II – Quixadá, Açu III – Jaguaruana II ou Açu III – Milagres II, até a entrada das obras estruturantes do Nordeste, previstas para dezembro de 2029. Após a entrada em operação dessas obras, são esperadas melhores condições de escoamento da geração; no entanto, ainda poderá haver necessidade de restrições de geração para prevenir riscos de colapso de tensão na contingência das LTs 500 kV Pacatuba – Jaguaruana II, Açu III – Morada Nova, Açu III – Milagres II, Quixadá – Crateús, Crateús – Teresina IV ou Ceará Mirim II – Campina Grande III. Nesta linha, vale ressaltar que, em 31 de outubro de 2025, foi realizado o Leilão de Transmissão nº 004/2025, cujo Lote 11 licitou três compensadores síncronos, dois na SE Açu III 500 kV e um na SE João Câmara III 500 kV, com entrada em operação prevista até agosto de 2029. Esses equipamentos irão reforçar as margens de estabilidade da região e contribuir de forma positiva para ampliar o escoamento de geração renovável com segurança.
+
+Um dos principais destaques deste ciclo do PAR/PEL para a área Ceará foi o desenvolvimento da “Solução Ponte”, elaborada pelo ONS a partir de uma solicitação do Ministério de Minas e Energia para viabilizar, no médio prazo, a conexão de até 3 GW de novos grandes consumidores no Ceará e Piauí diante das restrições de estabilidade de tensão observadas no eixo RN–CE–PI. A proposta recomenda a instalação de cinco compensadores síncronos de (-200 / +300) Mvar, alocados nas SEs Açu III, Ceará Mirim II, Morada Nova (duas unidades) e Quixadá, que serão licitados no Lote 3 do Leilão de Transmissão nº 001/2026, previsto para março de 2026. Esses equipamentos reforçam as margens de estabilidade da região, preservam o escoamento da geração renovável já contratada e mitigam riscos de curtailment por confiabilidade elétrica. Além disso, os cinco compensadores indicados pelo ONS estão plenamente alinhados com os estudos da EPE, que também identificam a compensação síncrona como solução estratégica e compatível com expansões estruturais futuras no Nordeste. Assim, a Solução Ponte constitui uma medida essencial deste ciclo do PAR/PEL, criando condições para a integração segura dos novos grandes consumidores enquanto os reforços estruturais de longo prazo não entram em operação.
+
+RIO GRANDE DO NORTE
+
+Destaca-se a necessidade de restringir o escoamento da geração renovável variável para mitigar o risco de colapso de tensão no sistema de transmissão entre os estados do Ceará e Rio Grande do Norte, especialmente em contingências simples das LTs 500 kV Pacatuba – Jaguaruana II, Fortaleza II – Quixadá, Açu III – Jaguaruana II ou Açu III – Milagres II, até a entrada das obras estruturantes do Nordeste, previstas para dezembro de 2029. Após a entrada em operação dessas obras, são esperadas melhores condições de escoamento da geração; no entanto, ainda poderá haver necessidade de restrições de geração para prevenir riscos de colapso de tensão na contingência das LTs 500 kV Pacatuba – Jaguaruana II, Açu III – Morada Nova, Açu III – Milagres II, Quixadá – Crateús, Crateús – Teresina IV ou Ceará Mirim II – Campina Grande III. Nesta linha, vale ressaltar que, em 31 de outubro de 2025, foi realizado o Leilão de Transmissão nº 004/2025, cujo Lote 11 licitou três compensadores síncronos, dois na SE Açu III 500 kV e um na SE João Câmara III 500 kV, com entrada em operação prevista até agosto de 2029. Esses equipamentos irão reforçar as margens de estabilidade da região e contribuir de forma positiva para ampliar o escoamento de geração renovável com segurança.
+
+Um dos principais destaques deste ciclo do PAR/PEL para a área Ceará foi o desenvolvimento da “Solução Ponte”, elaborada pelo ONS a partir de uma solicitação do Ministério de Minas e Energia para viabilizar, no médio prazo, a conexão de até 3 GW de novos grandes consumidores no Ceará e Piauí diante das restrições de estabilidade de tensão observadas no eixo RN–CE–PI. A proposta recomenda a instalação de cinco compensadores síncronos de (-200 / +300) Mvar, alocados nas SEs Açu III, Ceará Mirim II, Morada Nova (duas unidades) e Quixadá, que serão licitados no Lote 3 do Leilão de Transmissão nº 001/2026, previsto para março de 2026. Esses equipamentos reforçam as margens de estabilidade da região, preservam o escoamento da geração renovável já contratada e mitigam riscos de curtailment por confiabilidade elétrica. Além disso, os cinco compensadores indicados pelo ONS estão plenamente alinhados com os estudos da EPE, que também identificam a compensação síncrona como solução estratégica e compatível com expansões estruturais futuras no Nordeste. Assim, a Solução Ponte constitui uma medida essencial deste ciclo do PAR/PEL, criando condições para a integração segura dos novos grandes consumidores enquanto os reforços estruturais de longo prazo não entram em operação.
+
+PARAÍBA
+
+Destaca-se a necessidade de restrição de geração renovável variável ao longo do ciclo do PAR/PEL para mitigar os riscos de colapso de tensão na SE Santa Luzia II em situações de contingências simples da LT 500 kV Santa Luzia II – Campina Grande III ou da LT 500 kV Santa Luzia – Milagres II. Este problema é mitigado após a entrada em operação da LT 500 kV Bom Nome II – Santa Luzia II, licitada no Leilão de Transmissão nº 004/2025 – Lote 02, com previsão entrada em operação até agosto de 2030. Ressalta-se que o ONS está realizando novas análises dinâmicas à luz dos modelos matemáticos validados encaminhados pelos agentes, os quais vêm sendo progressivamente atualizados, para reavaliar os problemas dinâmicos da região.
+
+PERNAMBUCO
+
+Destaca-se a superação da capacidade de transformação das SE Mirueira, Jaboatão II e Tacaimbó para atendimento ao crescimento de carga da região. Para a SE Mirueira, a solução estrutural é a substituição dos TRs 230/69 kV - 100 MVA (04T3 e 04T4), que estão em final de vida útil, por duas unidades trifásicas de 200 MVA, já incorporados ao POTEE 2025 - 1ª Emissão, além da implantação do 3° TR 230/69 kV - 200 MVA nessa subestação, indicado neste PAR/PEL. Para a SE Jaboatão II, foi indicado o 3° TR 230/69 kV - 150 MVA. Ressalta-se que foi avaliada a possibilidade de transferência de carga para as SE Bongi e Pirapama II, porém se mostraram tecnicamente inviáveis, segundo informação da Neoenergia Pernambuco. Por fim, para a SE Tacaimbó, também foi avaliada pela distribuidora a possibilidade de transferência parcial de carga para a SE Angelim, entretanto, a subestação não dispõe de espaço físico para a indicação de um novo transformador. Diante disso, o problema foi endereçado a EPE para avaliar a necessidade de um novo estudo de planejamento com o objetivo de solucionar o atendimento ao suprimento na região de Tacaimbó.
+
+ALAGOAS
+
+Destaca-se a indicação do 4º TR 230/69 kV – 100 MVA na SE Rio Largo II com o objetivo de atender ao crescimento de carga e mitigar o risco de sobrecarga nos transformadores remanescentes em situações de contingências de um dos transformadores de fronteira da subestação. Além disso, no ciclo anterior do PAR/PEL, já havia sido indicada a instalação do 3º TR 230/69 kV da SE Maceió II com o mesmo propósito de reforçar a capacidade de suprimento e a confiabilidade do atendimento elétrico na região. Ressalta-se que essas indicações poderão ser reavaliadas após a publicação do estudo de planejamento da EPE para atendimento à Região Metropolitana de Maceió, que está em fase de emissão.
+
+06
+Projeções Futuras
+do Curtailment
+
+A crescente participação de fontes renováveis variáveis, em especial usinas eólicas, fotovoltaicas e a micro e minigeração distribuída fotovoltaica, tem intensificado fenômenos operativos associados à redução de geração, usualmente denominados como curtailment. Conforme estabelecido na Análise de Impacto Regulatório nº 2022-002/SRG da ANEEL, os termos curtailment e constrained-off são considerados equivalentes no âmbito regulatório brasileiro, ainda que a terminologia formal utilizada na regulação seja constrained-off. Assim, para fins deste relatório, é adotado o termo curtailment como expressão geral, mantendo alinhamento conceitual com a AIR e com a terminologia amplamente empregada pelo setor elétrico, evitando ambiguidades.
+
+Por definição, curtailment refere-se à redução, limitação ou corte de geração decorrente tanto de restrições por confiabilidade, associadas a limites elétricos ou indisponibilidades externas no sistema de transmissão, quanto de restrições por razões energéticas, quando a oferta de geração supera a demanda instantânea. A expansão acelerada das fontes renováveis variáveis e da MMGD, somada à crescente complexidade operativa do SIN, vem ampliando a frequência e a diversidade desses eventos, tornando essencial uma discussão estruturada sobre suas causas, impactos e perspectivas. Os tópicos a seguir buscam aprofundar esses elementos à luz da evolução recente do sistema e das projeções associadas.
+
+Nesta linha, vale reforçar que a acelerada expansão dos Recursos Energéticos Distribuídos (REDs), em especial da MMGD, acrescenta uma nova camada de complexidade à operação do SIN. A ausência de controlabilidade e observabilidade dessa geração pelo ONS, somada à redução da carga supervisionada ao longo do dia e às acentuadas rampas de carga na transição do período diurno para o noturno, impõe desafios adicionais tanto ao planejamento quanto à operação do sistema. Os principais impactos da geração conectada na rede de distribuição para operação elétrica do SIN serão detalhados no Capítulo 7.
+
+A restrição de geração por razões de confiabilidade elétrica, de forma a prevenir sobrecargas em equipamentos ou riscos para a estabilidade da rede de transmissão, ganhou destaque, principalmente, após a perturbação de 15 de agosto de 2023, onde foi evidenciado que o controle de tensão e suporte dinâmico de potência reativa das fontes eólicas e fotovoltaicas ficaram aquém do desempenho indicado pelos modelos matemáticos fornecidos pelos agentes proprietários dessas usinas. Esse episódio desencadeou uma série de estudos e ações por parte do ONS para estabelecer novas regiões operativas seguras, que resultaram na redução dos limites de intercâmbio das interligações e na inclusão de novas restrições locais no sistema de transmissão a fim de prevenir colapsos de tensão de larga abrangência em situações de contingência.
+
+No entanto, em 2025, já se observa que a maior parcela do curtailment de usinas eólicas e fotovoltaicas no SIN está associada às restrições por razões energéticas, refletindo um quadro estrutural de sobreoferta de energia em determinados períodos do dia, agravado pelo aumento da penetração da MMGD. O relatório RT ONS DGL-0189/2025 – Diagnóstico e Perspectiva da Evolução dos Cortes de Geração no Brasil, elaborado pelo ONS no âmbito do GT Cortes de Geração coordenado pelo MME, já destacava essa mudança de predominância e apontava que os cortes energéticos tendem a se intensificar nos próximos anos, à medida que a expansão de geração renovável variável e dos REDs se sobrepõe ao crescimento da carga no período diurno. Nesse sentido, o presente capítulo atualiza e aprofunda o diagnóstico apresentado ao GT Cortes de Geração, incorporando, dados históricos mais recentes e projeções de expansão de geração atualizadas, além de um aprimoramento metodológico: a estimação dos cortes energéticos passa a considerar um requisito hidráulico mínimo variável mês a mês, calculado com base no histórico considerado, em substituição à premissa anterior de um valor anual único, tornando a avaliação mais aderente à sazonalidade do sistema e aos padrões observados de operação.
+
+Ante o exposto, este capítulo tem como objetivo apresentar uma prospecção da evolução do curtailment no Brasil nos próximos anos, fornecendo ao SEB um conjunto de informações relevantes para apoiar as discussões e os aprimoramentos necessários relacionados ao tema.
+
+6.1. Premissas e Critérios
+
+A prospecção da evolução do curtailment constitui um desafio complexo, repleto de incertezas intrínsecas. As variáveis envolvidas podem alterar as causas, os volumes e a distribuição dos cortes de geração ao longo do tempo, configurando um cenário multivariável. Para delimitar o escopo da análise, sem comprometer a qualidade das tendências identificadas, são necessárias algumas premissas simplificadoras.
+
+Dessa forma, as análises subsequentes visam estimar a evolução de parte do curtailment do SIN a partir de dados históricos verificados na operação, de modo que, seja projetado o mesmo comportamento verificado com a aplicação de fatores de crescimento associados à carga e às fontes eólicas, fotovoltaicas e MMGD. O dimensionamento do curtailment é feito a partir do balanço de carga e geração tanto para os critérios de confiabilidade elétrica das interligações quanto por razões energéticas. Esta seção detalha as premissas e os critérios utilizados para definição do curtailment estimado.
+
+6.1.1. Cenários Avaliados
+
+Devido à disposição geográfica das fontes eólicas e fotovoltaicas, a evolução da rede de transmissão e as diversas combinações de comportamento dessas fontes eólicas e fotovoltaicas, principalmente alocadas no Nordeste, nos vários intervalos de carga, a avaliação prospectiva do curtailment pode enfrentar uma explosão combinatória de cenários. Na análise são avaliadas três restrições sistêmicas relevantes, descritas a seguir:
+
+i. Restrição de geração no SIN por razões energéticas: associada ao controle da frequência do SIN devido à sobreoferta de energia.
+
+ii. Restrição de geração no Nordeste por confiabilidade elétrica: associada ao Controle do Limite de Exportação do Nordeste (ExpNE).
+
+iii. Restrição de geração no Norte e Nordeste por confiabilidade elétrica: associada ao Controle do Limite de Exportação do Norte e Nordeste para o Sudeste/Centro-Oeste (ExpNNE).
+
+6.1.2. Premissas
+
+Para avaliar a prospecção da evolução do curtailment no SIN, foram utilizados os dados históricos horários de carga e geração do sistema no período de 1º de outubro de 2024 a 30 de setembro de 2025, em MWmed/h, isto é, o valor médio verificado a cada hora. Nesse contexto, com base nos 8.760 pontos de operação verificados nesse período, foram projetados pontos equivalentes para os anos de 2026 até 2029, aplicando-se fatores de crescimento na carga e na capacidade instalada de geração, resultando em 35 mil pontos de operação futuros.
+
+Ao replicar o comportamento horário das fontes renováveis variáveis e da carga do SIN, a análise parte do pressuposto de que o padrão meteorológico observado no período-base se repetirá nos anos seguintes. A diferença é que, para cada ano futuro, esse mesmo comportamento é “redimensionado”: a geração é ampliada de acordo com o aumento projetado da capacidade instalada e a carga cresce conforme os fatores percentuais previstos, preservando seu perfil sazonal e horário. Assim, mantém-se a forma das curvas, mas em níveis ajustados para refletir o SIN futuro. A Figura 6.1, a seguir, ilustra esse procedimento, mostrando como, a partir dos valores históricos, são aplicados os fatores de crescimento enquanto se conserva o comportamento horário original.
+
+Figura 6.1 – Exemplo de prospecção
+
+6.1.2.1. Carga
+
+O crescimento de carga considera as taxas de crescimento percentuais por ano da previsão da 2ª Revisão Quadrimestral do Planejamento Anual da Operação Energética – Ciclo 2025 (2025-2029), realizada pelo ONS em conjunto com a Empresa de Pesquisa Energética – EPE e a Câmara de Comercialização de Energia Elétrica – CCEE. A Tabela 6.1, a seguir, apresenta as taxas de crescimento de carga consideradas como padrão.
+
+Tabela 6.1: Taxas de Crescimento de Carga
+
+6.1.2.2. Capacidade Instalada de GD e MMGD
+
+A previsão de MMGD utilizada nas análises foi a do Programa Mensal de Operação (PMO) de setembro de 2025, que utiliza como base a metodologia 4MD (Modelo de Mercado da Micro e Minigeração Distribuída). Segundo esse modelo, até 2029, a MMGD atinge o valor de 64,9 GW de capacidade instalada.
+
+Além da base do PMO, também foi realizada uma sensibilidade com a base de capacidade instalada de MMGD encaminhada pelas distribuidoras para os estudos do PAR/PEL 2025 de modo que a capacidade instalada prevista para o ano de 2029 é de 58 GW. Tais diferenças entre as bases serão mais bem detalhadas no Capítulo 7 - Impactos da Geração Distribuída na Segurança Elétrica do SIN.
+
+Por fim, para a Geração Distribuída (GD), foi considerada a geração verificada devido ao crescimento pouco representativo dessa fonte ao longo do horizonte. Dessa forma, não há aplicação de fatores de crescimento. Os aspectos relacionados ao crescimento e o impacto da GD, também, serão abordados no Capítulo 7.
+
+6.1.2.2. Capacidade Instalada de Usinas Eólicas e Fotovoltaicas
+
+Com relação à capacidade instalada das usinas eólicas e fotovoltaicas, existem duas bases, a PEN/PMO e a base de Contrato Uso do Sistema de Transmissão (CUST). As premissas dessas bases são detalhadas a seguir:
+
+Base PEN/PMO: Considera a evolução da capacidade instalada das usinas eólicas e fotovoltaicas que já firmaram CUST e iniciaram as obras de implementação das respectivas usinas ou que possuam contratos de compra e venda de energia de longo prazo. Nessa base, para as análises, foram consideradas apenas as usinas Eólicas e Fotovoltaicas do Tipo I e II, não considerando as usinas do Tipo III, com base no PMO de setembro de 2025.
+Base CUST: Considera a capacidade instalada das usinas eólicas e fotovoltaicas que possuem CUST assinado. Como data prevista para operação de cada usina, foi considerada a divulgada no Relatório de Acompanhamento da Expansão da Oferta de Geração de Energia Elétrica (RALIE), publicado pela ANEEL em outubro de 2025. Também foram consideradas apenas as usinas Eólicas e Fotovoltaicas do Tipo I e II, não considerando as usinas Tipo III, que atualmente não participam dos cortes de geração na operação em tempo real do SIN.
+
+Ao final do horizonte, é prevista uma diferença de aproximadamente 10 GW de geração entre as duas bases, com a base PEN/PMO atingindo 58,8 GW, enquanto a base CUST atinge 69,3 GW. A Figura 6.2 apresenta a evolução da capacidade instalada de Eólica e Fotovoltaica para as bases PEN/PMO e CUST.
+
+Figura 6.2: Capacidade instalada de Eólica e Fotovoltaica
+
+6.1.2.3. Geração Térmica e Hidráulica
+
+Para a geração térmica, a premissa adotada considera a inflexibilidade sazonal das usinas termoelétricas, conforme os dados declarados no PMO de setembro de 2025. No entanto, a análise também pode ser realizada replicando os valores observados no horizonte-base, assumindo que o padrão de despacho térmico horário se repetirá nos anos futuros.
+
+Para a geração hidráulica, a abordagem metodológica difere conforme o tipo de restrição a ser avaliada:
+
+i. Análise de Restrição por Confiabilidade Elétrica: o comportamento da geração hidráulica verificada é replicado para todo o horizonte, sob a premissa de repetição das condições hidrológicas e de manutenção da capacidade instalada.
+
+ii. Análise de Restrição por Razões Energéticas: a metodologia específica será apresentada a seguir, uma vez que o Requisito de Hidráulica Mínima do SIN passa a ser o parâmetro limitante para essa avaliação.
+
+6.1.3. Limites avaliados
+6.1.3.1. Análises de Restrição por Confiabilidade Elétrica
+
+As análises de restrição por confiabilidade elétrica utilizam como referência os limites das interligações regionais calculados no PAR/PEL 2025, cujos valores variam conforme o período do dia e a entrada de novas obras no horizonte de 2026 a 2029. Esses limites estão detalhados no Capítulo 4 – Limites das Interligações Inter-Regionais e no Volume II do PAR/PEL.
+
+Neste contexto, é importante destacar que a análise de restrição adotou algumas simplificações metodológicas em relação aos dados apresentados no Capítulo 4. Primeiramente, não foi considerada a variação do limite de ExpNE em função do percentual de geração fotovoltaica. Além disso, o limite de ExpNNE foi apresentado no Capítulo 4 apenas para o período de carga máxima noturna, não contemplado os demais períodos avaliados.
+
+Assim, para evitar assimetria de informações quanto aos valores utilizados, a Figura 6.3 e a Tabela 6.2 apresentam exatamente os limites de referência empregados nas análises. A Figura 6.3 mostra os limites de ExpNE, e a Tabela 6.2 detalha os limites de ExpNNE. Ambos os dados estão conforme definidos no Volume II – Evolução dos Limites de Transmissão nas Interligações Inter-regionais do PAR/PEL 2025 – Ciclo 2026 – 2030.
+
+Figura 6.3: Limite de Exportação Nordeste por Período de Carga
+
+Tabela 6.2: Limite de Exportação do Norte e Nordeste para o Sudeste/Centro-Oeste
+
+6.1.3.1. Análises de Restrição por Razões Energéticas
+
+Para a análise de restrição de geração por razões energéticas, o valor limite utilizado como referência no balanço entre carga e geração é o Requisito Mínimo das Usinas Hidroelétricas (Req_UHE_MínSIN). A definição desse requisito deve levar em consideração o comportamento da fonte, que está intrinsecamente associado aos regimes hídricos do País, exigindo uma análise estratificada por mês.
+
+Como se trata de uma avaliação de restrição por razões energéticas, os valores históricos de geração hidráulica mínima devem ser obtidos em dias nos quais houve restrições energéticas no SIN. Além disso, é necessário observar a relação entre a carga global do SIN e a geração hidráulica registrada, de forma a avaliar a participação das UHEs no atendimento da carga, especialmente nos momentos de maior demanda.
+
+Assim, foi considerado que a participação absoluta e relativa da geração hidráulica futura não deve ser inferior aos valores mínimos observados no histórico desses dias com corte energético. Adota-se, portanto, a simplificação de que as condições mensais futuras se repetirão, permitindo extrair a sazonalidade hidrológica média.
+
+Dessa forma, para todos os meses do histórico foram calculadas as seguintes métricas:
+
+i. Hidráulica Mínima (UHEmin): valor mínimo, em MW, da geração hidráulica observada nos dias em que ocorreram cortes por razões energéticas, em cada mês.
+
+ii. Participação Mínima da Hidráulica na Carga (Part_UHEmin): menor valor da razão entre a geração hidráulica verificada e a carga global registrada nos dias com cortes por razões energéticas, em cada mês.
+
+Após as definições desses valores, para cada instante, é definido o requisito mínimo das Usinas Hidroelétricas (Req_UHE_MínhSIN), a partir da avaliação entre o maior valor entre a UHEmin com o resultado do produto da Part_UHEmin com a carga global prevista em cada horário.
+
+Portanto, o Req_UHE_MínSIN ) é definido de maneira dinâmica a partir da relação entre a geração e a carga global, além de incorporar a avaliação do comportamento sazonal da fonte, sendo um aprimoramento metodológico em relação à abordagem utilizada no relatório do ONS para subsidiar o GT Cortes de Geração. A Tabela 6.3 apresenta os valores de UHEmin e PartUHEmin utilizados como referência para os meses do ano.
+
+Tabela 6.3: Geração Hidráulica Mínima Verificada e Participação Mínima da Hidráulica na Carga Global Verificada
+
+6.3. Metodologia
+6.3.1. Análise de Balanço Estático
+
+A metodologia empregada para determinar os cortes de geração é fundamentada em uma análise de balanço estático, configurando-se como uma forma de extrapolação de tendências. Esta abordagem utiliza os dados históricos verificados associados a aplicação de fatores de crescimento para a carga e a geração, conforme premissas descritas acima.
+
+Nas avaliações de restrição de geração por razões de confiabilidade, esse cálculo é dado pela diferença entre a geração total de um determinado subsistema, ou conjunto de subsistemas, sub, em uma hora, h, definido (Gerhsub) e a carga deste mesmo subsistema e instante de tempo (Cargahsub), conforme indicado na equação (I). O resultado dessa equação é o montante de potência exportado por esse subsistema Exphsub, que se for positivo, representa uma exportação, e se for negativo, representa uma importação de energia.
+
+Assim, para todas as horas do horizonte de análise, que vai de 2026 a 2029, é feita diferença entre a geração (Gerhsub) e a carga (Cargahsub) daquele subsistema.
+
+A parcela de geração é composta pela soma definida na equação (II), em que UHEhsub, representa a geração hidráulica verificada no instante de tempo h, UTEhsub a inflexibilidade das térmicas para este mesmo horário, MMGDhsub, EOLhsub e UFVhsub a energia gerada por MMGD, eólica e fotovoltaica, respectivamente, prevista com base nos fatores de capacidade calculados, considerando a geração verificada e a frustrada, a partir do histórico verificado.
+
+Neste cenário, o corte de geração decorrente da violação de um limite de interligação em cada horário pode ser calculado utilizando a equação (III), apresentada abaixo, levando em consideração apenas os valores positivos dessa expressão. Isso significa que, sempre que a exportação exceder um limite estabelecido (Limitehsub), será necessário efetuar cortes de geração para garantir a confiabilidade e a estabilidade da operação elétrica do SIN.
+
+Para as avaliações de restrição de geração no SIN por razões energéticas, é aplicada uma análise similar. Neste contexto, a principal diferença é que o balanço energético não é comparado a um limite de exportação, mas sim ao requisito mínimo das Usinas Hidroelétricas (Req_UHE_MínhSIN), essencial para garantir a segurança da operação e manter o controle da frequência elétrica do SIN em níveis apropriados.
+
+A equação (IV), a seguir, representa o resultado de geração hidráulica (Res_UHEhSIN) para equilibrar o balanço energético do SIN, considerando a carga horária do sistema e os valores atribuídos às outras fontes de geração para cada hora do período entre 2026 e 2029.
+
+Caso o valor calculado (Res_UHEhSIN) seja inferior ao requisito mínimo para o sistema no momento específico h, (Req_UHE_MínhSIN), isso sinaliza uma sobreoferta de geração no instante h. Neste cenário, é necessário realizar cortes de geração para assegurar o equilíbrio entre a carga e a geração do sistema. Dado que a geração das UHEs não pode ser reduzida abaixo do requisito mínimo, torna-se necessário ajustar a geração de outras fontes. Estes ajustes devem seguir a equação apresentada abaixo, considerando somente os valores positivos da equação (V).
+
+6.3.1. Classificação dos Cortes
+
+Após a avaliação de todos os instantes, é feita a classificação dos cortes. Foi adotada uma abordagem top-down na classificação dos cortes, de modo que em casos em que houver, simultaneamente, cortes por confiabilidade elétrica e por razões energéticas ao mesmo conjunto de geradores, a classificação adotada será de corte por razões energéticas. O motivo da escolha desse método de classificação é justificado pelo fato de que, independentemente das restrições do sistema de transmissão, ainda haveria a necessidade de restringir geração por razões energéticas. Dessa forma, na abordagem top-down, os cortes energéticos prevalecem sobre os cortes por confiabilidade.
+
+Por outro lado, caso fosse adotada a priorização da classificação por confiabilidade, poderia ser transmitida a percepção de que as restrições que levam ao curtailment estão concentradas exclusivamente no sistema de transmissão. No entanto, mesmo com a expansão da rede de transmissão para eliminar tais restrições, os cortes ainda assim ocorreriam, devido à necessidade de equilíbrio entre geração e consumo em determinados momentos — ou seja, por razões energéticas. Por isso, neste exercício, quando houver simultaneidade de causas, será priorizada, sempre que possível e em montante adequado, a alocação dos cortes como sendo de natureza energética.
+
+Nesse contexto, são considerados três condicionantes que definem os possíveis cenários de interseção entre esses conjuntos, os quais são descritos a seguir. Ressalta-se que, para fins de ilustração dessas três condicionantes, utilizou-se como exemplo o montante de corte por confiabilidade necessário nas interligações entre as regiões Norte/Nordeste e Sudeste/Centro-Oeste, em paralelo com os cortes energéticos. No entanto, essa escolha não restringe a aplicação da metodologia apenas a essas regiões, sendo a lógica de classificação aqui descrita plenamente reaplicável a qualquer outra região (ou restrição) do SIN. As três possíveis opções são:
+
+i. Corte Energético no SIN > Corte Energético no NNE > Corte por Confiabilidade no NNE: nesse cenário, o montante de corte energético necessário no SIN, distribuído entre as regiões, já é suficiente para atender também às restrições de confiabilidade elétrica nas regiões Norte e Nordeste. Nesse contexto, não se faz necessário um corte adicional por confiabilidade, e todos os cortes são classificados como cortes energéticos. Dessa forma, todo corte ocorrido na região Norte e Nordeste (NNE) é classificado como corte energético, visto que o corte energético no NNE necessário na hora h (CortehEnergético NNE) é maior que o corte por confiabilidade no NNE necessários na hora h (CortehConfiabilidade NNE).
+
+ii. Corte por Confiabilidade no NNE > Corte Energético no SIN: nessa situação, o montante de corte de geração por confiabilidade no NNE (CortehConfiabilidade NNE) excede o corte energético necessário para o SIN (CortehEnergético SIN). Nesta situação, a parcela de corte por confiabilidade é classificada como a diferença entre o montante de geração que deve ser cortado por confiabilidade no NNE e o corte energético necessário no SIN (CortehConfiabilidade NNE - CortehEnergético SIN). Simultaneamente, a parcela de corte energético permanece como o montante inicialmente necessário no SIN (CortehEnergético SIN).
+
+iii. Corte Energético no SIN > Corte por Confiabilidade no NNE > Corte Energético no NNE: Por fim, nesse cenário, o montante de corte por confiabilidade necessário no NNE (CortehConfiabilidade NNE) é maior que o corte energético destinado para essa região (CortehEnergético NNE), mas menor que o total de corte energético do SIN (CortehEnergético SIN). Neste caso, o corte energético distribuído no SIN não é suficiente para solucionar as questões de confiabilidade nas interligações entre o Norte e o Nordeste. Portanto, é preciso calcular o valor adicional de corte necessário no NNE para evitar violações dos limites elétricos na região. Este corte incremental resulta em uma redução dos cortes de geração nas regiões Sul, Sudeste/Centro-Oeste, ajustando-se de modo que o volume total de geração frustrada no sistema interligado permaneça equivalente ao necessário. Nesse sentido, a parcela de corte por confiabilidade corresponde apenas ao corte incremental realizado no NNE (CortehConfiabilidade NNE - CortehEnergético NNE), e a parcela de corte energético é ajustada subtraindo o corte por confiabilidade incremental do montante total necessário no SIN.
+
+A Tabela 6.4 sintetiza e exemplifica os montantes de cada tipo de corte por classificação em cada um dos três possíveis cenários.
+
+Tabela 6.4: Síntese dos Montantes de corte por classificação para os três possíveis cenários avaliados.
+
+6.4. Análise e Resultados
+
+Para apresentação dos resultados, foram definidos quatro intervalos de tempo com base no comportamento da carga e da geração fotovoltaica do SIN:
+
+i. Entre 00:00 e 06:59: Caracterizado por uma carga e geração fotovoltaica reduzidas.
+ii. Das 07:00 às 08:59 e das 16:00 às 17:59: Abrange as horas em que a geração fotovoltaica está em transição, incluindo um período de crescimento e outro de decrescimento.
+iii. Entre 09:00 e 15:59: É marcado por uma geração fotovoltaica elevada e uma carga supervisionada reduzida. Nesse período, grande parte da carga é atendida por MMGD.
+iv. Entre 18:00 e 23:59: Envolve uma geração fotovoltaica reduzida ou nula, porém com uma carga supervisionada elevada.
+
+Adicionalmente, tendo em vista a diferença entre as bases de capacidade instalada tanto de MMGD quanto de usinas eólicas e fotovoltaicas, para as análises a seguir será utilizada a base de MMGD da metodologia 4MD e a previsão da evolução da capacidade instalada de geração eólica e fotovoltaica da base PEN/PMO, ambas utilizadas no PMO de setembro de 2025. De forma complementar, será feita uma sensibilidade dos resultados considerando as bases de geração consideradas no PAR/PEL 2025.
+
+Nesse contexto, a Figura 6.4, a seguir, apresenta a distribuição dos cortes de geração (em MW) ao longo do tempo, divididos nos quatro intervalos específicos supracitados, entre 2026 e 2029. Os pontos azuis representam as horas sem cortes de geração, enquanto os pontos vermelhos indicam as horas com cortes, com a magnitude dos cortes, em MW, no eixo Y. A partir dela é possível identificar que:
+
+Intervalo das 00:00h às 06:59h (3,3% do intervalo com restrição): Este gráfico mostra uma predominância de pontos de operação sem cortes de geração, como evidenciado pela quantidade de pontos azuis e pela ausência de pontos vermelhos. Isso indica que este período não é crítico do ponto de vista de cortes de geração por razões energéticas e por razões de confiabilidade das interligações do Norte e Nordeste para o Sudeste.
+Intervalo das 07:00h às 08:59h e das 16:00h às 17:59h (37,8% do intervalo com restrição): Este gráfico cobre os períodos de transição de manhã e tarde. Há uma ocorrência moderada de cortes de geração, com montantes de restrição notáveis na ordem de até 20 GW, com alguns picos na ordem de 40 GW. Esse intervalo indica que serão necessários ajustes do montante de geração tanto no início do dia e quanto ao final do dia antes da rampa de carga.
+Intervalo das 09:00h às 15:59h (73,7% do intervalo com restrição): Este é o período mais crítico, onde há a presença da MMGD de forma acentuada junto com a geração fotovoltaica centralizada. Neste intervalo, os cortes atingem montantes da ordem de 50 GW, principalmente aos domingos e feriados, onde pode ser identificada a necessidade de restringir toda a geração eólica e fotovoltaica para atender ao equilíbrio carga e geração do SIN. Nesta perspectiva, a integração de novas fontes de geração no período diurno irá agravar as restrições e aumentar a frequência dos cortes de geração já previstos.
+Intervalo das 18:00h às 23:59h (2,8% do intervalo com restrição): Semelhante ao primeiro intervalo, este período apresenta uma baixa frequência de cortes de geração pelos motivos supracitados, e com cortes que não passam da ordem de 10 GW. É possível perceber que, à medida que a carga aumenta, há uma diminuição considerável dos montantes de cortes.
+
+Figura 6.4: Distribuição dos Cortes de Geração ao Longo do Tempo
+
+Como forma de passar uma sensibilidade sobre o impacto da escolha das bases de capacidade instalada de geração, tanto de MMGD quanto de eólica e fotovoltaica, a Tabela 6.5 apresenta o maior corte verificado por período e o percentual do tempo em que há violação de algum dos três limites, por período do dia, para as bases de capacidade instalada de geração, a partir das combinações dessas bases.
+
+Tabela 6.5: Comparação da evolução do Curtailment para as bases analisadas.
+
+Tal sensibilidade permite compreender com mais clareza o impacto da MMGD, uma vez que o cenário da previsão 4MD possui uma capacidade instalada maior que a base do PAR/PEL, e das bases PEN/PMO e PAR/PEL na previsão de capacidade instalada de geração eólica e fotovoltaica, visto que a primeira possui menor capacidade que a segunda. Além disso, fica evidente que tanto o aumento da capacidade instalada de geração centralizada, representado pelas eólicas e fotovoltaicas na base PAR/PEL, quanto de MMGD, representado na base 4MD, aumentarão consideravelmente as restrições durante o período diurno.
+
+A Figura 6.5 apresenta o corte médio e o percentual de corte de geração por cada classificação ao longo do tempo, enquanto a Figura 6.6 apresenta as mesmas informações segmentadas por fonte. A partir das figuras, fica evidente que os cortes por razões energéticas serão preponderantes em relação aos cortes por confiabilidade elétrica das interligações, com o impacto principalmente na fonte solar, uma vez que o percentual de corte é superior a 25% em quase todo o horizonte, e tende a se agravar com uma maior penetração de MMGD no SIN. Cumpre destacar que as restrições internas aos subsistemas não estão sendo representadas, especialmente em usinas localizadas no Rio Grande do Norte e Ceará, tampouco o vertimento turbinável das UHEs, o que pode resultar na subestimação do curtailment total do SIN. Portanto, esses números não devem ser interpretados isoladamente para pontos específicos, mas sim como indicativos de tendências médias no sistema.
+
+Figura 6.5: Corte Médio e Percentual do Corte de Geração por Classificação ao Longo do Tempo
+
+Figura 6.6: Corte Médio e Percentual do Corte de Geração por Fonte e Classificação ao Longo do Tempo
+
+6.4. Impacto da Integração de Grandes Consumidores no Curtailment
+
+Novos mercados com alto consumo de energia elétrica vêm se desenvolvendo em escala global. Entre eles, destacam-se os setores de tecnologia, como os data centers, e as indústrias voltadas à descarbonização da economia, com ênfase para o hidrogênio verde (H2V). Nesse cenário, tanto o H2V quanto os data centers surgem como alternativas promissoras para absorver parte do excedente de geração renovável e, potencialmente, reduzir o curtailment dessa energia.
+
+Para avaliar esse potencial, foram analisados dois cenários de sensibilidade, focados no impacto da integração de grandes consumidores na redução do curtailment do SIN em 2029. Nas análises, foi adotada uma premissa propositalmente hipotética e otimista: foi considerado que o parque hidráulico atual teria capacidade para suprir a conexão dessas cargas, inclusive nos períodos de ponta. Dessa forma, não foi prevista a expansão da base de geração — escolha metodológica importante, pois qualquer alteração nesse ponto, como maior despacho térmico na base poderia elevar os cortes de geração em determinados momentos.
+
+Com esse enquadramento, buscou-se isolar e quantificar o potencial teórico máximo de redução do curtailment decorrente da entrada de grandes consumidores com perfil de carga constante ao longo do dia, sem condicionar a análise aos desafios de atendimento à ponta ou à necessidade de reforços na oferta de potência e energia.
+
+Na prática, esse efeito pode ser menor. Isso porque, para atender às novas cargas ao longo de todo o ano, será necessário ampliar a oferta de geração e de potência no SIN. Dependendo da combinação de recursos adicionados — por exemplo, térmicas inflexíveis ou com restrições elevadas de unit commitment — o perfil de despacho resultante pode alterar as condições operativas e, em alguns casos, até aumentar o curtailment, minimizando o impacto positivo da integração desses consumidores na redução dos cortes de geração.
+
+Além disso, grandes consumidores como data centers e indústrias de hidrogênio verde tendem a operar de forma contínua e pouco flexível. Esse comportamento ajuda a absorver a geração renovável excedente durante o dia, mas não contribui para aliviar os períodos críticos de ponta, onde se concentram as maiores restrições de potência do SIN. Assim, o benefício real dependerá da capacidade do sistema de acomodar simultaneamente a nova carga e os requisitos adicionais de potência.
+
+Em síntese, os cenários apresentados têm como objetivo medir o limite superior do benefício potencial, e não reproduzir exatamente como o sistema deverá operar após a integração desses novos grandes consumidores.
+
+No Cenário 1, foi considerado um incremento de carga de 1.500 MW no Nordeste e 1.000 MW no Sudeste/Centro-Oeste. No Cenário 2, avaliou-se um incremento de 3.000 MW no Nordeste, mantendo-se os mesmos 1.000 MW no Sudeste/Centro-Oeste. Para ambos os cenários, utilizou-se a base de MMGD da metodologia 4MD e a previsão de geração eólica e fotovoltaica da base PEN/PMO. A Figura 6.7 apresenta os cortes médios para o cenário de referência e para os dois cenários de sensibilidade supracitados. De forma adicional, a Figura 6.8 apresenta os cortes médios dessa análise dentro do intervalo de 09h00 às 15h59.
+
+Figura 6.7: Corte Médio e Percentual do Corte de Geração por Fonte e Classificação ao Longo do Tempo
+
+Figura 6.8: Corte Médio e Percentual do Corte de Geração por Fonte e Classificação ao Longo do Tempo
+
+Os resultados apresentados na Figura 6.7 mostram que a integração de grandes consumidores reduz o curtailment por razões energéticas e de confiabilidade, porém em magnitude limitada quando comparada ao total de cortes observados. Mesmo no cenário mais extremo, com acréscimo de aproximadamente 4 GW de carga (3 GW no Nordeste e 1 GW no Sudeste/Centro-Oeste), a redução do curtailment médio por razões energéticas foi de apenas cerca de 700 MW, e o total somado (energético + confiabilidade) permaneceu inferior a 800 MW. Nesta linha, a Figura 6.8 mostra que, embora grandes blocos de carga com perfil de consumo constante contribuam para absorver parte da geração renovável excedente durante o dia, o volume de cortes está concentrado em janelas horárias específicas, com patamares que excedem mesmo incrementos de carga expressivos. Nessa simulação do Cenário 2, a integração de aproximadamente 4 GW de novos consumidores resultou em uma redução de 693 MW médios no curtailment total do SIN, o que corresponde a uma “eficiência teórica” de cerca de 17% na mitigação dos cortes de geração.
+
+Em síntese, a análise dos cortes de geração ao longo do horizonte 2026–2029 evidencia que o problema é estruturalmente concentrado no período diurno, especialmente entre 09h e 15h59, quando a combinação entre MMGD e a geração fotovoltaica e eólica centralizada resulta em montantes de restrição que podem superar 50 GW, atingindo situações extremas em fins de semana e feriados. Nos demais intervalos, madrugada e noite, os cortes são reduzidos, e nos períodos de transição (07h–08h59 e 16h–17h59) há apenas ajustes moderados de geração. Esse diagnóstico reforça que a eliminação ou redução substancial dos cortes de geração renovável não dependerá apenas da integração de grandes consumidores ou de recursos de flexibilidade, como armazenamento ou resposta da demanda. Será igualmente essencial que a expansão da geração renovável variável, sobretudo solar, centralizada e distribuída, não continue avançando em ritmo superior ao crescimento da carga do SIN nesses horários. Caso contrário, o sistema permanecerá preso a um efeito de “soma zero”, em que novas usinas renováveis passam apenas a deslocar a geração renovável já existente, sem produzir ganho líquido de energia útil para o SIN, ampliando ainda mais a necessidade de cortes. Nesse contexto, será fundamental racionalizar políticas públicas, incentivos e subsídios, de modo que a expansão futura da oferta renovável se alinhe à capacidade real de absorção do sistema e contribua de forma efetiva para eficiência, otimização e segurança da operação eletroenergética do SIN.
+
+6.5. Conclusões
+
+Este capítulo buscou lançar luz sobre os desafios do curtailment no horizonte temporal do ONS, compreender as causas, analisar a evolução dos cortes de geração ao longo dos últimos anos e realizar projeções para antecipar tendências futuras. Essa análise contribui para minimizar a assimetria de informações, priorizar reformas e ações técnicas e regulatórias necessárias, além de fundamentar o aprimoramento e a dosimetria das políticas públicas envolvidas e, portanto, fornecer ao Setor Elétrico Brasileiro uma base sólida para futuras decisões relacionadas ao seu tema central.
+
+07
+Impactos da Geração
+Distribuída na Segurança
+Elétrica do SIN
+
+O Setor Elétrico Brasileiro (SEB) está vivenciando uma série de transformações que acompanham a transformação energética global. Dentre as principais, destaca-se o expressivo aumento da participação dos Recursos Energéticos Distribuídos (REDs) no atendimento à demanda elétrica, que vem alterando sobremaneira a operação do sistema elétrico. No Brasil, a Micro e Minigeração Distribuída (MMGD) é a principal modalidade de REDs e já ultrapassa 43 GW de capacidade instalada, posicionando-a atualmente como a segunda maior fonte de geração do país em termos de capacidade instalada.
+
+O arcabouço regulatório da MMGD no Brasil moldou de maneira decisiva o ritmo de expansão desse segmento ao longo dos últimos anos. O marco regulatório inicial instituiu um Sistema de Compensação de Energia Elétrica (SCEE), permitindo que a energia injetada na rede pela MMGD compensasse grande parte da tarifa. Esse arranjo, desenhado para estimular a geração renovável e descentralizada, sustentou um ambiente favorável ao investimento e contribuiu para a rápida difusão da geração distribuída no país. Com a promulgação da Lei nº 14.300/2022, que instituiu o Marco Legal da MMGD e estabeleceu um modelo tarifário com aplicação progressiva da Tarifa de Uso do Sistema de Distribuição entre 2023 e 2029, o setor elétrico brasileiro passou a vivenciar uma aceleração significativa na instalação de sistemas de MMGD. Esse movimento decorre da busca dos agentes por assegurar os benefícios e descontos tarifários previstos no período de transição estabelecido pela lei.
+
+O relatório da Agência Internacional de Energia (International Energy Agency – IEA) [a] discute o plano de transição gradual do SCEE da MMGD, estabelecido pela Lei nº 14.300/2022 e alerta, ainda, que, na ausência de reformas estruturais no SEB, a manutenção da taxa de crescimento da MMGD poderá acarretar impactos significativos para o setor, tanto sob a perspectiva econômica quanto sob os aspectos técnicos e de segurança operativa do SIN.
+
+Conforme os dados encaminhados pelas distribuidoras para este ciclo do PAR/PEL, as projeções indicam que a capacidade instalada da MMGD deverá alcançar aproximadamente 61 GW em 2030. Paralelamente, a previsão do Modelo de Mercado da Micro e Minigeração Distribuída (4MD), elaborada a partir da divisão empregada pela ANEEL em seu banco de dados sobre MMGD, aponta para um crescimento ainda mais acelerado. Ressalta-se que, além de utilizado pela Empresa de Pesquisa Energética (EPE), o modelo 4MD passou a ser incorporado aos modelos de Planejamento da Operação Energética (PEN) e do Programa Mensal da Operação (PMO) do ONS e, portanto, também nos modelos de formação de preços do setor elétrico brasileiro.
+
+A diferença entre a projeção do PAR/PEL e do modelo 4MD decorre, principalmente, da natureza das duas bases: enquanto o PAR/PEL utiliza projeções enviadas pelas distribuidoras para os estudos elétricos do Operador, a base 4MD representa um retrato mais dinâmico, influenciado pela entrada contínua de novos pedidos de conexão e pela velocidade de contratação e instalação dos sistemas fotovoltaicos distribuídos. A Figura 1, a seguir, apresenta a evolução histórica da MMGD desde 2017, além da comparação das projeções das duas bases, PAR/PEL 2025 e 4MD do PMO de setembro de 2025, para os próximos anos. Destaca-se que a previsão do PAR/PEL vai até 2030, enquanto a do PMO se estende até 2029.
+
+Expansão Verificada e Prevista da MMGD
+
+Figura 7.1: Expansão Verificada e Prevista da MMGD.
+
+Além da MMGD, é relevante destacar a participação das usinas classificadas como Tipo III, comumente conectadas às redes de distribuição e sem relacionamento operacional com o ONS, que totalizam aproximadamente 19,2 GW de capacidade instalada. Nesse panorama de descentralização dos recursos de geração, verifica-se um montante considerável de recursos que não dispõem de supervisão e capacidade de controle em tempo real.
+
+Um dos efeitos do aumento da capacidade instalada da geração distribuída é sua crescente participação no atendimento à demanda do SIN em determinados horários, o que, na prática, implica no deslocamento de recursos de geração centralizados. Nesse contexto, o gráfico do tipo boxplot apresentado na Figura 2 ilustra a evolução da participação verificada do somatório da geração de usinas Tipo III e MMGD no atendimento à demanda do SIN nos anos de 2023, 2024 e 2025. Adicionalmente, o gráfico também apresenta a previsão dessa participação percentual para o período entre 2026 e 2029, considerando o crescimento de demanda baseado na 2ª Revisão Quadrimestral do Planejamento Anual de Operação Energética – Ciclo 2025 (2025 – 2029).
+
+Figura 7.2:Participação da geração distribuída (MMGD + Usinas Tipo III) no Atendimento à Demanda do SIN.
+
+De acordo com a análise apresentada na Figura 7.2, observa-se que a geração distribuída tem contribuído de forma crescente para o atendimento à demanda do SIN. A participação máxima da geração conectada na rede de distribuição (MMGD + Usinas Tipo III) em relação à carga global do sistema atingiu aproximadamente 36% em 2023, 40% em 2024 e 46% em 2025. Destaca-se que o principal vetor do aumento da participação da geração conectada na rede de distribuição no atendimento à demanda é a expansão significativa da MMGD. Considerando apenas a participação da MMGD, verificam-se valores percentuais máximos anuais de 25% em 2023, 34% em 2024 e 40% em 2025, evidenciando a forte expansão verificada dessa modalidade de geração. Complementarmente, as projeções realizadas para o período de 2026 a 2029 indicam uma tendência de aumento do percentual da carga do SIN atendida pelos REDs. Embora os valores médios anuais de participação não apresentem aumento tão expressivo, observa-se que, em instantes específicos, a geração distribuída poderá atender cerca de 57% da carga global em 2026, 59% em 2027, 61% em 2028 e ultrapassar 64% em 2029, reforçando o papel cada vez mais estruturante desses recursos na operação eletroenergética do SIN.
+
+A evolução expressiva da participação dos REDs no atendimento à carga do SIN, evidenciada nos percentuais crescentes apresentados acima, reflete uma transformação estrutural do setor elétrico brasileiro. Um sistema historicamente ancorado em grandes usinas centralizadas passou, em menos de uma década, a conviver com um volume significativo de geração distribuída, que chegará, em diversos instantes, a suprir mais da metade da carga do país. Essa mudança de paradigma não implica a superação dos desafios operativos e de planejamento tradicionais; ao contrário, muitos deles são amplificados, assumem novas formas e introduzem dinâmicas adicionais de complexidade, exigindo abordagens tecnológicas, regulatórias e institucionais distintas daquelas do passado.
+
+Entre os desafios associados a esse novo arranjo, destacam-se a baixa observabilidade e controlabilidade dos REDs, a variabilidade de geração e a redução dos níveis de inércia, de curto-circuito e da capacidade dinâmica de suporte de tensão, fatores que afetam diretamente a resiliência do SIN frente a perturbações. Soma-se a isso o fato de que os ajustes de proteção de grande parte dos geradores distribuídos atualmente em operação não são coordenados com as ações de controle e proteção sistêmicas, podendo resultar em desligamentos em cascata diante de perturbações na Rede Básica. Esses são apenas alguns dos principais desafios introduzidos pela expansão dos REDs, aos quais se soma, conforme detalhado na sequência, o surgimento do fluxo reverso de potência ativa em transformações de fronteira da Rede Básica e implicações associadas.
+
+Inversão de Fluxo de Potência nas Transformações da Rede Básica de Fronteira
+
+Tradicionalmente, a operação do SIN era caracterizada por um fluxo de potência unidirecional, no qual a energia proveniente das grandes usinas hidráulicas e térmicas era transmitida pela Rede Básica até as redes de distribuição. Entretanto, o aumento da participação da geração conectada às redes de distribuição para atendimento à demanda do sistema tem introduzido um novo paradigma operacional: o fluxo bidirecional de potência nas transformações de fronteira da Rede Básica.
+
+Com a inserção crescente dos Recursos Energéticos Distribuídos, em especial da MMGD, observa-se a possibilidade de fluxo de potência ativa no sentido da rede de distribuição para a Rede Básica (D→T) em subestações de fronteira durante o período diurno. Já no período noturno, a operação retorna ao sentido convencional, com o fluxo de potência da Rede Básica para a distribuição (T→D), destinado ao atendimento da carga. A Figura 3, a seguir, representa de forma didática a operação do sistema elétrico atual, considerando a possibilidade de inversão de fluxo de potência ativa nas fronteiras entre os sistemas de transmissão e distribuição devido, principalmente, ao avanço da integração dos REDs, em especial MMGD, nas redes de distribuição.
+
+Figura 7.3: Fluxo Bidirecional de Potência Ativa entre os Sistemas de Transmissão e Distribuição.
+
+Nesse contexto, desde o ciclo do PAR/PEL 2024, o ONS realiza uma avaliação do desempenho elétrico das transformações na Rede Básica de Fronteira, com ênfase no escoamento da geração da rede de distribuição para o sistema de transmissão. Para realizar tal diagnóstico, foi solicitado às distribuidoras o envio de previsões de carga e geração MMGD para o período diurno de dias típicos de domingo, normalmente caracterizados por uma baixa demanda. Ademais, além das transformações de fronteira que apresentaram fluxo reverso de potência ativa, foi realizado um diagnóstico para identificar também aquelas em que podem ser verificados problemas de sobrecarga nos transformadores, seja em regime normal de operação ou em situações de contingências simples de um dos transformadores.
+
+No gráfico a seguir está apresentado uma síntese quantitativa dessa avaliação, destacando o número de transformações de fronteira que apresentam inversão de fluxo de potência ao longo dos anos 2026, 2028 e 2030. Com relação às cores das colunas do gráfico, cumpre ressaltar que: (i) o verde indica que há fluxo reverso na subestação, mas não são esperadas sobrecargas na transformação de fronteira, seja em condição normal de operação ou em situações de contingência, (ii) o amarelo representa o carregamento superior à capacidade operativa de longa duração, porém inferior à capacidade operativa de curta duração, denominado sobrecarga admissível, em condição de contingência, (iii) o vermelho claro representa o carregamento superior a capacidade operativa de curta duração dos transformadores remanescentes, denominado sobrecarga inadmissível, em situação de contingência e (iv) o vermelho escuro indica a possibilidade de sobrecarga em condição normal de operação.
+
+Quantidade de Transformações de Fronteira com Fluxo Reverso
+
+Figura 7.4: Síntese das Transformações de Fronteira com Possibilidade de Fluxo Reverso.
+
+De acordo com o gráfico apresentado acima, verifica-se que no final do horizonte de análise há 217 transformações de fronteira com possibilidade de fluxo reverso de potência ativa. Dentre tais transformações, 19 apresentam possibilidade de sobrecarga inadmissível nos transformadores remanescentes em situação de contingência simples e 2 de sobrecarga em condição normal de operação. É relevante ressaltar que houve uma variação no número de subestações que apresentam possibilidade de sobrecarga e que há uma tendência de aumento do número de transformações com possibilidade de fluxo reverso ao longo do horizonte de análise. Ao comparar os resultados obtidos neste ciclo do PAR/PEL com os resultados do ciclo de 2024, verifica-se um aumento no número de subestações com possibilidade de fluxo reverso de potência. No estudo anterior, referente ao PAR/PEL 2024, foram identificadas 138 subestações com essa condição ao final do horizonte de análise, enquanto, neste ciclo, o total aumentou para 217. Esse resultado é justificado pela elevação na previsão de participação da MMGD no atendimento à demanda, conforme informações enviadas pelos agentes de distribuição. No ciclo do PAR/PEL 2024, estimava-se uma capacidade instalada de MMGD em torno de 49,5 GW ao final do horizonte, enquanto, no PAR/PEL 2025, a previsão alcança 60,9 GW para o ano de 2030.
+
+Embora o aumento da MMGD já influencie nos cortes de geração centralizada por razões energéticas — mesmo na ausência de fluxo reverso — a ocorrência de reversão de fluxo nas subestações evidencia um cenário mais crítico. Nesses casos, a geração distribuída supera a carga local e passa, na prática, a concorrer com os recursos centralizados no atendimento às cargas de outros pontos ou regiões do SIN. Diferentemente das usinas centralizadas, entretanto, a geração distribuída ainda não pode ser gerenciada operacionalmente para solucionar problemas sistêmicos, o que limita a capacidade do Operador de realizar o despacho mais adequado às necessidades do sistema. Assim, ainda que o fluxo reverso não implique sobrecarga nos transformadores de fronteira, ele reforça a necessidade de restrições adicionais à geração centralizada, seja por razões energéticas em momentos de baixa demanda, seja por requisitos de confiabilidade associados ao cumprimento dos limites e diretrizes operativas para atendimento aos critérios de segurança e desempenho estabelecidos nos Procedimentos de Rede.
+
+Conforme destacado, a MMGD vem apresentando diferentes impactos na demanda supervisionada. Nesse cenário, a fim de identificar em quais regiões do Brasil há um maior número de transformações de fronteira com possibilidade de fluxo reverso, foi realizado um diagnóstico do escoamento de geração distribuída por estado. Tal análise está apresentada na Figura 5, a seguir, na qual os símbolos circulares indicam a quantidade de subestações que apresentam fluxo reverso.
+
+Figura 7.5: Diagnóstico Estadual das Subestações com Possibilidade de Fluxo Reverso.
+
+De acordo com a análise do mapa acima, conclui-se que dezoito estados do Brasil apresentam transformações de fronteira com possibilidade de fluxo reverso. Além disso, Rio Grande do Sul, São Paulo, Goiás, Minas Gerais, Paraná e Mato Grosso são os estados que ganham destaque como aqueles que apresentam o maior número de subestações com possibilidade de operarem com o fluxo de potência ativa no sentido da rede de distribuição para transmissão. Por outro lado, nos estados do Amazonas, Acre, Roraima, Amapá, Maranhão, Alagoas, Sergipe e Rio de Janeiro não foram identificadas transformações de fronteira com indicação de fluxo reverso neste ciclo do PAR/PEL.
+
+Complementarmente, ao se analisar os resultados apresentados na Figura 5 em termos percentuais, considerando o número de transformações de fronteira com possibilidade de fluxo reverso em relação ao total de transformações de cada estado, obtém-se uma visão sobre a distribuição desses casos no SIN. Estados com menor quantidade absoluta de subestações podem apresentar percentuais elevados, mesmo que não figurem entre aqueles com maior número absoluto de ocorrências. Essa avaliação percentual permite comparar estados de diferentes portes e identificar onde a influência da geração distribuída sobre os transformadores de fronteira é relativamente mais significativa. Nesse cenário, na Figura 6, a seguir, está apresentado o diagnóstico percentual do número de transformações de fronteira com possibilidade de fluxo reverso em cada estado.
+
+Percentual de Transformações de Fronteira com Possibilidade de Fluxo Reverso
+
+Figura 7.6: Análise Percentual do Número de Transformações de Fronteira com Possibilidade de Fluxo Reverso.
+
+O gráfico acima evidencia que alguns estados apresentam alta concentração relativa de transformações de fronteira sujeitas a fluxo reverso de potência ativa. Tal fato indica que, nesses estados, a geração distribuída já supera de forma consistente a carga atendida nas redes de distribuição, com destaque para os estados de Mato Grosso, Goiás e Mato Grosso do Sul. Essa condição intensifica a concorrência entre a geração distribuída e a geração centralizada e pode trazer riscos operacionais adicionais. Por exemplo, em estados com elevados percentuais de subestações apresentando fluxo reverso, torna-se mais desafiador gerenciar os montantes de carga efetivamente disponíveis para atuação do Esquema Regional de Alívio de Carga (ERAC), responsável por realizar cortes de carga controlados em situações de déficit de geração. Nesses casos, subestações ou alimentadores das redes de distribuição com fluxo reverso, quando desligados por atuação do ERAC, podem agravar ainda mais o desequilíbrio entre carga e geração, ampliando os efeitos da perturbação.
+
+De forma complementar, regiões com diversas subestações com fluxo reverso também podem ser mais impactadas no processo de recomposição do sistema após distúrbios, uma vez que a reconexão automática da MMGD durante a recomposição pode comprometer a segurança e a eficácia das etapas iniciais, atrasando o restabelecimento pleno das cargas. Nesse contexto, as análises apresentadas fornecem subsídios importantes para que o setor elétrico, em especial o ONS e distribuidoras, possa se antecipar aos desafios e estruturar ações adequadas diante dessa nova realidade.
+
+Adicionalmente, em determinadas transformações de fronteira o fluxo reverso alcança níveis capazes de provocar sobrecarga nos transformadores, seja em condição normal de operação ou em situações de contingências simples, o que pode indicar a necessidade de restrição de geração na rede de distribuição para o adequado controle do carregamento. Atualmente já se identifica a possibilidade de sobrecarga em condição normal de operação nas transformações das SEs Nova Mutum 230/69 kV e Brasnorte 230/138 kV, ambas localizadas no estado de Mato Grosso. Dessa forma, para assegurar o controle de carregamento nessas transformações de fronteira, estão normatizadas medidas operativas que preveem o corte manual da geração distribuída, a ser executado pela distribuidora mediante solicitação do ONS.
+
+Esse diagnóstico reforça que a expansão em larga escala dos REDs e o crescimento do fluxo reverso em diversas subestações ampliam de forma significativa os desafios de coordenação da operação do SIN, sobretudo quando tais fluxos não são gerenciáveis. Para enfrentar esse novo cenário, torna-se imprescindível redefinir o papel das distribuidoras, promovendo uma integração mais efetiva entre as camadas de “atacado” e “varejo” dos sistemas elétricos. Para o ONS, aprimorar a visibilidade e a capacidade de atuação intermediada sobre os REDs, de modo que esses recursos possam contribuir ativamente para a operação, flexibilidade e estabilidade do sistema, é condição fundamental. Nesse contexto, os DSOs assumem uma função estratégica, e a interface TSO–DSO consolida-se como elemento crítico para viabilizar uma operação segura e eficiente, capaz de sustentar as transformações em curso e apoiar um crescimento de REDs alinhado às exigências de confiabilidade e sustentabilidade do setor elétrico brasileiro.
+
+Impactos do aumento da MMGD no Controle de Tensão da Rede Básica
+
+Os estudos de controle de tensão têm por objetivo definir as estratégias operativas mais adequadas, utilizando os recursos disponíveis no sistema elétrico, para manter os níveis de tensão dentro dos critérios estabelecidos nos Procedimentos de Rede e assegurar margens de estabilidade adequadas. Entre os principais recursos empregados destacam-se: o controle de tensão pelas unidades geradoras, o controle de potência reativa por meio de compensadores síncronos e estáticos, a atuação dos comutadores sob carga dos transformadores e as manobras de chaveamento de bancos de capacitores e reatores tanto da Rede Básica quanto da Rede de Distribuição.
+
+No âmbito do planejamento da operação e da operação em tempo real, a abertura de linhas de transmissão para fins de controle de tensão é considerada uma medida de último recurso, adotada somente após o esgotamento de todas as alternativas disponíveis no sistema. O uso excessivo dessa estratégia pode acarretar consequências relevantes, destacando-se o desgaste prematuro dos equipamentos de manobra associados.
+
+Tradicionalmente, as situações mais críticas para a manutenção de padrões adequados de controle de tensão estão associadas a condições de carga reduzida. Nessas circunstâncias, a rede de transmissão é menos demandada e, consequentemente, o perfil de tensão do sistema tende a se elevar, exigindo a adoção de todas as medidas necessárias para assegurar o desempenho adequado dos equipamentos dentro dos limites operativos. Historicamente, tais situações ocorriam predominantemente durante a madrugada ou nos finais de semana, períodos caracterizados por menores níveis de carga.
+
+Entretanto, mais recentemente, a redução verificada da demanda supervisionada do SIN no período diurno, especialmente aos domingos e feriados, contrasta com a expansão do sistema de transmissão, projetado para atendimento à demanda máxima do sistema, agora deslocada para o período noturno. Esse novo paradigma impõe desafios adicionais à operação, especialmente para a manutenção de níveis adequados de tensão nos equipamentos da Rede Básica durante o intervalo de transição entre os períodos diurno e noturno, caracterizado por um acentuado e rápido aumento da demanda supervisionada. Esse cenário reforça a necessidade premente de ampliar a flexibilidade operativa do sistema, tanto para o atendimento à ponta de carga quanto para o controle tensão, sujeito a variações significativas em curtos intervalos de tempo.
+
+Ultimamente, a Operação em Tempo Real tem recorrido à abertura de linhas para controle de tensão em diversas ocasiões em que os recursos disponíveis não têm se mostrado suficientes para o adequado controle. Como exemplo, no dia da menor carga supervisionada registrada até o momento em 2025, dia 10/08/2025 (domingo do Dia dos Pais), foi necessária a abertura de 26 linhas para controle de tensão. Além disso, os estudos de curto prazo também têm apontado a necessidade de abertura de linhas para fins de controle de tensão, alcançando, em alguns cenários de carga mínima diurna de domingo, a ordem de 30 linhas desligadas.
+
+Todavia, nos estudos de médio prazo do PAR/PEL 2025, que também consideram o cenário de carga mínima diurna de domingo, verifica-se uma necessidade menor de abertura de linhas para controle de tensão, chegando a apenas três linhas abertas com esse intuito na projeção para o ano de 2030. Alguns fatores explicam essa diferença. O principal deles é a previsão de entrada em operação de diversos equipamentos de controle de tensão, incluindo reatores, compensadores síncronos e compensadores estáticos.
+
+Somente no que se refere aos novos reatores de barra em subestações da Rede Básica, estima-se a implantação de aproximadamente 6.900 Mvar na região Sudeste/Centro-Oeste, 4.600 Mvar no Nordeste, 1.200 Mvar no Sul e 500 Mvar no Norte. Quando se compara a potência total de equipamentos shunt chaveados nos estudos de curto e médio prazos, observa-se uma diferença significativa, reforçando a expectativa de melhoria quanto à redução da necessidade de aberturas de linhas para controle de tensão. Somente na rede de 500 kV, a diferença entre os horizontes corresponde a cerca de 12.000 Mvar em reatores de barra manobráveis. Ressalta-se que esse levantamento não considera as novas linhas de transmissão que, eventualmente, entram em operação com reatores shunt destinados a compensar seu efeito capacitivo intrínseco.
+
+Outra diferença relevante entre os dois horizontes de estudo diz respeito à capacidade de absorção de potência reativa por geradores e compensadores síncronos. Nos estudos de curto prazo, a absorção total realizada por esses equipamentos é da ordem de 15.600 Mvar em um caso típico de domingo, enquanto no médio prazo esse valor pode chegar a até 20.700 Mvar. Considerando apenas os compensadores síncronos previstos para entrar em operação nas subestações da Rede Básica, estima-se um incremento de aproximadamente 4.000 Mvar na capacidade de absorção de potência reativa, em um total de 17 novas unidades. Esse valor não contempla eventuais unidades geradoras que, nos próximos anos, possam ser convertidas para operação como compensadores síncronos, o que ampliaria ainda mais essa capacidade.
+
+Além disso, é fundamental destacar os desafios associados ao controle de tensão intradiário, especialmente em função da acentuada rampa de carga observada no final do dia. Nesse período, a redução da geração fotovoltaica centralizada e distribuída coincide com o aumento da demanda, intensificando a necessidade de atuação do ONS na utilização dos recursos de controle disponíveis no sistema.
+
+Para fins comparativos, considerando dias úteis típicos em um cenário de verão, foi realizado um levantamento do montante total de equipamentos shunt chaveados na Rede Básica entre o horário de carga mínima diurna e carga máxima noturna, bem como da variação no controle de potência reativa das unidades geradoras e dos compensadores síncronos. No início do horizonte, em 2026, verificou-se a necessidade de chaveamento de aproximadamente 140 reatores de barra, totalizando 16.400 Mvar, e de cerca de 60 capacitores, somando 5.100 Mvar. Já em 2030, foram chaveados cerca de 170 reatores de barra, alcançando 19.200 Mvar, e 70 capacitores, totalizando 6.500 Mvar. Assim, entre 2026 e 2030, observa-se um incremento de aproximadamente 20% no número de manobras, passando de 200 para 240, necessárias para assegurar o controle de tensão ao longo do dia, atingindo mais de 25.000 Mvar de equipamentos chaveados na Rede Básica.
+
+No que se refere ao controle de potência reativa realizado pelas máquinas síncronas, no caso analisado de 2026, a potência reativa total absorvida exclusivamente pelas unidades geradoras passou de 7.800 Mvar no caso de carga mínima para cerca de 700 Mvar no caso de carga máxima, uma variação de aproximadamente 7.100 Mvar. Além disso, essa transição exigiu o ajuste na referência da tensão terminal em cerca de 60 usinas. Observou-se ainda a necessidade de acionar 50 máquinas operando como compensadores síncronos entre os casos diurno e noturno, com uma variação de 6.500 Mvar de absorção total de potência reativa. Para os compensadores síncronos fixos conectados a subestações da Rede Básica, verificou-se uma variação de 2.200 Mvar ao longo do dia.
+
+No que se refere ao controle de potência reativa realizado pelas máquinas síncronas, no caso analisado de 2026, a potência reativa total absorvida exclusivamente pelas unidades geradoras passou de 7.800 Mvar no caso de carga mínima para cerca de 700 Mvar no caso de carga máxima, uma variação de aproximadamente 7.100 Mvar. Além disso, essa transição exigiu o ajuste na referência da tensão terminal em cerca de 60 usinas. Observou-se ainda a necessidade de acionar 50 máquinas operando como compensadores síncronos entre os casos diurno e noturno, com uma variação de 6.500 Mvar de absorção total de potência reativa. Para os compensadores síncronos fixos conectados a subestações da Rede Básica, verificou-se uma variação de 2.200 Mvar ao longo do dia.
+
+Considerando a mesma análise para o ano de 2030, a variação de potência reativa absorvida pelas usinas alcançou 10.500 Mvar, representando um aumento de cerca de 50% em relação aos valores obtidos para 2026. Para os compensadores síncronos associados a usinas, a variação foi de 7.400 Mvar, incremento de aproximadamente 14%, enquanto os compensadores síncronos fixos da Rede Básica apresentaram variação de 5.400 Mvar, mais do que o dobro do valor observado em 2026. Ademais, foi verificada a necessidade de ajuste no setpoint de tensão terminal em cerca de 100 usinas, o dobro do registrado na análise de 2026, bem como o acionamento de aproximadamente 70 máquinas operando como compensadores síncronos, aumento de cerca de 40% em relação ao início do horizonte.
+
+A dinâmica descrita evidencia que a operação intradiária do SIN acompanha, de forma crescente, o comportamento característico da chamada “curva do pato”. A acentuada redução da demanda supervisionada no período diurno, impulsionada principalmente pela elevada penetração de MMGD fotovoltaica, seguida por uma rampa pronunciada de aumento de carga no final do dia, impõe novos patamares de exigência para a coordenação do controle de tensão no sistema.
+
+Esse fenômeno intensifica a necessidade de flexibilidade na malha de potência reativa, uma vez que a diferença entre os níveis de carga mínima e máxima se amplia ao longo dos anos. Como consequência, o esforço requerido para manter os perfis de tensão dentro dos limites operativos torna-se significativamente maior, tanto em termos de quantidade quanto de diversidade das ações necessárias. O volume crescente de manobras de equipamentos shunt, a maior amplitude das variações de potência reativa nas unidades geradoras e o aumento do número de máquinas operando como compensadores síncronos ilustram de forma clara esse processo.
+
+Portanto, observa-se que a expansão acelerada da MMGD, embora traga benefícios energéticos e ambientais, introduz custos operativos adicionais e pressiona a necessidade de aprimoramento contínuo da infraestrutura de controle de tensão do SIN. A tendência é que a operação intradiária do SIN se torne progressivamente mais desafiadora, exigindo recursos de potência reativa mais flexíveis, adaptativos e dotados de maior grau de automação para acomodar de forma coordenada as rápidas transições entre os patamares de carga mínima e máxima.
+
+Impacto da MMGD na Curva de Carga Supervisionada e na Controlabilidade do SIN
+
+A crescente inserção de REDs, notadamente a MMGD no Brasil, vem ocasionando sucessivos recordes de carga líquida mínima nos sistemas elétricos de diversos países. Esse fenômeno ocorre principalmente em dias de forte irradiação solar e temperaturas amenas, quando a demanda convencional é reduzida e a geração distribuída alcança elevados patamares. Como resultado, a carga líquida observada pelo sistema de transmissão cai significativamente, ao mesmo tempo em que parte das usinas síncronas de grande porte precisa permanecer em operação para prover serviços essenciais como inércia, regulação secundária de frequência, controle de tensão, rampas de potência e potência de curto-circuito.
+
+Essas condições de baixa carga líquida representam riscos relevantes à segurança eletroenergética. Entre os principais, destacam-se: (i) limitação no acesso a serviços de suporte providos por geradores síncronos, (ii) maior vulnerabilidade do sistema a distúrbios, e, no limite, (iii) possibilidade de blecautes generalizados e dificuldades acrescidas de recomposição em cenários de alta penetração de REDs não controláveis [b].
+
+A mitigação desses riscos demanda um conjunto integrado de medidas. Entre as principais destacam-se: a redução da geração mínima de unidades síncronas, viabilizada por novos ativos como compensadores síncronos ou outros dispositivos de controle de potência reativa; o aumento da demanda diurna, seja por meio da eletrificação de cargas, estímulo a novos consumidores eletrointensivos ou expansão da resposta da demanda; e o uso de armazenamento de energia para deslocar excedentes solares para horários noturnos. Ainda assim, permanece indispensável a existência de mecanismos de redução controlada da geração distribuída em situações críticas — os chamados emergency backstop na Austrália — que permitem ao operador limitar temporariamente a injeção dos REDs quando todos os demais instrumentos já tiverem sido utilizados [b][c].
+
+Os REDs, entretanto, não devem ser vistos apenas como fonte de risco, mas também como parte da solução. Quando equipados com funcionalidades de gerenciamento dinâmico, esses recursos podem fornecer flexibilidade operacional e contribuir ativamente para a estabilidade do sistema. Além disso, podem ser integrados a mecanismos de mercado, ajustando exportações ou consumos conforme sinais de preço [c].
+
+Na experiência australiana, diferentes categorias de REDs foram consideradas elegíveis para corte em condições críticas, abrangendo desde inversores fotovoltaicos residenciais de pequeno porte até usinas fotovoltaicas de médio porte conectadas às redes de distribuição.
+
+Os aprendizados extraídos pelo AEMO destacam a necessidade de planejamento antecipado, dado que a implementação de mecanismos de corte de geração na distribuição pode demandar entre 3 e 5 anos. Ressalta-se também a importância de testes periódicos em larga escala, pois, mesmo em condições de alta conformidade, apenas 50% a 68% dos dispositivos respondem efetivamente ao sinal de corte. Outro ponto central é a construção de uma governança clara, com papéis e responsabilidades bem definidos entre governos, distribuidoras, fabricantes de equipamentos e consumidores. A harmonização nacional de padrões e normas técnicas é considerada essencial para reduzir fragmentações regulatórias. Por fim, é fundamental o engajamento da indústria e dos consumidores, comunicando que a gestão ativa dos REDs não visa apenas restringir geração, mas também habilitar maior participação desses recursos nos mercados de energia e serviços ancilares [c][d].
+
+Em síntese, a experiência australiana evidencia que a condição de carga líquida mínima exige respostas coordenadas, envolvendo instrumentos técnicos, regulatórios e institucionais. Os REDs, a depender da sua forma de integração, podem ser tanto uma fonte de risco quanto uma alavanca estratégica para a operação segura e eficiente do sistema.
+
+No Brasil, a crescente expansão da MMGD tem ampliado a ocorrência de condições de carga líquida mínima, já observadas em eventos recentes e cuja tendência é de agravamento ao longo do horizonte do ONS, uma vez que a expansão prevista desses recursos supera o crescimento projetado da carga do SIN em determinados períodos. Nesse cenário, a fim de ilustrar o impacto da MMGD na operação elétrica, a Figura 7.2, a seguir, apresenta as curvas de carga supervisionada registradas nos domingos em que ocorreram os recordes anuais de demanda supervisionada mínima em 2023, 2024 e 2025. Além disso, a Figura 7.2 a seguir exibe os valores mínimos de demanda supervisionada verificada e a respectiva potência instalada da MMGD em cada dia avaliado.
+
+Carga Supervisionada
+
+Figura 7.7: Curvas da Carga Supervisionada Mínima em 2023, 2024 e 2025.
+
+De acordo com o gráfico apresentado, verifica-se uma redução do valor mínimo de carga supervisionada ao longo dos anos devido, principalmente, ao aumento da participação da MMGD no atendimento à demanda do SIN. A carga supervisionada mínima reduziu cerca de 8.570 MW e a capacidade instalada de MMGD expandiu aproximadamente 17.170 MW em três anos, o que corrobora o impacto desse tipo de geração na operação do SIN. Ao mesmo tempo em que se verifica essa redução da curva de carga supervisionada, parte das usinas síncronas de grande porte precisa permanecer em operação para prover serviços essenciais como inércia, regulação primária e secundária de frequência, controle dinâmico de tensão e potência de curto-circuito. Nesse contexto, tais condições de carga supervisionada mínima podem representar riscos relevantes à manutenção da segurança eletroenergética da operação do SIN.
+
+No Brasil, além desses riscos associados à carga supervisionada mínima para a operação elétrica, verifica-se que as restrições por razões energéticas, que são aquelas caracterizadas pela impossibilidade de alocação de geração na demanda disponível, já constituem a principal causa de restrição da geração renovável variável em 2025. Nesse contexto, o gráfico a seguir apresenta a modulação das fontes no atendimento ao recorde de carga supervisionada mínima do SIN, que foi registrado no dia 10 de agosto de 2025.
+
+Curva Horária da Carga Supervisionada Mínima em 2025
+
+Figura 7.8: Modulação das Fontes para Atendimento da Demanda Supervisionada Mínima do SIN em 2025
+
+Baseado na análise do gráfico acima, verifica-se que o recorde de demanda supervisionada mínima do SIN é de aproximadamente 31.804 MW, que ocorreu às 13h05mim de um domingo. Nesse instante, a MMGD contribuía com aproximadamente 22.085 MW e a geração das usinas classificadas como Tipo III com 4.705 MW, o que totalizava uma participação de 44,8% no atendimento à carga global do SIN. Nesse dia, o Operador necessitou emitir comando de redução total da geração fotovoltaica e eólica centralizada. Ressalta-se ainda que as usinas térmicas controladas pelo ONS já estavam operando com valores de geração mínima, considerando as inflexibilidades e as restrições de Unit Commitment. No que se refere à geração hidráulica centralizada, foi necessária a redução da geração nas usinas dos subsistemas Norte e Sul em relação aos valores programados, enquanto as usinas do Sudeste e Centro-Oeste já operavam próximas de seus limites mínimos. Após essas medidas, permaneceu uma folga de apenas 2 GW na geração hidráulica centralizada, montante que poderia se mostrar insuficiente para garantir o equilíbrio entre demanda e geração caso a carga supervisionada continuasse a reduzir ao longo do dia.
+
+No contexto de análise dos impactos da MMGD para a operação do SIN no dia 10 de agosto de 2025, a Figura 4 a seguir apresenta as curvas de carga líquida de MMGD verificadas em alguns estados. Esse gráfico permite evidenciar a contribuição da MMGD para a redução da carga atendida pela Rede Básica no período diurno e analisar as diferenças dos impactos da MMGD na carga de determinados estados.
+
+Curva Líquida de MMGD por Estado - Dia 10/08/2025
+
+Figura 7.9: Curvas de Carga Líquida de MMGD por Estado na Operação do Dia 10 de Agosto de 2025.
+
+De acordo com o gráfico apresentado, verifica-se que a MMGD influencia sobremaneira a curva de carga dos estados. Para Minas Gerais, foi verificada uma amplitude de cerca de 5.900 MW entre a demanda mínima, verificada às 12h40, e a máxima, registrada às 18h20. Além disso, destaca-se que os estados de Mato Grosso e Mato Grosso do Sul registraram carga líquida de MMGD negativa nos intervalos horários das 9h às 16h e 8h às 17h, respectivamente. Ou seja, esses estados forneceram potência ativa ao SIN durante o período diurno pois a participação da MMGD superou a demanda estadual. Ressalta-se que os valores mínimos de carga negativa em Mato Grosso e em Mato Grosso do Sul foram de 657 MW e 906 MW, respectivamente.
+
+A expansão da geração distribuída, que atualmente não tem controlabilidade, pode acarretar desequilíbrio entre carga e geração, especialmente em dias de demanda elétrica reduzida. Caso nenhuma ação seja tomada, esse desequilíbrio pode comprometer a estabilidade de frequência do SIN. Dessa forma, por meio da ferramenta de análise prospectiva apresentada no Capítulo 6, foi realizado um diagnóstico dos dias com possibilidade de perda de controlabilidade1 do SIN no horizonte de 2026 a 2029. Para realizar tal análise, foram consideradas as seguintes premissas: (i) previsão de crescimento de demanda baseada na 2ª Revisão Quadrimestral do Planejamento Anual de Operação Energética – Ciclo 2025 (2025 - 2029) e (ii) previsão de expansão da MMGD baseada no modelo 4MD. Com relação à geração térmica centralizada, foram considerados os cenários de operação na inflexibilidade e conforme dados verificados ao longo do ano 2024 a fim de avaliar a influência do Unit Commitment no fechamento do balanço carga e geração.
+
+Para ilustrar o fenômeno de possibilidade de perda de controlabilidade, o gráfico apresentado na Figura 7.10, a seguir, apresenta a modulação prevista das fontes de geração para atendimento da demanda de um domingo crítico na operação em 2029.
+
+Prospecção da Operação em um Domingo de 2029
+
+Figura 7.10: Projeção da Modulação das Fontes para Atendimento da Demanda Prevista para um Domingo em 2029.
+
+Conforme apresentado no gráfico acima, no intervalo entre 10h e 12h foi identificada escassez dos recursos controláveis pelo Operador para redução de geração a fim de garantir o equilíbrio instantâneo entre carga e geração do SIN. Nesse intervalo, a geração eólica e fotovoltaica estava totalmente restrita e a geração hidráulica centralizada operava no seu valor mínimo conforme premissas apresentadas no Capítulo 6. Para o dia analisado, foi identificado um excedente máximo de geração da ordem de 4.900 MW às 11h. Nesse caso, para evitar perda de controlabilidade, seria necessário reduzir, abaixo dos níveis de segurança adequados e violando possíveis restrições de operação e ambientais, a geração de usinas hidrelétricas. Além disso, como medida emergencial, poderia reduzir a geração térmica centralizada abaixo da inflexibilidade e/ou desconsiderar as restrições associadas ao Unit Commitment. Todavia, tais ações acarretariam uma redução dos níveis de segurança operativa do sistema , visto que é necessário manter um valor mínimo de geração síncrona conectada ao SIN para garantir uma operação estável e dentro dos limites de segurança.
+
+Dessa forma, o Operador, em conjunto com a ANEEL e com as Distribuidoras de Energia Elétrica, está trabalhando na operacionalização do Plano de Gestão de Excedentes de Energia na Rede de Distribuição a fim de permitir a redução de geração das usinas Tipo III em situações emergenciais. O objetivo principal do plano é definir antecipadamente os procedimentos que devem ser seguidos pelo Operador e pelas distribuidoras em situações emergenciais, quando houver indicação de que haverá excedente de geração de energia e não for mais possível reduzir a geração centralizada que está sob a responsabilidade do ONS. Os detalhes desse plano serão apresentados na próxima seção, que destaca as principais ações do Operador para lidar com os impactos da GD.
+
+A análise de controlabilidade ilustrada no gráfico da Figura 7.10, referente a um domingo específico de 2029, foi estendida para todos os dias do horizonte 2026–2029. Destaca-se que a avaliação para o ano de 2030 não foi realizada, uma vez que ainda não há previsão da taxa de crescimento da MMGD pelo modelo 4MD do PMO.
+
+Nesse contexto, o gráfico de colunas a seguir apresenta a projeção do número de dias por ano com possibilidade de perda de controlabilidade, caso nenhuma ação seja adotada. Ressalta-se que os resultados consideram dois cenários: operação das usinas térmicas centralizadas em seus valores de inflexibilidade e operação conforme os valores verificados ao longo do ano de 2024.
+
+Número de Dias ao Ano com Possibilidade de Perda de Controlabilidade
+
+Figura 7.11: Análise Prospectiva do Número de Dias com Possibilidade de Perda de Controlabilidade do SIN.
+
+Baseada na análise do gráfico acima, verifica-se que, a depender do despacho das usinas térmicas, já a partir de 2026 há previsão de ocorrência de dias com possibilidade de perda de controlabilidade do SIN, em função da escassez de recursos de redução de geração centralizada controlável pelo Operador em períodos de demanda supervisionada reduzida. Ademais, observa-se uma tendência de aumento do número de dias com risco de perda de controlabilidade ao longo do horizonte de estudo, independentemente do despacho da geração térmica, decorrente do fato de a expansão da MMGD superar o crescimento da demanda do sistema. Nesse cenário, a Tabela 1, a seguir, sintetiza os resultados do total de dias e o somatório de horas com possibilidade de perda de controlabilidade do SIN para cada cenário de despacho de geração térmica, caso não sejam tomadas ações preventivas para evitar a perda de controlabilidade. Além disso, na tabela também estão apresentados os valores máximos, em MW, do excedente de geração identificado.
+
+Tabela 1.1: Síntese dos Resultados da Análise Prospectiva de Perda de Controlabilidade.
+
+De acordo com os resultados apresentados, verifica-se um total de 39 dias, no período de 2026 a 2029, com possibilidade de perda de controlabilidade do SIN no cenário em que a geração térmica opera conforme os valores verificados em 2024. Considerando que a análise é horária, identificaram-se 101 horas de operação com potencial excedente de geração, condição que pode provocar sobrefrequências e, em última instância, comprometer a controlabilidade do sistema. Além disso, a tabela apresenta também o valor máximo necessário de redução de geração para controle do balanço carga e geração. Sobre esse ponto, para o cenário de geração térmica com os dados verificados em 2024, é prevista a necessidade de um corte máximo de geração de aproximadamente 4.900 MW, o que correspondia a cerca de 92% da geração de usinas Tipo III verificada nesse instante. É importante destacar que os resultados expostos na Tabela 1 refletem as premissas adotadas para esta avaliação. Caso as projeções de crescimento da demanda ou de expansão da MMGD diferirem das assumidas, os resultados serão alterados.
+
+Em cenários em que o crescimento da demanda seja inferior ao projetado ou em que a expansão da MMGD mantenha um ritmo acelerado e ultrapasse as previsões da metodologia 4MD utilizadas nesta análise, os riscos associados podem se elevar de forma significativa. Nessas condições, medidas emergenciais, potencialmente mais complexas e onerosas, poderão se tornar recorrentes para assegurar a confiabilidade da operação do SIN.
+
+Diante do exposto ao longo deste capítulo, verifica-se que a geração distribuída tem impactado de forma significativa a operação do SIN. Assim, o Operador, em conjunto com os agentes do setor, vem desenvolvendo iniciativas e ações voltadas à mitigação desses impactos. Na seção a seguir, são apresentados os principais projetos em andamento no ONS relacionados ao tema.
+
+Ações do ONS para Lidar com os Impactos da GD
+
+Conforme apresentado nas seções deste capítulo, o aumento da geração conectada nas redes de distribuição vem gerando uma série de impactos para a operação do SIN. Nesse sentido, o Operador vem atuando em diferentes frentes junto à ANEEL, MME, EPE e distribuidoras de energia elétrica para viabilizar a inserção massiva da MMGD de forma segura e sustentável para o SIN.
+
+No ciclo do PAR/PEL 2022, foram destacados os riscos associados à possibilidade de desconexão em cascata dos geradores distribuídos durante perturbações na Rede Básica devido a ajustes de proteção de frequência e/ou tensão demasiadamente sensíveis e descoordenados com as proteções sistêmicas. Nesse contexto, ressaltou-se o trabalho de atualização dos ajustes de proteção de usinas do tipo III, de modo a evitar atuação descoordenada com a do Esquema Regional de Alívio de Carga (ERAC). Adicionalmente, foram destacadas as contribuições do ONS para a Comissão de Estudo de Sistemas de Conversão Fotovoltaica de Energia Solar, as quais subsidiaram a publicação da Portaria do INMETRO nº 140/2022. Esta portaria foi um marco relevante pois incorporou, dentre outros avanços, requisitos de suportabilidade a variações de frequência e tensão mais robustos para microgeradores distribuídos.
+
+Em 2023, como síntese dos principais pontos apresentados no Sumário Executivo do PAR/PEL, destacaram-se os impactos da MMGD associados à redução da demanda supervisionada mínima do sistema, ao aumento da rampa de carga vista pelo sistema de transmissão no intervalo de transição entre o período diurno e noturno e à falta de controlabilidade dos REDs.
+
+Esses fatores reforçaram a necessidade de maior coordenação entre o ONS e as distribuidoras, impulsionando iniciativas como o Projeto Integração ONS–DSO, que foi iniciado no primeiro semestre de 2024. É importante destacar que esses impactos da MMGD, apresentados de forma prospectiva à época, antecipavam desafios operativos relevantes. Contudo, como a expansão dessa modalidade de geração ocorreu em ritmo superior ao previsto nos estudos de 2023, os efeitos esperados se materializaram mais rapidamente, de modo que diversos problemas que passaram a ser observados na operação em 2025 já estavam sinalizados tecnicamente dois anos antes. Adicionalmente, destacou-se o início do projeto de cooperação técnico-cientifica com o INESC P&D Brasil, cujo objetivo foi a realização de estudos especializados para aperfeiçoar a modelagem de carga e da MMGD utilizada em estudos elétricos, considerando as características atuais do SIN.
+
+No ciclo do PAR/PEL 2024, o Operador apresentou, pela primeira vez, um diagnóstico das transformações de fronteira com possibilidade de fluxo reverso e as consequências dessa nova realidade de operação para o sistema elétrico. Embora, por si só, o fluxo reverso não seja um problema, ele pode amplificar a necessidade de corte de geração em usinas centralizadas por razões elétricas e energéticas e acarretar sobrecarga em transformadores de fronteira. Foi ressaltada também a crescente influência da MMGD sobre a curva de demanda supervisionada, com destaque para a operação do domingo, 11 de agosto de 2024, em que foi registrado o recorde de demanda supervisionada mínima no SIN em 2024 (41,41 GW). Esse ciclo consolidou os pontos apresentados em ciclos anteriores e reforçou a necessidade de um novo modelo de coordenação entre transmissão e distribuição a fim de garantir uma integração mais segura e eficiente dos recursos distribuídos.
+
+Nesse contexto, apresentam-se a seguir os principais projetos e iniciativas, em andamento ou concluídos, com participação do ONS, voltados a tratar os impactos dos REDs na operação do SIN.
+
+Projeto Interface ONS/DSO:
+
+O tema de interface entre os operadores de transmissão e distribuição foi abordado no Plano Diretor de Desenvolvimento Tecnológico do ONS, que deu origem ao Projeto “Interface ONS-DSO”, iniciado em 2024 e finalizado no primeiro semestre de 2025. O referido projeto foi executado em parceria com as consultorias PSR e Diamon e teve como resultado principal uma série de ações regulatórias recomendadas, que foram encaminhadas à Agência Reguladora.
+
+O projeto apresentou um diagnóstico detalhado, enumerando os trechos de instrumentos que precisam ser alterados, assim como indicações específicas de criação de nova regulamentação e adequação nas Regras e Procedimentos de Distribuição da ANEEL (PRODIST), Procedimentos de Rede do ONS e Resolução Normativa nº 1.000/2021, indicando ações de curto, médio e longo prazo. O objetivo principal da adequação regulatória proposta por esse projeto é a criação de um marco regulatório robusto para a gestão das usinas classificadas como Tipo III e da MMGD em colaboração com as distribuidoras de energia.
+
+Ressalta-se que, para melhor operação das redes de transmissão e distribuição, será necessário que as distribuidoras possam dispor de mecanismos para gestão dos REDs, a serem contemplados na regulamentação, sendo a distribuidora responsável pela gestão dos agentes conectados em sua rede. Entre os mecanismos possíveis, destacam-se aqueles relacionados à qualidade da previsão, produtos despachabilidade e, ainda, mecanismos que estejam associados às atividades comerciais e atividades fio da distribuidora. Destaca-se ainda que o ONS promoveu, no dia 15 de maio de 2025, um evento com os agentes do setor elétrico para apresentar os principais resultados do projeto.
+
+Projeto para Parametrização, Validação e Calibração de Modelos de Carga e MMGD:
+
+A primeira fase do projeto, desenvolvida em parceria com o INESC ao longo dos anos de 2023 e 2024, resultou em um roadmap estratégico com ações no curto, médio e longo prazo. No curto prazo, foi proposta a representação do modelo estático de carga e das proteções da MMGD. No médio prazo, foi proposta a representação do modelo estático de carga e dos motores de indução, além das proteções da MMGD. Finalmente, no longo prazo, foi proposta a representação do modelo composto detalhado da carga (Composite Load Model – CLM), que inclui a representação detalhada da MMGD.
+
+Em 2025, foram iniciados dois projetos em paralelo para o desenvolvimento de ferramentas para a parametrização, validação e calibração desses modelos, nos três horizontes citados, um em nova parceria com o INESC e o outro através de um P&D da CPFL, com execução da ERA e cooperação do ONS. Ao final desses projetos, será possível parametrizar um modelo composto detalhado da carga e da MMGD, além de sua validação e calibração a partir de dados das Unidades de Medição Fasorial (PMUs).
+
+Para o sucesso dos projetos, serão necessárias etapas intermediárias que envolvem desenvolvimentos metodológicos, ampliação da infraestrutura de medição de PMUs, implementação de modelos e métodos nas ferramentas nacionais para estudos de estabilidade no domínio do tempo, aprimoramento de bases de dados existentes, entre outros.
+
+Projeto de Atualização do Módulo 3 do PRODIST:
+
+O projeto, iniciado em agosto e com previsão de conclusão em dezembro de 2025, tem como principal objetivo revisar e atualizar os requisitos de conexão dos Recursos Energéticos Distribuídos dispostos no Módulo 3 do PRODIST. Destaca-se que o projeto está sendo conduzido em parceria com especialistas da Universidade Federal de Santa Maria (UFSM), Universidade Federal de Uberlândia (UFU), Universidade Estadual do Oeste do Paraná (UNIOSTE) e da ANEEL.
+
+O Módulo 3 do PRODIST foi atualizado em 2023, por meio da Resolução Normativa nº 1.059/2023, e incorporou requisitos de suportabilidade e seus reflexos nos ajustes de proteção da MMGD e das centrais geradoras. No entanto, sua estrutura permanece voltada prioritariamente à mitigação de riscos locais da integração dos REDs no sistema de distribuição, sem contemplar a necessidade de suporte sistêmico, como já consolidado em códigos de rede internacionais. Nesse contexto, a soma cada vez maior de recursos de geração conectados às redes de distribuição amplia os potenciais impactos à segurança operativa do SIN.
+
+Ante o exposto, o projeto em referência tem como objetivo realizar uma atualização tecnológica dos requisitos técnicos para conexão à rede de centrais geradoras distribuídas e elementos de armazenamento de energia em unidades consumidoras, considerando a abordagem amplamente empregada pelas normas técnicas internacionais de REDs. Como principal resultado do projeto, prevê-se a entrega de uma minuta do Módulo 3 do PRODIST atualizado considerando os principais aprimoramentos de requisitos identificados, tais como os de suportabilidade a distúrbios e serviços de suporte à rede automáticos/ locais. Essa atualização deve projetar uma visão de futuro em que os REDs, além de injetarem energia na rede com segurança e qualidade, atuarão como recursos de suporte à estabilidade, operação e flexibilidade dos sistemas elétricos modernos.
+
+Plano de Gestão de Excedentes na Rede de Distribuição:
+
+O Operador enviou para a ANEEL, em outubro de 2025, as diretrizes iniciais para operacionalização do Plano de Gestão de Excedentes na Rede de Distribuição. O objetivo é definir antecipadamente os procedimentos que devem ser seguidos pelo Operador e pelos agentes do setor elétrico em situações emergenciais, quando houver indicação de que haverá excedente de geração de energia e não for mais possível reduzir a geração centralizada que está sob a responsabilidade do ONS.
+
+A ação excepcional só será adotada em última instância, quando todas as outras medidas operativas possíveis já tiverem sido realizadas. Desta forma, o ONS previne riscos iminentes à estabilidade do SIN e evita a perda de controlabilidade do sistema em momentos de demanda supervisionada demasiadamente reduzida, característicos da operação de domingos e feriados com temperaturas amenas e céu claro. Neste primeiro momento, ressalta-se que apenas as usinas classificadas como Tipo III participarão do plano. Contudo, o ONS destaca que essa medida constitui uma primeira etapa dentro de uma estratégia de segurança mais ampla no aprimoramento da gestão de excedentes de energia na rede de distribuição.
+
+Por fim, é importante ressaltar que as diretrizes gerais do Plano foram apresentadas em workshop institucional destinado a todos os agentes envolvidos, realizado em 24 de novembro de 2025. O objetivo é garantir ampla transparência, difundir o entendimento sobre a importância do Plano e obter contribuições que permitam aprimorar sua operacionalização.
+
+Processo de Revisão de Classificação de Modalidades de Operação de Usinas:
+
+O ONS vem conduzindo, desde 2024, um processo de revisão da classificação de modalidade de operação de usinas. Essa revisão visa adequar as modalidades de operação ao novo contexto do setor elétrico brasileiro, caracterizado pela inserção crescente de geração renovável, descentralizada e conectada nas redes de distribuição.
+
+A proposta de revisão faz parte das metas globais do Operador para 2025 e encontra-se disponível no site do ONS como “Meta 3 – Evolução da capacidade do ONS na gestão de Recursos Energéticos Distribuídos – Revisitação da Modalidade de Operação de Usinas”.
+
+O Operador iniciou a consulta externa sobre a proposta de revisão das modalidades de operação das usinas em novembro/2025. Adicionalmente, o ONS contará com ações de divulgação nos seus canais de comunicação para fomentar ampla participação dos agentes e demais interessados.
+
+Referência:
+
+[a] International Energy Agency (IEA), “Energy Policy Review – Brazil 2025”, 2025.
+
+[b] Australian Energy Market Operator (AEMO). “Supporting secure operation with high levels of distributed resources”, Relatório Técnico, outubro de 2024.
+
+[c] Australian Energy Market Operator (AEMO). Fact Sheet: Minimum System Load (MSL). Documento Institucional, novembro de 2024.
+
+[d] Australian Energy Market Operator (AEMO). Learnings from industry implementation of emergency backstop mechanisms for distributed resources. Relatório Técnico, julho de 2025.
+
+Gerência Executiva de Planejamento Elétrico - PL
+Diretoria de Planejamento - DPL
+Operador Nacional do Sistema Elétrico

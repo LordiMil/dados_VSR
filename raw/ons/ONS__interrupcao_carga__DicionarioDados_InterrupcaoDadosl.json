@@ -1,0 +1,49 @@
+{
+    "titulo": "DicionarioDados_InterrupcaoDadosl",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Identificador da perturbação no Sistema Integrado de Perturbações (SIPER)",
+            "codigo": "cod_perturbacao"
+        },
+        {
+            "descricao": "Instante da interrupção de carga",
+            "codigo": "din_interrupcaocarga"
+        },
+        {
+            "descricao": "Sigla do subsistema",
+            "codigo": "id_subsistema"
+        },
+        {
+            "descricao": "Nome do subsistema",
+            "codigo": "nom_subsistema"
+        },
+        {
+            "descricao": "Sigla do estado",
+            "codigo": "id_estado"
+        },
+        {
+            "descricao": "Nome do agente afetado pela interrupção de carga",
+            "codigo": "nom_agente"
+        },
+        {
+            "descricao": "Valor da interrupção de carga, em MW",
+            "codigo": "val_cargainterrompida_mw"
+        },
+        {
+            "descricao": "Tempo médio para recompor a carga, em minutos",
+            "codigo": "val_tempomedio_minutos"
+        },
+        {
+            "descricao": "Valor da energia não suprida na perturbação, em MWh",
+            "codigo": "val_energianaosuprida_mwh"
+        },
+        {
+            "descricao": "Indica se houve envolvimento de equipamentos da Rede Básica na perturbação. O conteúdo é S (Sim) ou N (Não)",
+            "codigo": "flg_envolveuredebasica"
+        },
+        {
+            "descricao": "Indica se houve envolvimento de equipamentos da Rede de Operação do ONS na perturbação.O conteúdo é S (Sim) ou N (Não)",
+            "codigo": "flg_envolveuredeoperacao"
+        }
+    ]
+}

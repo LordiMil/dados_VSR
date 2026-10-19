@@ -1,0 +1,83 @@
+﻿cenario;visao;variavel;vpl_baixo;vpl_alto;amplitude;vpl_base_media
+campo;concessionaria;Preço do VSR (contratos de 2025–26: faixa baixa – alta);13897043.3851;447575.5197;13449467.8654;8239838.5809
+campo;concessionaria;Fase reserva do fixo: nenhuma – uma por banco;-849432.5807;8243495.8097;9092928.3903;8239838.5809
+campo;concessionaria;OLTC: vácuo – óleo;8243495.8097;217049.3762;8026446.4335;8239838.5809
+campo;concessionaria;Mínimo de regulação 60% – 20% (slider);11065681.5507;5210822.3862;5854859.1645;8239838.5809
+campo;concessionaria;Vida mecânica: real = nominal ÷ 1 – ÷ 5;6917125.4055;9810237.644;2893112.2385;8239838.5809
+campo;concessionaria;Taxa de desconto (8% – 14%);9230524.7878;7956168.2233;1274356.5645;8239838.5809
+campo;concessionaria;O&M de rotina do vão (0,5% – 2%/ano);7679008.7942;8946581.1026;1267572.3083;8239838.5809
+campo;concessionaria;Volatilidade 0,5× – 2× (slider);7845203.2129;8978210.5112;1133007.2983;8239838.5809
+campo;concessionaria;Falha do disjuntor de reator: tanque morto 1,17 – tanque vivo 6,79%/ano;8112343.2823;8561816.4;449473.1177;8239838.5809
+campo;concessionaria;Revisão geral a cada 5.000 – 2.000 ciclos;8186626.5607;8432543.127;245916.5663;8239838.5809
+campo;concessionaria;Falha grave do reator/VSR (0,30 – 0,53%/ano);8259383.3724;8092907.7136;166475.6588;8239838.5809
+campo;concessionaria;Falha do disjuntor de reator (1,98 – 3,02%/ano);8135556.9792;8282501.956;146944.9768;8239838.5809
+campo;concessionaria;Custo da revisão geral (5% – 20% do disjuntor);8214785.4021;8300916.6247;86131.2226;8239838.5809
+campo;sin;Preço do VSR (contratos de 2025–26: faixa baixa – alta);14354624.1832;747901.6827;13606722.5005;8636029.9494
+campo;sin;Fase reserva do fixo: nenhuma – uma por banco;-354852.7842;8634973.8764;8989826.6606;8636029.9494
+campo;sin;OLTC: vácuo – óleo;8634973.8764;339169.074;8295804.8024;8636029.9494
+campo;sin;Mínimo de regulação 60% – 20% (slider);11762937.4634;5085416.8347;6677520.6287;8636029.9494
+campo;sin;Vida mecânica: real = nominal ÷ 1 – ÷ 5;6661401.8748;10723911.9167;4062510.0419;8636029.9494
+campo;sin;O&M de rotina do vão (0,5% – 2%/ano);7887222.681;9566320.1323;1679097.4514;8636029.9494
+campo;sin;Volatilidade 0,5× – 2× (slider);8037108.0505;9678209.221;1641101.1704;8636029.9494
+campo;sin;Taxa de desconto (8% – 14%);8770869.7372;7668343.7949;1102525.9423;8636029.9494
+campo;sin;Valor da energia das perdas (R$ 150 – 400/MWh);8875895.4789;8361654.4016;514241.0773;8636029.9494
+campo;sin;Falha do disjuntor de reator: tanque morto 1,17 – tanque vivo 6,79%/ano;8441837.0643;8845609.3835;403772.3192;8636029.9494
+campo;sin;Revisão geral a cada 5.000 – 2.000 ciclos;8564829.4281;8856412.8042;291583.376;8636029.9494
+campo;sin;Falha grave do reator/VSR (0,30 – 0,53%/ano);8515520.658;8330043.0869;185477.5711;8636029.9494
+campo;sin;Custo da revisão geral (5% – 20% do disjuntor);8590890.6941;8723140.2411;132249.547;8636029.9494
+campo;sin;Corte de carga por falha do disjuntor (2% – 10%);8630450.879;8650732.4814;20281.6024;8636029.9494
+campo;sin;Falha do disjuntor de reator (1,98 – 3,02%/ano);8428249.591;8444305.6122;16056.0213;8636029.9494
+polo_eolico;concessionaria;Preço do VSR (contratos de 2025–26: faixa baixa – alta);13694354.3593;187902.9851;13506451.3742;7989564.2491
+polo_eolico;concessionaria;OLTC: vácuo – óleo;8016853.4958;-1611018.3828;9627871.8786;7989564.2491
+polo_eolico;concessionaria;Fase reserva do fixo: nenhuma – uma por banco;-899843.9951;8016853.4958;8916697.491;7989564.2491
+polo_eolico;concessionaria;Mínimo de regulação 60% – 20% (slider);10685415.6398;5113356.3873;5572059.2525;7989564.2491
+polo_eolico;concessionaria;Vida mecânica: real = nominal ÷ 1 – ÷ 5;6721641.4544;9555842.4422;2834200.9877;7989564.2491
+polo_eolico;concessionaria;O&M de rotina do vão (0,5% – 2%/ano);7452366.4804;8719938.7888;1267572.3083;7989564.2491
+polo_eolico;concessionaria;Taxa de desconto (8% – 14%);8861821.6305;7772614.8086;1089206.8219;7989564.2491
+polo_eolico;concessionaria;Volatilidade 0,5× – 2× (slider);7672488.4461;8336365.589;663877.1429;7989564.2491
+polo_eolico;concessionaria;Falha do disjuntor de reator: tanque morto 1,17 – tanque vivo 6,79%/ano;7882669.227;8264218.772;381549.545;7989564.2491
+polo_eolico;concessionaria;Revisão geral a cada 5.000 – 2.000 ciclos;7961348.8863;8202256.2845;240907.3983;7989564.2491
+polo_eolico;concessionaria;Falha do disjuntor de reator (1,98 – 3,02%/ano);7891451.0121;7990144.6018;98693.5897;7989564.2491
+polo_eolico;concessionaria;Falha grave do reator/VSR (0,30 – 0,53%/ano);7999789.8841;7909885.8553;89904.0288;7989564.2491
+polo_eolico;concessionaria;Custo da revisão geral (5% – 20% do disjuntor);7988841.0451;8072878.3972;84037.3521;7989564.2491
+polo_eolico;sin;Preço do VSR (contratos de 2025–26: faixa baixa – alta);14164999.8203;482448.8275;13682550.9928;8360962.3802
+polo_eolico;sin;OLTC: vácuo – óleo;8413474.6474;-1578518.2773;9991992.9246;8360962.3802
+polo_eolico;sin;Fase reserva do fixo: nenhuma – uma por banco;-576352.0133;8413474.6474;8989826.6606;8360962.3802
+polo_eolico;sin;Mínimo de regulação 60% – 20% (slider);11571944.5503;5092460.2973;6479484.2529;8360962.3802
+polo_eolico;sin;Vida mecânica: real = nominal ÷ 1 – ÷ 5;6478600.4143;10469371.7872;3990771.3729;8360962.3802
+polo_eolico;sin;O&M de rotina do vão (0,5% – 2%/ano);7665723.4519;9344820.9033;1679097.4514;8360962.3802
+polo_eolico;sin;Taxa de desconto (8% – 14%);8538977.0674;7527210.9118;1011766.1556;8360962.3802
+polo_eolico;sin;Volatilidade 0,5× – 2× (slider);8020711.0469;8977817.5075;957106.4606;8360962.3802
+polo_eolico;sin;Falha do disjuntor de reator: tanque morto 1,17 – tanque vivo 6,79%/ano;8210067.4463;8759382.9132;549315.4668;8360962.3802
+polo_eolico;sin;Valor da energia das perdas (R$ 150 – 400/MWh);8604630.7402;8196612.8866;408017.8536;8360962.3802
+polo_eolico;sin;Revisão geral a cada 5.000 – 2.000 ciclos;8344857.2944;8630908.7288;286051.4344;8360962.3802
+polo_eolico;sin;Custo da revisão geral (5% – 20% do disjuntor);8370315.1275;8499793.6871;129478.5596;8360962.3802
+polo_eolico;sin;Falha grave do reator/VSR (0,30 – 0,53%/ano);8457682.3862;8410767.5985;46914.7877;8360962.3802
+polo_eolico;sin;Falha do disjuntor de reator (1,98 – 3,02%/ano);8426999.7216;8394633.2205;32366.5012;8360962.3802
+polo_eolico;sin;Corte de carga por falha do disjuntor (2% – 10%);8415373.7472;8418089.7276;2715.9805;8360962.3802
+urbano;concessionaria;Preço do VSR (contratos de 2025–26: faixa baixa – alta);5386481.4963;1942865.6016;3443615.8947;3573054.1595
+urbano;concessionaria;OLTC: vácuo – óleo;3517559.0955;1120515.8811;2397043.2144;3573054.1595
+urbano;concessionaria;Vida mecânica: real = nominal ÷ 1 – ÷ 5;3213666.3624;3869171.3866;655505.0242;3573054.1595
+urbano;concessionaria;O&M de rotina do vão (0,5% – 2%/ano);3227677.9088;3878614.6974;650936.7885;3573054.1595
+urbano;concessionaria;Taxa de desconto (8% – 14%);3826702.6615;3425614.384;401088.2776;3573054.1595
+urbano;concessionaria;Mínimo de regulação 60% – 20% (slider);3727724.4801;3495221.0476;232503.4324;3573054.1595
+urbano;concessionaria;Falha do disjuntor de reator: tanque morto 1,17 – tanque vivo 6,79%/ano;3484436.2081;3670535.5607;186099.3526;3573054.1595
+urbano;concessionaria;Revisão geral a cada 5.000 – 2.000 ciclos;3499693.3446;3574308.6062;74615.2615;3573054.1595
+urbano;concessionaria;Falha do disjuntor de reator (1,98 – 3,02%/ano);3501891.7901;3534585.7794;32693.9893;3573054.1595
+urbano;concessionaria;Custo da revisão geral (5% – 20% do disjuntor);3511349.2697;3529978.7473;18629.4777;3573054.1595
+urbano;concessionaria;Volatilidade 0,5× – 2× (slider);3520722.8521;3512719.4036;8003.4485;3573054.1595
+urbano;concessionaria;Falha grave do reator/VSR (0,30 – 0,53%/ano);3542195.2227;3535671.512;6523.7107;3573054.1595
+urbano;sin;Preço do VSR (contratos de 2025–26: faixa baixa – alta);5591927.0078;2109956.8768;3481970.131;3700217.0467
+urbano;sin;OLTC: vácuo – óleo;3702188.9605;1994676.5404;1707512.4201;3700217.0467
+urbano;sin;O&M de rotina do vão (0,5% – 2%/ano);3318196.0643;4180463.4832;862267.4189;3700217.0467
+urbano;sin;Vida mecânica: real = nominal ÷ 1 – ÷ 5;3327928.3677;4113332.8227;785404.455;3700217.0467
+urbano;sin;Mínimo de regulação 60% – 20% (slider);3981570.0717;3574248.6792;407321.3925;3700217.0467
+urbano;sin;Taxa de desconto (8% – 14%);3747820.0034;3370430.7438;377389.2596;3700217.0467
+urbano;sin;Valor da energia das perdas (R$ 150 – 400/MWh);3744078.1759;3654666.7032;89411.4727;3700217.0467
+urbano;sin;Falha do disjuntor de reator: tanque morto 1,17 – tanque vivo 6,79%/ano;3692877.6854;3774995.5746;82117.8892;3700217.0467
+urbano;sin;Revisão geral a cada 5.000 – 2.000 ciclos;3687708.4102;3746270.4817;58562.0715;3700217.0467
+urbano;sin;Falha grave do reator/VSR (0,30 – 0,53%/ano);3723595.8795;3676535.1737;47060.7057;3700217.0467
+urbano;sin;Custo da revisão geral (5% – 20% do disjuntor);3692974.7878;3720617.3057;27642.5179;3700217.0467
+urbano;sin;Falha do disjuntor de reator (1,98 – 3,02%/ano);3685601.2651;3708388.5504;22787.2853;3700217.0467
+urbano;sin;Volatilidade 0,5× – 2× (slider);3704570.3117;3685795.9228;18774.3888;3700217.0467
+urbano;sin;Corte de carga por falha do disjuntor (2% – 10%);3691000.2881;3704054.0058;13053.7177;3700217.0467

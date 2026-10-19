@@ -1,0 +1,29 @@
+{
+	"titulo": "DicionarioDados_Ind_Confiabilidade_Energia_NaoSuprida",
+	"dicionario_simplificado": [
+		{
+			"descricao": "Tipo de agregação do indicador.Os valores possíveis são: SIN, Subsistema, Região geográfica ou Estado.",
+			"codigo": "dsc_agregacao"
+		},
+		{
+			"descricao": "Sigla da visão do indicador.Observação: Conforme o Tipo de Agregação selecionado, são apresentadas as siglas correspondentes a estes.",
+			"codigo": "cod_caracteristica"
+		},
+		{
+			"descricao": "Descrição da visão do indicador.Observação: Conforme o Tipo de Agregação selecionado, são apresentados os descritivos correspondentes a estes.",
+			"codigo": "dsc_caracteristica"
+		},
+		{
+			"descricao": "Periodicidade do indicador Os valores possíveis são: AN: Anual, ME: Mensal.",
+			"codigo": "id_periodicidade"
+		},
+		{
+			"descricao": "Mês ou Ano do indicador",
+			"codigo": "din_referencia"
+		},
+		{
+			"descricao": "Valor do indicador ENS para o mês ou ano, em pu.",
+			"codigo": "val_ens"
+		}
+	]
+}

@@ -1,0 +1,65 @@
+{
+    "titulo": "DicionarioDados_Equipamento_Controle_Reativo",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Código do Subsistema",
+            "codigo": "id_subsistema"
+        },
+        {
+            "descricao": "Nome da Subsistema",
+            "codigo": "nom_subsistema"
+        },
+        {
+            "descricao": "Estado onde se localiza o equipamento",
+            "codigo": "id_estado"
+        },
+        {
+            "descricao": "Nome do estado onde se localiza o equipamento",
+            "codigo": "nom_estado"
+        },
+        {
+            "descricao": "Nome da subestação onde se localiza o equipamento",
+            "codigo": "nom_subestacao"
+        },
+        {
+            "descricao": "Nome do Agente proprietário do equipamento",
+            "codigo": "nom_agente_proprietario"
+        },
+        {
+            "descricao": "Tipo de rede do equipamento",
+            "codigo": "nom_tipoderede"
+        },
+        {
+            "descricao": "Tipo do equipamento",
+            "codigo": "nom_tipoequipamento"
+        },
+        {
+            "descricao": "Nome do Equipamento",
+            "codigo": "nom_equipamento"
+        },
+        {
+            "descricao": "Potência reativa nominal do equipamento, em Mvar. Campo preenchido apenas para reatores e capacitores shunt.",
+            "codigo": "val_potreativanominal_mvar"
+        },
+        {
+            "descricao": "Limite inferior de absorção de potência reativa. Campo preenchido apenas para compensadores síncronos e estáticos.",
+            "codigo": "val_limiteinferior_mvar"
+        },
+        {
+            "descricao": "Limite superior de fornecimento de potência reativa. Campo preenchido apenas para compensadores síncronos e estáticos.",
+            "codigo": "val_limitesuperior_mvar"
+        },
+        {
+            "descricao": "Data de entrada em operação do equipamento.",
+            "codigo": "dat_entradaoperacao"
+        },
+        {
+            "descricao": "Data de desativação do equipamento.",
+            "codigo": "dat_desativacao"
+        },
+        {
+            "descricao": "Código do Equipamento",
+            "codigo": "cod_equipamento"
+        }
+    ]
+}

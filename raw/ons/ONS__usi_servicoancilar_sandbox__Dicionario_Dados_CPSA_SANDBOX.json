@@ -1,0 +1,37 @@
+{
+    "titulo": "Dicionario_Dados_CPSA_SANDBOX",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Data Verificada",
+            "codigo": "dat_verificada"
+        },
+        {
+            "descricao": "Hora Verificada",
+            "codigo": "hor_verificada"
+        },
+        {
+            "descricao": "Código do Ponto de Conexão",
+            "codigo": "cod_pontoconexao"
+        },
+        {
+            "descricao": "Código CEG da Usina",
+            "codigo": "ceg"
+        },
+        {
+            "descricao": "Nome do Conjunto",
+            "codigo": "nom_conjunto"
+        },
+        {
+            "descricao": "MUST",
+            "codigo": "val_must"
+        },
+        {
+            "descricao": "Indicação da contratação do serviço de compensação de reativo. O valor 1 indica que Sim, valor 0 indica que não.",
+            "codigo": "flg_cpsa"
+        },
+        {
+            "descricao": "Comentário",
+            "codigo": "dsc_comentario"
+        }
+    ]
+}

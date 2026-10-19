@@ -1,0 +1,33 @@
+{
+	"titulo": "DicionarioDados_Intercambio_Nacional",
+	"dicionario_simplificado": [
+		{
+			"descricao": "Data/hora (início do período de agregação)",
+			"codigo": "din_instante"
+		},
+		{
+			"descricao": "Código do Subsistema de Origem",
+			"codigo": "id_subsistema_origem"
+		},
+		{
+			"descricao": "Nome do Subsistema de Origem",
+			"codigo": "nom_subsistema_origem"
+		},
+		{
+			"descricao": "Código do Subsistema de Destino",
+			"codigo": "id_subsistema_destino"
+		},
+		{
+			"descricao": "Nome do Subsistema de Destino",
+			"codigo": "nom_subsistema_destino"
+		},
+		{
+			"descricao": "Intercâmbio verificado em base horária, representando a soma das medidas de fluxo de potência ativa nas linhas de transmissão de fronteira entre os subsistemas em MWmed",
+			"codigo": "val_intercambiomwmed"
+		},
+		{
+			"descricao": "Intercâmbio programado em base horária em MWmed",
+			"codigo": "val_intercambioprogmwmed"
+		}
+	]
+}

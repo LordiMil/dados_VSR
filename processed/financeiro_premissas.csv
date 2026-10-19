@@ -1,0 +1,51 @@
+﻿grupo;parametro;valor_central;unidade;distribuicao;fonte;status
+Unidade;Mínimo de regulação do VSR (m);0.5;;fixo (slider);"Decisão 2.4; CIGRÉ A2-211";decisão
+Unidade;Reator manobrável W – 230 kV (Centro Urbano);20;Mvar;fixo;Mediana do cadastro ONS (script 06);dado
+Unidade;Reator manobrável W – 500 kV (Campo, Polo eólico);150;Mvar;fixo;Mediana do cadastro ONS (script 06);dado
+Preços;Reator fixo 500 kV, por Mvar (set/2026);89898.26660649803;R$/Mvar;fixo;EPE-DEE-NT-077/2021 (R$ 4,415 mi / 66,6 Mvar, mar/2021) × IPCA;dado
+Preços;Reator fixo 230 kV, por Mvar (set/2026);145455.11943496554;R$/Mvar;fixo;Premissa: 500 kV × (66,6/20)^0,4 (regra de escala);premissa
+Preços;Vão de reator (CRB) 500 kV (set/2026);13003736.413910454;R$;fixo;EPE-DEE-NT-077/2021 (R$ 9,589 mi, mar/2021) × IPCA;dado
+Preços;Vão de reator (CRB) 230 kV (set/2026);5615249.815097695;R$;fixo;BPR soma direta (R$ 2,28 mi) × razão EPE/BPR do 500 kV (9,589/5,28) × IPCA;derivado
+Preços;Disjuntor 230 kV (set/2026);464012.46;R$;fixo;ANEEL BPR × IPCA (P29);dado
+Preços;Disjuntor 500 kV (set/2026);2972707.38;R$;fixo;ANEEL BPR × IPCA (P28);dado
+Preços;Preço do VSR 500 kV, 150–300 Mvar (set/2026);42541573.20507929;R$;"fixo (slider); faixa e estresse em Fin_Precos_VSR";"Média dos contratos públicos de 2025–26 (Energinet/GE; Litgrid), escalada por Mvar^0,6 × (kV)^0,5 e convertida a € 1 = R$ 5.92 (BCB, set/2026). Aba Pesquisa_Precos_VSR. Cotação da Hitachi Energy ainda pendente";dado + premissa
+Preços;Preço do VSR 230 kV, 20–40 Mvar (set/2026);8613024.925972834;R$;fixo (slider);"Mesmos contratos, escalados para 40 Mvar e 230 kV (extrapolação grande; confiança baixa)";dado + premissa
+Preços;Regra de escala do preço do VSR;"preço ∝ Mvar^0,6 × kV^β; β = 0,5 (faixa 0,3–1,0)";;fixo;Premissa (regra dos seis décimos, a mesma do reator de 230 kV);premissa
+Preços;Prêmio do VSR (resultado, não entrada);preço do VSR ÷ preço dos 2 fixos − 1;fração;derivado;"Base: +58% a 500 kV e +48% a 230 kV. Variante ""mesma base de preço"": -20% (razão VSR/fixo ≈ 1 por Mvar na Europa)";derivado
+Preços;Fase reserva do banco fixo de 500 kV;1 unidade monofásica de W/3 Mvar por banco (3+1R);;"fixo (variantes: compartilhada; nenhuma)";EPE-DEE-NT-077/2021, Tab. 7-1: banco de barra de referência 3+1R, uma reserva por banco. A fase reserva é o que dá a franquia de 3 h na falha do fixo (Módulo 4 rev.2);dado
+Receita;RAP de FT de reator de barra – 230 kV;1321996.93;R$/ano;fixo;ANEEL SIGET, mediana (P50);dado
+Receita;RAP de FT de reator de barra – 500 kV;2226397.7;R$/ano;fixo;ANEEL SIGET, mediana (P51);dado
+Receita;RAP da FT do VSR;2;× RAP de uma FT de reator;fixo;Premissa: mesma receita dos dois fixos (exposição à PV);premissa
+Parcela Variável;"Ko / Kp do reator; teto por evento";"150 / 10; 3 PB";;fixo;"Módulo 4 rev.2 (REN 1.137/2025); teto de 12 meses = 25% de 12 PB";dado
+Parcela Variável;Franquia de falha do reator fixo 500 kV com fase reserva;3 h;;fixo;Módulo 4 rev.2, Seção 4.3, item 5.9;dado
+Disjuntor;Falha maior – disjuntor de linha (λ0);0,23 / 0,25 / 0,28;%/ano;triangular;CIGRÉ TB 510 (P58);dado
+Disjuntor;Falha maior – disjuntor de manobra de reator (λref, a 1 ciclo/dia);1,98 / 2,46 / 3,02;%/ano;triangular;"CIGRÉ TB 510 (P57); 1 ciclo/dia é premissa";dado + premissa
+Disjuntor;Taxa de falha em função dos ciclos;λ = λ0 + (λref − λ0) × ciclos/365;;fórmula;Premissa (G02 em Pesquisa_Lacunas);premissa
+Disjuntor;Falhas menores por falha maior;7,1 – 7,9;×;uniforme;CIGRÉ TB 83/510 (derivado);dado
+Disjuntor;Custo de falha menor;0,5 / 1 / 2;% do disjuntor;triangular;Premissa;premissa
+Disjuntor;Reparo de falha maior: duração;"lognormal, mediana 24 h, p90 100 h; 5–15% vão à fábrica (14–42 dias)";;mistura;"Vikesjö 2008; Karimabadi 2020; GE GL314 (câmara só na fábrica)";dado + premissa
+Disjuntor;Reparo de falha maior: custo;5 / 15 / 30;% do disjuntor;triangular;Premissa;premissa
+Disjuntor;Falha catastrófica (explosão) entre as falhas maiores;2 – 8;%;uniforme;"Premissa (G04); custo 1,5 × disjuntor, 30 dias fora";premissa
+Disjuntor;Preventiva regulatória;"a cada 72 meses; 1 / 2 / 3% do disjuntor; 8 h programadas";;triangular;"Módulo 4 rev.2 (P56); custo: Jeromin 2009 (≈0,3%/ano)";dado + premissa
+Disjuntor;Revisão geral (custo por manutenção – slider);0.1;fração do disjuntor;"central × triangular(0,7; 1; 1,3)";"Jeromin 2009 (≈10% por revisão); slider do site";premissa-chave
+Disjuntor;Revisão geral: gatilho;"2.000 / 3.000 / 5.000 ciclos CO ou 20 anos; 24 h programadas";;triangular;"GE GL314; Hermosillo 2002";dado
+Disjuntor;Vida mecânica até a troca;10.000 ciclos ÷ fator 1–5;ciclos CO;uniforme no fator;"IEC 62271-100 M2 (P43); IEEE PES TF 2017, real ≈ 5× menor (P42)";dado + premissa
+Disjuntor;Troca do disjuntor;"1,2 × preço; 72 h programadas";;fixo;Premissa (instalação);premissa
+Disjuntor;Incerteza das operações do modelo físico;0,8 / 1 / 1,2;×;triangular;Premissa (calibração por plausibilidade, 3.4);premissa
+Reator;Falha grave de reator (por unidade);0,30 / 0,41 / 0,53;%/ano;triangular;"CIGRÉ TB 939; Martin & Tenbohlen 2026; TB 642";dado
+Reator;Falha do OLTC (adicional do VSR);0,04 / 0,10 / 0,16;%/ano;triangular;Derivado de TB 642 × TB 939;derivado
+Reator;Reparo de falha grave do reator/VSR sem reserva;"lognormal, mediana 180 d, p90 540 d; custo 30–100% do equipamento";;lognormal / uniforme;"Belknap (AEP) 2015; prazos de fábrica 80–210 semanas";premissa
+Reator;Falha do OLTC: duração e custo;"3–21 dias; 5–15% do VSR";;uniforme;Premissa (G06);premissa
+VSR;Operações de tap: fator sobre o piso do modelo físico;1 – 2;×;uniforme;Premissa (resolução de 30 min a 1 h);premissa
+VSR;Manutenção do OLTC a vácuo;"a cada 300.000 comutações; 1 / 2 / 3% do VSR; 48 h programadas";;triangular;"MR VACUTAP VR/VRX (versão para VSR; relatório de ensaio VR 2E 001e); padrão de mercado (H3); custo: premissa (G06)";dado + premissa
+VSR;Manutenção do OLTC a óleo (teste de estresse);20–50 mil comutações ou 4–7 anos;;uniforme;"MR OILTAP R, Um ≥ 245 kV; improvável em VSR novo (H3)";dado
+VSR;Reserva do VSR (variantes);"sem reserva (base); 1 reserva para 3 VSR; pool de 1 para 10";;variante;Base: reparo longo com Parcela Variável. Pool: BPA mantém reatores de reserva de 500 kV para 30 instalados (H6);dado + premissa
+Vão;O&M de rotina do vão (exceto disjuntor);0,5 / 1 / 2;% do vão por ano;triangular;"Premissa; teto = CAOM 2% do VNR (NT 103/2024-STR)";premissa
+SIN;Probabilidade de corte de carga dada falha maior do disjuntor do reator;2 – 10;%;uniforme;Premissa (G14);premissa
+SIN;Energia não suprida por corte;lognormal, mediana 11,5 MWh, p90 140 MWh;MWh;lognormal;ONS interrupção de carga 2016–2025 (P75);dado
+SIN;Custo do déficit;8291.25;R$/MWh;fixo;NT 11/2025/GPRE/GEPME/AGM (P65);dado
+SIN;Perdas do reator;"1,55 kW/Mvar pleno; VSR na posição mínima = 62% do pleno";;fixo;IPST 2015 (HOPS 420 kV);dado
+SIN;Valor da energia das perdas;150 / 250 / 400;R$/MWh;triangular;Premissa sem fonte (CME da EPE não localizado);premissa
+Financeiro;Taxa de desconto – Concessionária;0.1211;a.a. real;fixo (slider);Despacho ANEEL 675/2026 (pré-impostos);dado
+Financeiro;Taxa de desconto – SIN;0.085;a.a. real;fixo;NT SEI 19911/2020/ME;dado
+Financeiro;Horizonte;30;anos;fixo;Decisão 2.3;decisão

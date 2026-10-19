@@ -1,0 +1,17 @@
+{
+    "titulo": "DicionarioDados_Ind_DisponibilidadeTransmissao_FT_Reativo",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Código da Característica do Indicador",
+            "codigo": "cod_caracteristica"
+        },
+        {
+            "descricao": "Data de Referência",
+            "codigo": "dat_referencia"
+        },
+        {
+            "descricao": "Indicador de Disponibilidade das Funções Transmissão - Equipamento de Controle de Reativo (DISP)",
+            "codigo": "val_disp"
+        }
+    ]
+}

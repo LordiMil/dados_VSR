@@ -1,0 +1,74 @@
+﻿cenario;visao;componente;vp_fixo;vp_vsr;ganho_vsr
+urbano;concessionaria;CAPEX reatores;5818204.7774;5818204.7774;0.0
+urbano;concessionaria;CAPEX vão;11230499.6302;5615249.8151;5615249.8151
+urbano;concessionaria;Falhas do disjuntor;34101.0345;3124.2142;30976.8203
+urbano;concessionaria;Falhas do reator/VSR;140346.5762;180955.6674;-40609.0912
+urbano;concessionaria;Manutenção do OLTC;0.0;87646.7991;-87646.7991
+urbano;concessionaria;Manutenção preventiva;18179.1405;9089.5703;9089.5703
+urbano;concessionaria;O&M do vão;1021578.6534;510789.3267;510789.3267
+urbano;concessionaria;Parcela Variável;169739.2635;144769.1739;24970.0895
+urbano;concessionaria;Prêmio do VSR;0.0;2794820.1486;-2794820.1486
+urbano;concessionaria;Revisão geral;17830.3275;4718.4131;13111.9145
+urbano;concessionaria;Troca do disjuntor;291942.6621;0.0;291942.6621
+urbano;sin;CAPEX reatores;5818204.7774;5818204.7774;0.0
+urbano;sin;CAPEX vão;11230499.6302;5615249.8151;5615249.8151
+urbano;sin;Energia não suprida;7605.8377;1287.9362;6317.9015
+urbano;sin;Falhas do disjuntor;45697.7341;3824.8823;41872.8518
+urbano;sin;Falhas do reator/VSR;176685.2799;267524.2961;-90839.0163
+urbano;sin;Manutenção do OLTC;0.0;134793.8515;-134793.8515
+urbano;sin;Manutenção preventiva;26784.2524;13392.1262;13392.1262
+urbano;sin;O&M do vão;1353240.444;676620.222;676620.222
+urbano;sin;Perdas;0.0;95537.1955;-95537.1955
+urbano;sin;Prêmio do VSR;0.0;2794820.1486;-2794820.1486
+urbano;sin;Revisão geral;28477.6526;9080.0501;19397.6025
+urbano;sin;Troca do disjuntor;443356.7395;0.0;443356.7395
+campo;concessionaria;CAPEX reatores;26969479.9819;26969479.9819;0.0
+campo;concessionaria;CAPEX vão;26007472.8278;13003736.4139;13003736.4139
+campo;concessionaria;Falhas do disjuntor;184763.3277;18677.8712;166085.4565
+campo;concessionaria;Falhas do reator/VSR;629435.8652;936245.4765;-306809.6112
+campo;concessionaria;Fase reserva do fixo;8989826.6606;0.0;8989826.6606
+campo;concessionaria;Manutenção do OLTC;0.0;422653.6546;-422653.6546
+campo;concessionaria;Manutenção preventiva;116465.1166;58232.5583;58232.5583
+campo;concessionaria;O&M do vão;1989324.9769;994662.4885;994662.4885
+campo;concessionaria;Parcela Variável;188354.0281;243683.398;-55329.3699
+campo;concessionaria;Prêmio do VSR;0.0;15572093.2231;-15572093.2231
+campo;concessionaria;Revisão geral;91132.4193;30228.6307;60903.7885
+campo;concessionaria;Troca do disjuntor;1323277.0734;0.0;1323277.0734
+campo;sin;CAPEX reatores;26969479.9819;26969479.9819;0.0
+campo;sin;CAPEX vão;26007472.8278;13003736.4139;13003736.4139
+campo;sin;Energia não suprida;8282.074;598.9465;7683.1275
+campo;sin;Falhas do disjuntor;243625.6022;28570.1272;215055.4749
+campo;sin;Falhas do reator/VSR;837940.2613;1215205.7992;-377265.5379
+campo;sin;Fase reserva do fixo;8989826.6606;0.0;8989826.6606
+campo;sin;Manutenção do OLTC;0.0;651468.1344;-651468.1344
+campo;sin;Manutenção preventiva;171593.9799;85796.99;85796.99
+campo;sin;O&M do vão;2635171.5612;1317585.7806;1317585.7806
+campo;sin;Perdas;0.0;549472.5549;-549472.5549
+campo;sin;Prêmio do VSR;0.0;15572093.2231;-15572093.2231
+campo;sin;Revisão geral;151538.9624;58171.567;93367.3954
+campo;sin;Troca do disjuntor;2073277.5569;0.0;2073277.5569
+polo_eolico;concessionaria;CAPEX reatores;26969479.9819;26969479.9819;0.0
+polo_eolico;concessionaria;CAPEX vão;26007472.8278;13003736.4139;13003736.4139
+polo_eolico;concessionaria;Falhas do disjuntor;185266.7865;27822.5528;157444.2337
+polo_eolico;concessionaria;Falhas do reator/VSR;679755.4325;1018095.6992;-338340.2668
+polo_eolico;concessionaria;Fase reserva do fixo;8989826.6606;0.0;8989826.6606
+polo_eolico;concessionaria;Manutenção do OLTC;0.0;550088.4036;-550088.4036
+polo_eolico;concessionaria;Manutenção preventiva;116465.1166;58232.5583;58232.5583
+polo_eolico;concessionaria;O&M do vão;1989324.9769;994662.4885;994662.4885
+polo_eolico;concessionaria;Parcela Variável;187210.4343;289007.072;-101796.6377
+polo_eolico;concessionaria;Prêmio do VSR;0.0;15572093.2231;-15572093.2231
+polo_eolico;concessionaria;Revisão geral;89654.5088;30228.6307;59425.8781
+polo_eolico;concessionaria;Troca do disjuntor;1288554.5472;0.0;1288554.5472
+polo_eolico;sin;CAPEX reatores;26969479.9819;26969479.9819;0.0
+polo_eolico;sin;CAPEX vão;26007472.8278;13003736.4139;13003736.4139
+polo_eolico;sin;Energia não suprida;8959.5627;1747.8337;7211.729
+polo_eolico;sin;Falhas do disjuntor;244265.0763;39346.6461;204918.4302
+polo_eolico;sin;Falhas do reator/VSR;835053.8579;1364941.4129;-529887.555
+polo_eolico;sin;Fase reserva do fixo;8989826.6606;0.0;8989826.6606
+polo_eolico;sin;Manutenção do OLTC;0.0;825045.263;-825045.263
+polo_eolico;sin;Manutenção preventiva;171593.9799;85796.99;85796.99
+polo_eolico;sin;O&M do vão;2635171.5612;1317585.7806;1317585.7806
+polo_eolico;sin;Perdas;0.0;435971.8084;-435971.8084
+polo_eolico;sin;Prêmio do VSR;0.0;15572093.2231;-15572093.2231
+polo_eolico;sin;Revisão geral;149534.6984;58171.567;91363.1315
+polo_eolico;sin;Troca do disjuntor;2023521.0939;0.0;2023521.0939
