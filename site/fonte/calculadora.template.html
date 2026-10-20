@@ -1,0 +1,1043 @@
+<title>O Custo do Fixo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Simulador estocástico PoliVSR: VSR contra reator shunt fixo no SIN, com preços de contratos públicos e 4.000 simulações por cenário.">
+<script>try{if(/[?&]embed=1(&|$)/.test(location.search))document.documentElement.classList.add('embed')}catch(e){}</script>
+<style>
+/* Layout: o mesmo do site PoliVSR (cabeçalho branco fixo, página slate-50, calculadora em duas colunas .8fr / 1.2fr, rodapé slate-200).
+   Paleta e tipografia copiadas do site (Tailwind v4: slate, red-600, emerald-600; fonte do sistema). Tema claro único, como o site. */
+:root {
+  color-scheme: light;
+  --ink: #020618;        /* slate-950 */
+  --ink-2: #314158;      /* slate-700 */
+  --text-2: #45556c;     /* slate-600 */
+  --muted: #62748e;      /* slate-500 */
+  --faint: #90a1b9;      /* slate-400 */
+  --spark: #94a3b8;
+  --line: #e2e8f0;       /* slate-200 */
+  --line-2: #f1f5f9;     /* slate-100 */
+  --page: #f8fafc;       /* slate-50 */
+  --surface: #ffffff;
+  --band: #e2e8f0;       /* faixa da nota técnica */
+  --red: #e7000b;        /* red-600 */
+  --red-hover: #c10007;  /* red-700 */
+  --brand: #e60000;
+  --red-50: #fef2f2;
+  --red-200: #ffc9c9;
+  --red-300: #ffa2a2;
+  --red-900: #82181a;
+  --red-950: #460809;
+  --green: #009966;      /* emerald-600: VSR */
+  --green-800: #005f46;
+  --green-50: #ecfdf5;
+  --amber-50: #fffbeb;
+  --amber-800: #973c00;
+  --glow: rgba(230, 0, 0, 0.38);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+}
+* { box-sizing: border-box; }
+body { background: var(--page); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---------- cabeçalho ---------- */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-top: env(safe-area-inset-top, 0px); }
+.site-header .bar { max-width: 80rem; margin: 0 auto; height: 80px; display: flex; align-items: center; gap: 2rem;
+  padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.logo { display: flex; align-items: center; gap: 6px; color: var(--ink); text-decoration: none; }
+.logo svg { width: 28px; height: 28px; transform: skewX(-15deg); }
+.logo span { font-size: 1.35rem; font-weight: 800; letter-spacing: -.06em; }
+.logo b { color: var(--brand); font-weight: 800; }
+.nav-desk { display: none; align-items: center; gap: 2rem; }
+.nav-pill { display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 20px; font-weight: 700; border-radius: 999px; padding: 8px 12px;
+  color: var(--faint); text-decoration: none; transition: background .15s, color .15s; }
+.nav-pill:hover { background: var(--line-2); color: var(--text-2); }
+.nav-pill svg { width: 24px; height: 24px; }
+.nav-pill.cta { background: var(--red); color: #fff; padding: 10px 20px; box-shadow: 0 0 12px 3px var(--glow); }
+.nav-pill.cta:hover { background: var(--red-hover); color: #fff; }
+.nav-mob { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.nav-ico { width: 44px; height: 44px; border-radius: 999px; display: flex; align-items: center; justify-content: center; color: var(--faint); }
+.nav-ico:hover { background: var(--line-2); color: var(--text-2); }
+.nav-ico.cta { width: auto; min-width: 96px; padding: 8px 16px; background: var(--red); color: #fff; box-shadow: 0 0 11px 2px rgba(230,0,0,.35); }
+.nav-ico svg { width: 24px; height: 24px; }
+@media (min-width: 768px) { .nav-desk { display: flex; } .nav-mob { display: none; } .site-header .bar { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); } }
+@media (min-width: 1024px) { .site-header .bar { padding-left: 64px; padding-right: 64px; } }
+
+/* ---------- página ---------- */
+.calc { background: var(--page); padding-top: calc(112px + env(safe-area-inset-top, 0px)); padding-bottom: 64px; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+@media (min-width: 640px) { .calc { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+.wrap { max-width: 72rem; margin: 0 auto; }
+.page-head { max-width: 48rem; }
+.eyebrow { font-size: 12px; line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: .25em; color: var(--red); }
+.page-head .eyebrow { text-align: center; }
+.page-head h1 { margin-top: 12px; font-size: 2.25rem; line-height: 1.1; font-weight: 900; letter-spacing: -0.025em; }
+@media (min-width: 640px) { .page-head h1 { font-size: 3.75rem; line-height: 1; } }
+.page-sub { margin-top: 16px; font-size: 14px; line-height: 22px; color: var(--muted); }
+.layout { margin-top: 40px; display: grid; gap: 32px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1024px) { .layout { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+.col { display: flex; flex-direction: column; gap: 32px; min-width: 0; }
+.h2 { font-size: 18px; line-height: 28px; font-weight: 700; }
+.h2-lg { font-size: 20px; line-height: 28px; font-weight: 700; }
+.lede { margin-top: 8px; font-size: 16px; line-height: 28px; color: var(--text-2); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 1px 2px rgba(2,6,24,.05); }
+
+/* cenários */
+.scen-list { margin-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.scen { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 128px; width: 100%; padding: 16px; text-align: left;
+  border-radius: 12px; border: 2px solid var(--line); background: var(--surface); transition: border-color .15s, background .15s; }
+.scen:hover { border-color: var(--faint); }
+.scen[aria-pressed="true"] { border-color: var(--red); background: var(--red-50); }
+.scen .who { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
+.scen .ico { width: 44px; height: 44px; flex-shrink: 0; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: var(--line-2); color: var(--text-2); }
+.scen[aria-pressed="true"] .ico { background: var(--red); color: #fff; }
+.scen .ico svg { width: 24px; height: 24px; }
+.scen strong { display: block; font-size: 16px; color: var(--ink); }
+.scen small { display: block; margin-top: 4px; font-size: 12px; line-height: 16px; color: var(--muted); }
+.scen .spark { width: 160px; height: 64px; flex-shrink: 0; }
+@media (max-width: 420px) { .scen .spark { width: 96px; } }
+
+/* parâmetros */
+.params { padding: 20px; }
+.params-body { margin-top: 20px; display: flex; flex-direction: column; gap: 24px; }
+.field-label { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink-2); }
+.field-label strong { white-space: nowrap; color: var(--ink); font-size: 15px; }
+.field-help { margin-top: 6px; font-size: 12px; line-height: 18px; color: var(--muted); }
+.seg { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; background: var(--line-2); border-radius: 999px; }
+.seg button { border-radius: 999px; padding: 8px 10px; font-size: 13px; font-weight: 700; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(2,6,24,.12); }
+input[type="range"] { width: 100%; height: 32px; margin-top: 10px; accent-color: var(--red); cursor: grab; touch-action: none; }
+input[type="range"]:active { cursor: grabbing; }
+.chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 10px; font-size: 12px; font-weight: 600; color: var(--text-2); }
+.chip:hover { border-color: var(--faint); color: var(--ink); }
+.chip[aria-pressed="true"] { border-color: var(--red); color: var(--red-900); background: var(--red-50); }
+select { margin-top: 10px; width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-size: 14px; color: var(--ink); }
+.unit-note { font-size: 12px; line-height: 18px; color: var(--muted); padding-top: 16px; border-top: 1px solid var(--line-2); }
+.inv { padding-top: 16px; border-top: 1px solid var(--line-2); }
+.inv-title { font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink-2); }
+.inv-table { margin-top: 8px; min-width: 0; font-size: 13px; }
+.inv-table th { padding: 6px 4px; font-size: 11px; letter-spacing: .02em; }
+.inv-table td { padding: 6px 4px; color: var(--text-2); }
+.inv-table td:first-child { color: var(--ink-2); }
+.inv-table tr.tot td { font-weight: 700; color: var(--ink); border-top: 1px solid var(--line); border-bottom: 0; }
+.inv-table tr.dif td { font-weight: 700; border-bottom: 0; }
+.inv-table td.good { color: var(--green-800); }
+.inv-table td.bad { color: var(--red-hover); }
+
+/* resultados */
+.results { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .results { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.res { border-radius: 12px; padding: 24px; box-shadow: 0 1px 2px rgba(2,6,24,.05); min-width: 0; }
+.res.dark { background: var(--ink); color: #fff; }
+.res.dark .eyebrow-sm { color: var(--red-300); }
+.res.light { background: var(--red-50); border: 1px solid var(--red-200); color: var(--red-950); }
+.res.light .eyebrow-sm { color: var(--red); }
+.eyebrow-sm { font-size: 12px; line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: .18em; }
+.res .big { margin-top: 16px; font-size: 30px; line-height: 36px; font-weight: 900; }
+.res .sub { margin-top: 12px; font-size: 14px; line-height: 20px; }
+.res.dark .sub { color: #cad5e2; }
+.res .pill { margin-top: 20px; display: inline-flex; border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 700; }
+.pill.ok-dark { background: #004f3b; color: #a4f4cf; }
+.pill.bad-dark { background: var(--red-900); color: var(--red-200); }
+.sub.good { color: var(--green-800); }
+.sub.bad { color: var(--red-hover); }
+.impact { margin-top: 16px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; box-shadow: 0 1px 2px rgba(2,6,24,.05); min-width: 0; }
+.tile p { font-size: 12px; font-weight: 600; color: var(--muted); }
+.tile strong { margin-top: 8px; display: block; font-size: 24px; line-height: 32px; font-weight: 900; color: var(--red); }
+.tile strong.ink { color: var(--ink); font-size: 18px; line-height: 28px; }
+.tile span { font-size: 12px; line-height: 16px; color: var(--muted); }
+
+/* gráficos */
+.chart-card { padding: 16px; min-width: 0; }
+@media (min-width: 640px) { .chart-card { padding: 24px; } }
+.chart-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 16px; }
+.chart-head .muted { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; font-weight: 600; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { display: inline-block; width: 16px; height: 0; border-top: 2px solid currentColor; }
+.legend i.fixo { border-color: var(--red); }
+.legend i.vsr { border-color: var(--green); }
+.legend i.need { border-top: 2px dashed var(--faint); }
+.legend i.load { border-top: 3px solid #314158; }
+.legend i.band { height: 10px; border: 0; border-radius: 2px; background: rgba(0,153,102,.14); }
+.plot { position: relative; margin-top: 20px; width: 100%; overflow-x: clip; }
+.plot svg { display: block; width: 100%; overflow: visible; }
+.plot svg text { font-family: var(--font); font-size: 11px; fill: var(--muted); }
+.plot svg text.lab { font-size: 12px; font-weight: 700; fill: var(--ink-2); }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
+  box-shadow: 0 4px 16px rgba(2,6,24,.12); font-size: 12px; line-height: 18px; color: var(--ink-2); min-width: 150px; z-index: 5; }
+.tip b { color: var(--ink); font-size: 13px; }
+.tip .row { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.tip .row i { width: 12px; border-top: 2px solid; display: inline-block; }
+/* janela de gráficos em abas */
+.tabbar { display: flex; gap: 4px; padding: 4px; margin-bottom: 24px; background: var(--line-2); border-radius: 12px; overflow-x: auto; scrollbar-width: thin; }
+.tabbar [role="tab"] { flex: 1 0 auto; padding: 10px 18px; border-radius: 9px; font-size: 15px; line-height: 22px; font-weight: 600; color: var(--text-2); white-space: nowrap; }
+.tabbar [role="tab"]:hover { color: var(--ink); }
+.tabbar [role="tab"][aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(2,6,24,.14); }
+@media (max-width: 480px) { .tabbar [role="tab"] { padding: 8px 10px; font-size: 14px; } }
+.pane[hidden] { display: none; }
+.mc-link { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface);
+  text-decoration: none; color: var(--ink); box-shadow: 0 1px 2px rgba(2,6,24,.05); }
+.mc-link:hover { border-color: var(--faint); }
+.mc-link svg { width: 28px; height: 28px; flex-shrink: 0; color: var(--red); }
+.mc-link svg.arr { width: 20px; height: 20px; margin-left: auto; color: var(--muted); }
+.mc-link span { display: flex; flex-direction: column; min-width: 0; }
+.mc-link strong { font-size: 15px; line-height: 22px; }
+.mc-link small { font-size: 13px; line-height: 19px; color: var(--muted); }
+.ttl { display: flex; align-items: center; gap: 10px; }
+.info-btn { width: 28px; height: 28px; flex-shrink: 0; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; color: var(--muted); }
+.info-btn:hover, .info-btn[aria-expanded="true"] { color: var(--ink); background: var(--line-2); }
+.info-btn svg { width: 22px; height: 22px; }
+.info { margin-top: 12px; padding: 10px 12px; border-radius: 8px; background: var(--page); font-size: 13px; line-height: 20px; color: var(--text-2); }
+.info[hidden] { display: none; }
+.info p + p { margin-top: 6px; }
+.lbl-row { display: inline-flex; align-items: center; gap: 4px; min-width: 0; }
+.info-btn.sm { width: 24px; height: 24px; }
+.info-btn.sm svg { width: 16px; height: 16px; }
+.params .info { margin-top: 8px; font-size: 12px; line-height: 18px; }
+.res .info { margin-top: 10px; font-size: 13px; line-height: 19px; }
+.res.dark .info { background: rgba(255,255,255,.08); color: #cad5e2; }
+.res.dark .info-btn { color: #cad5e2; }
+.res.dark .info-btn:hover, .res.dark .info-btn[aria-expanded="true"] { color: #fff; background: rgba(255,255,255,.14); }
+.res.light .info { background: rgba(255,255,255,.7); color: var(--red-900); }
+.res.light .info-btn { color: var(--red-900); }
+.res.light .info-btn:hover, .res.light .info-btn[aria-expanded="true"] { background: rgba(255,255,255,.7); }
+section > .info { margin-top: 8px; }
+.note-variant { margin-top: 10px; font-size: 12px; color: var(--amber-800); background: var(--amber-50); border-radius: 8px; padding: 6px 10px; }
+.table-wrap { margin-top: 32px; overflow-x: auto; }
+table { width: 100%; min-width: 480px; border-collapse: collapse; text-align: left; font-size: 14px; }
+th { padding: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: .025em; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--line); }
+td { padding: 12px; border-bottom: 1px solid var(--line-2); }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+td.r { white-space: nowrap; }
+.nw { white-space: nowrap; }
+td.yr { font-weight: 600; color: var(--ink-2); }
+td.fx { color: var(--red); }
+td.vs { color: var(--green); font-weight: 600; }
+td.df { font-weight: 700; color: var(--ink); }
+.h3 { margin-bottom: 12px; font-size: 16px; font-weight: 700; }
+
+/* cascata */
+.casc { margin-top: 20px; display: flex; flex-direction: column; gap: 6px; }
+.casc-row { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 5.5rem; gap: 12px; align-items: center; font-size: 13px; }
+.casc-row .lbl { color: var(--ink-2); line-height: 1.25; }
+.casc-row .trk { position: relative; height: 22px; }
+.casc-row .zero { position: absolute; left: 50%; top: -3px; bottom: -3px; border-left: 1px solid var(--line); }
+.casc-row .bar { position: absolute; top: 4px; height: 14px; }
+.casc-row .bar.pos { background: var(--green); border-radius: 0 4px 4px 0; }
+.casc-row .bar.neg { background: var(--red); border-radius: 4px 0 0 4px; }
+.casc-row .val { text-align: right; font-size: 12px; font-weight: 700; color: var(--ink-2); white-space: nowrap; }
+.casc-row.total { margin-top: 6px; padding-top: 10px; border-top: 1px solid var(--line); }
+.casc-row.total .lbl { font-weight: 700; color: var(--ink); }
+@media (max-width: 520px) { .casc-row { grid-template-columns: minmax(0, 7rem) minmax(0, 1fr) 4.8rem; gap: 8px; font-size: 12px; } }
+
+/* nota técnica e metodologia */
+.tech { background: var(--band); padding-block: 32px; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+@media (min-width: 640px) { .tech { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+.tech .wrap { display: flex; flex-direction: column; gap: 20px; }
+.tech p { font-size: 14px; line-height: 24px; color: var(--text-2); max-width: 70ch; }
+.btn-out { width: 100%; padding: 12px 16px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #cad5e2; border-radius: 8px;
+  font-size: 14px; font-weight: 600; color: var(--ink); background: transparent; }
+.btn-out:hover { background: var(--page); }
+.btn-out svg { width: 18px; height: 18px; }
+.method { background: var(--surface); border-radius: 12px; padding: 24px; display: grid; gap: 24px; }
+.method[hidden] { display: none; }
+.method > * { min-width: 0; }
+.method h3 { font-size: 16px; font-weight: 700; }
+.method ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; line-height: 22px; color: var(--text-2); }
+.method li + li { margin-top: 6px; }
+.method a { color: var(--red-hover); }
+.method table { min-width: 560px; font-size: 13px; }
+.foot-nav { background: var(--surface); border-top: 1px solid var(--line); padding-block: 48px; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.foot-nav .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px 32px; }
+.foot-nav a { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 4px; font-size: 14px; font-weight: 700; color: var(--text-2); text-decoration: none; }
+.foot-nav a:hover { background: var(--line-2); color: var(--brand); }
+.foot-nav svg { width: 24px; height: 24px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* modo embutido no site (?embed=1) */
+html.embed .site-header, html.embed .foot-nav { display: none; }
+html.embed .calc { padding-top: 40px; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+  <symbol id="i-pole" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 5h20"/><path d="M3 3v2"/><path d="M7 3v2"/><path d="M17 3v2"/><path d="M21 3v2"/><path d="m19 5-7 7-7-7"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="https://polivsr.vercel.app/" target="_blank" rel="noopener" aria-label="PoliVSR, abrir o site">
+      <svg viewBox="0 0 28 28" role="img" aria-label="Marca PoliVSR"><ellipse cx="7" cy="14" rx="3.2" ry="10" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="14" cy="14" rx="3.2" ry="10" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="21" cy="14" rx="3.2" ry="10" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+      <span>Poli<b>VSR</b></span>
+    </a>
+    <nav class="nav-desk" aria-label="Navegação principal">
+      <a class="nav-pill" href="https://polivsr.vercel.app/" target="_blank" rel="noopener"><svg><use href="#i-users"/></svg>Quem Somos</a>
+      <a class="nav-pill" href="https://polivsr.vercel.app/" target="_blank" rel="noopener"><svg><use href="#i-chart"/></svg>Pesquisas e Dados</a>
+      <a class="nav-pill cta" href="#calculadora" aria-current="page"><svg><use href="#i-dollar"/></svg>O Preço do Fixo</a>
+    </nav>
+    <nav class="nav-mob" aria-label="Navegação principal mobile">
+      <a class="nav-ico" href="https://polivsr.vercel.app/" target="_blank" rel="noopener" aria-label="Quem Somos" title="Quem Somos"><svg><use href="#i-users"/></svg></a>
+      <a class="nav-ico" href="https://polivsr.vercel.app/" target="_blank" rel="noopener" aria-label="Pesquisas e Dados" title="Pesquisas e Dados"><svg><use href="#i-chart"/></svg></a>
+      <a class="nav-ico cta" href="#calculadora" aria-label="O Preço do Fixo" title="O Preço do Fixo" aria-current="page"><svg><use href="#i-dollar"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="calc" id="calculadora">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">Simulação financeira</p>
+      <h1>O Custo do Fixo: Simulador Estocástico do VSR</h1>
+      <p class="page-sub" id="page-sub">Modelo PoliVSR · 4.000 simulações de Monte Carlo por cenário · fluxos mensais em 30 anos · R$ de set/2026</p>
+    </header>
+
+    <div class="layout">
+      <div class="col">
+        <section aria-labelledby="scenario-title">
+          <div class="ttl"><h2 id="scenario-title" class="h2">Cenário operacional</h2><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="info-cen" aria-label="O que é a curva de cada cenário"><svg><use href="#i-info"/></svg></button></div>
+          <p class="lede">Selecione o cenário da sua rede.</p>
+          <p class="info" id="info-cen" hidden>A curva de cada cartão é a carga (ou o fluxo) que move o cenário num dia típico. No Centro Urbano é a curva de pato: cai ao meio-dia com a geração solar e sobe à noite. Quanto mais baixa a curva, mais folgadas ficam as linhas e mais reator a subestação precisa ligado.</p>
+          <div class="scen-list" id="scen-list"></div>
+        </section>
+
+        <section class="card params" aria-labelledby="inputs-title">
+          <h2 id="inputs-title" class="h2">Parâmetros da banca</h2>
+          <div class="params-body">
+            <div>
+              <div class="field-label"><span class="lbl-row"><span id="vis-label">Quem avalia</span><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="vis-help" aria-label="Sobre quem avalia"><svg><use href="#i-info"/></svg></button></span></div>
+              <div class="seg" role="group" aria-labelledby="vis-label">
+                <button type="button" id="vis-conc" data-vis="concessionaria" aria-pressed="true">Transmissora</button>
+                <button type="button" id="vis-sin" data-vis="sin" aria-pressed="false">Sistema (SIN)</button>
+              </div>
+              <p class="info" id="vis-help" hidden></p>
+            </div>
+            <div>
+              <div class="field-label"><span class="lbl-row"><label for="preco">Preço do VSR, só equipamento</label><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="preco-help" aria-label="Sobre o preço do VSR"><svg><use href="#i-info"/></svg></button></span><strong class="num" id="preco-val">R$ 42,5 mi</strong></div>
+              <p class="info" id="preco-help" hidden></p>
+              <input id="preco" type="range" min="15" max="90" step="0.5" value="42.5">
+              <div class="chips" id="chips" role="group" aria-label="Preços de referência do VSR"></div>
+            </div>
+            <div>
+              <div class="field-label"><span class="lbl-row"><label for="fixo">Preço de 1 reator fixo, só equipamento</label><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="fixo-help" aria-label="Sobre o preço do reator fixo"><svg><use href="#i-info"/></svg></button></span><strong class="num" id="fixo-val">R$ 13,5 mi</strong></div>
+              <p class="info" id="fixo-help" hidden></p>
+              <input id="fixo" type="range" min="0.5" max="1.6" step="0.01" value="1">
+              <div class="chips" id="chips-fixo" role="group" aria-label="Preços de referência do reator fixo"></div>
+            </div>
+            <div>
+              <div class="field-label"><span class="lbl-row"><label for="premissa">Premissas</label><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="premissa-help" aria-label="Sobre a premissa escolhida"><svg><use href="#i-info"/></svg></button></span></div>
+              <p class="info" id="premissa-help" hidden></p>
+              <select id="premissa"></select>
+            </div>
+            <div class="inv">
+              <div class="lbl-row"><p class="inv-title">Investimento no dia da instalação</p><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="inv-info" aria-label="Sobre o investimento e a unidade comparada"><svg><use href="#i-info"/></svg></button></div>
+              <div class="info" id="inv-info" hidden><p id="unit-note"></p><p id="inv-note"></p></div>
+              <table class="inv-table">
+                <thead><tr><th></th><th class="r">Reatores fixos</th><th class="r">VSR</th></tr></thead>
+                <tbody id="inv-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col">
+        <section class="results" aria-label="Resultados estimados">
+          <article class="res dark">
+            <div class="lbl-row"><p class="eyebrow-sm">Valor do VSR em 30 anos</p><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="info-vpl" aria-label="O que é o VPL"><svg><use href="#i-info"/></svg></button></div>
+            <p class="info" id="info-vpl" hidden>Diferença de custo entre os reatores fixos e o VSR em 30 anos, trazida a valor presente (VPL). Positivo: o VSR sai mais barato. O número grande é a mediana de 4.000 simulações; P10 e P90 são os casos pessimista e otimista.</p>
+            <p class="big num" id="vpl-big">VPL: + R$ 8,6 mi</p>
+            <p class="sub num" id="vpl-range"></p>
+            <span class="pill ok-dark" id="vpl-pill">Chance de compensar: 96%</span>
+          </article>
+          <article class="res light">
+            <div class="lbl-row"><p class="eyebrow-sm">Preço de equilíbrio</p><button type="button" class="info-btn sm" aria-expanded="false" aria-controls="eq-ref" aria-label="Sobre o preço de equilíbrio"><svg><use href="#i-info"/></svg></button></div>
+            <p class="info" id="eq-ref" hidden></p>
+            <p class="big num" id="eq-big">Compensa até R$ 51,1 mi</p>
+            <p class="sub num" id="eq-gap"></p>
+          </article>
+        </section>
+
+        <section aria-labelledby="impact-title">
+          <div class="ttl"><h2 id="impact-title" class="h2-lg">Impacto Operacional e Vida Útil</h2><button type="button" class="info-btn" aria-expanded="false" aria-controls="info-impacto" aria-label="Como ler os indicadores"><svg><use href="#i-info"/></svg></button></div>
+          <p class="info" id="info-impacto" hidden></p>
+          <div class="impact">
+            <article class="tile"><p>Payback</p><strong class="num" id="t-pay">Imediato</strong><span id="t-pay-sub"></span></article>
+            <article class="tile"><p>Manobras evitadas</p><strong class="num" id="t-man">592</strong><span>por ano</span></article>
+            <article class="tile"><p>Troca do disjuntor</p><strong class="ink" id="t-troca">Evitada</strong><span id="t-troca-sub"></span></article>
+            <article class="tile"><p>Vão de manobra evitado</p><strong class="ink num" id="t-vao">R$ 13,0 mi</strong><span>1 vão a menos</span></article>
+          </div>
+        </section>
+
+        <section class="card chart-card tabs-card" aria-label="Gráficos do resultado">
+          <div class="tabbar" role="tablist" aria-label="Gráficos do resultado">
+            <button type="button" role="tab" id="tab-risco" data-tab="risco" aria-controls="pane-risco" aria-selected="true">Risco</button>
+            <button type="button" role="tab" id="tab-preco" data-tab="preco" aria-controls="pane-preco" aria-selected="false" tabindex="-1">Preço</button>
+            <button type="button" role="tab" id="tab-operacao" data-tab="operacao" aria-controls="pane-operacao" aria-selected="false" tabindex="-1">Operação</button>
+            <button type="button" role="tab" id="tab-valor" data-tab="valor" aria-controls="pane-valor" aria-selected="false" tabindex="-1">Valor</button>
+          </div>
+
+          <div class="pane" id="pane-risco" role="tabpanel" aria-labelledby="tab-risco">
+            <div class="chart-head">
+              <div class="ttl"><h2 class="h2-lg">A Névoa do Risco</h2><button type="button" class="info-btn" aria-expanded="false" aria-controls="info-risco" aria-label="Como ler este gráfico"><svg><use href="#i-info"/></svg></button></div>
+              <div class="legend"><span><i class="fixo"></i>Reator fixo</span><span><i class="vsr"></i>VSR</span></div>
+            </div>
+            <p class="info" id="info-risco" hidden>Custo acumulado de cada alternativa, em valor presente, ao longo de 30 anos. A linha é a mediana das 4.000 simulações e a faixa vai do P10 ao P90. Quanto mais baixa a curva, mais barata a alternativa.</p>
+            <p class="note-variant" id="fan-note" hidden>A névoa mostra as premissas-base deste cenário. Os cartões acima seguem a premissa escolhida.</p>
+            <div class="plot" id="fan-plot" style="height:300px"></div>
+            <div class="table-wrap">
+              <h3 class="h3">Detalhamento do custo acumulado (R$ mi, mediana)</h3>
+              <table>
+                <thead><tr><th>Ano</th><th class="r">Reator fixo</th><th class="r">VSR</th><th class="r">Diferença a favor do VSR</th></tr></thead>
+                <tbody id="fan-table"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pane" id="pane-preco" role="tabpanel" aria-labelledby="tab-preco" hidden>
+            <div class="chart-head">
+              <div class="ttl"><h2 class="h2-lg">Até quanto o VSR compensa</h2><button type="button" class="info-btn" aria-expanded="false" aria-controls="info-preco" aria-label="Como ler este gráfico"><svg><use href="#i-info"/></svg></button></div>
+              <div class="legend"><span><i class="vsr"></i>VPL mediano</span><span><i class="band"></i>P10–P90</span></div>
+            </div>
+            <p class="info" id="info-preco" hidden>VPL do VSR em função do preço dele, com o reator fixo no preço escolhido. Acima de zero, o VSR compensa. O ponto preto marca o preço de equilíbrio; a linha vertical, o preço simulado.</p>
+            <div class="plot" id="pp-plot" style="height:280px"></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Preço do VSR</th><th class="r">Prêmio sobre os 2 fixos</th><th class="r">VPL mediano</th><th class="r">Chance de compensar</th></tr></thead>
+                <tbody id="pp-table"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pane" id="pane-operacao" role="tabpanel" aria-labelledby="tab-operacao" hidden>
+            <div class="chart-head">
+              <div class="ttl"><h2 class="h2-lg">Um dia de operação</h2><button type="button" class="info-btn" aria-expanded="false" aria-controls="info-dia" aria-label="Como ler este gráfico"><svg><use href="#i-info"/></svg></button></div>
+              <div class="legend"><span><i class="load"></i><span id="leg-load">Carga líquida</span></span><span><i class="fixo"></i>Reator fixo</span><span><i class="vsr"></i>VSR</span></div>
+            </div>
+            <p class="info" id="info-dia" hidden></p>
+            <div class="plot" id="day-plot" style="height:260px"></div>
+          </div>
+
+          <div class="pane" id="pane-valor" role="tabpanel" aria-labelledby="tab-valor" hidden>
+            <div class="chart-head">
+              <div class="ttl"><h2 class="h2-lg">De onde vem o valor</h2><button type="button" class="info-btn" aria-expanded="false" aria-controls="info-valor" aria-label="Como ler este gráfico"><svg><use href="#i-info"/></svg></button></div>
+            </div>
+            <p class="info" id="info-valor" hidden>Valor presente médio de cada parcela da comparação, nos preços escolhidos. Verde é a favor do VSR, vermelho é contra. A soma das parcelas é o VPL médio.</p>
+            <div class="casc" id="casc"></div>
+          </div>
+        </section>
+        <a class="mc-link" href="__MC__">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="16" cy="8" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="8" cy="16" r="1.2" fill="currentColor"/><circle cx="16" cy="16" r="1.2" fill="currentColor"/></svg>
+          <span><strong>Como funcionam as 4.000 simulações</strong><small>O que é sorteado em cada uma, com as faixas e as fontes</small></span>
+          <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech" aria-label="Nota técnica">
+  <div class="wrap">
+    <p>Nota técnica: simulação estocástica de confiabilidade e custo. Cada cenário roda 4.000 trajetórias mensais de 30 anos com as manobras do modelo físico (ONS: DESSEM e intercâmbio N–NE), taxas de falha de disjuntor e de reator da CIGRÉ, Parcela Variável do Módulo 4 da ANEEL e preços da EPE. O preço do reator fixo e o do vão são referências regulatórias brasileiras (EPE, base de preços da ANEEL de 2021, corrigida pelo IPCA); o do VSR vem de contratos públicos de operadores europeus, escalados para a tensão e a potência de cada cenário. Os dois preços podem ser ajustados acima, até a Hitachi Energy cotar o caso brasileiro.</p>
+    <button type="button" class="btn-out" id="btn-method" aria-expanded="false" aria-controls="method"><svg><use href="#i-file"/></svg>Ver metodologia e fontes</button>
+    <div class="method" id="method" hidden></div>
+  </div>
+</section>
+
+<nav class="foot-nav" aria-label="Explorar outras páginas">
+  <div class="wrap">
+    <a href="https://polivsr.vercel.app/" target="_blank" rel="noopener"><svg><use href="#i-users"/></svg>Quem Somos</a>
+    <a href="https://polivsr.vercel.app/" target="_blank" rel="noopener"><svg><use href="#i-chart"/></svg>Pesquisas e Dados</a>
+  </div>
+</nav>
+</main>
+
+<script type="application/json" id="dados">__DADOS__</script>
+<script>
+(function () {
+  'use strict';
+  var D = JSON.parse(document.getElementById('dados').textContent);
+  var ORDEM = ['urbano', 'campo', 'polo_eolico'];
+  var ICON = { urbano: 'i-building', campo: 'i-pole', polo_eolico: 'i-wind' };
+  var COMP = {
+    'CAPEX vão': 'Vão de manobra evitado', 'Fase reserva do fixo': 'Fases reserva evitadas', 'Prêmio do VSR': 'Prêmio do VSR sobre os fixos',
+    'Troca do disjuntor': 'Troca de disjuntor adiada', 'O&M do vão': 'O&M do vão evitado', 'Falhas do disjuntor': 'Falhas de disjuntor evitadas',
+    'Revisão geral': 'Revisões gerais evitadas', 'Manutenção preventiva': 'Preventivas evitadas', 'Manutenção do OLTC': 'Manutenção do OLTC',
+    'Falhas do reator/VSR': 'Falhas do reator e do VSR', 'Parcela Variável': 'Parcela Variável (ANEEL)', 'Energia não suprida': 'Energia não suprida',
+    'Perdas': 'Perdas do VSR', 'Reserva do VSR': 'Reserva do VSR', 'RAP (ajuste regulatório)': 'Ajuste da RAP'
+  };
+  var VIS_HELP = {
+    concessionaria: 'Fluxo de caixa da transmissora a 12,11% a.a. real, antes de impostos, com Parcela Variável.',
+    sin: 'Custo para o sistema a 8,5% a.a. real (taxa social), com energia não suprida e perdas, sem Parcela Variável.'
+  };
+  var VAR_HELP = {
+    base: 'Leilão; fixo de 500 kV com fase reserva por banco (padrão EPE); OLTC a vácuo; VSR sem reserva própria.',
+    reforco: 'Reforço autorizado: a RAP vem do Banco de Preços da ANEEL, então a receita do vão que deixa de existir também sai.',
+    rap: 'Cenário otimista: o prêmio do VSR é remunerado na RAP.',
+    pool: 'Uma unidade reserva para cada 10 VSR, como a BPA faz com reatores de 500 kV.',
+    res13: 'Uma unidade reserva para cada 3 VSR, com reparo em 30 dias.',
+    fase_comp: 'Uma fase reserva compartilhada pelos dois bancos fixos, em vez de uma por banco.',
+    fase_nenhuma: 'Banco fixo sem fase reserva: sem esse custo, mas também sem a franquia de 3 h na falha.',
+    oleo: 'Teste de estresse: OLTC a óleo, com manutenção a cada ~1 ano. O padrão de mercado para VSR é vácuo.'
+  };
+  var state = { cen: 'campo', vis: 'concessionaria', vk: 'base', preco: null, f: 1, tab: 'risco' };
+  try { var saved = JSON.parse(localStorage.getItem('polivsr-calc') || 'null'); if (saved && D.cenarios[saved.cen]) { state.cen = saved.cen; state.vis = saved.vis || state.vis; } } catch (e) {}
+  var FG = D.meta.fgrid;
+
+  /* ---------- formatação ---------- */
+  function nf(d) { return new Intl.NumberFormat('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }); }
+  function mi(x, d) {
+    if (x === null || x === undefined || !isFinite(x)) return '—';
+    if (d === undefined) d = Math.abs(x) < 1 ? 2 : 1;
+    var s = nf(d).format(Math.abs(x));
+    return (x < -1e-9 ? '− ' : '') + 'R$ ' + s + ' mi';
+  }
+  function smi(x, d) { return (x > 1e-9 ? '+ ' : '') + mi(x, d); }
+  function pct(x) { return nf(0).format(Math.round(x * 100)) + '%'; }
+  function spct(x) { return (x > 0 ? '+' : x < 0 ? '−' : '') + nf(0).format(Math.abs(Math.round(x * 100))) + '%'; }
+  function meses(m) { if (m === null || m === undefined) return 'Não se paga em 30 anos'; if (m <= 0) return 'Imediato'; return nf(0).format(m) + ' meses'; }
+  function el(id) { return document.getElementById(id); }
+
+  /* ---------- dados ---------- */
+  function C() { return D.cenarios[state.cen]; }
+  function V() { return C().visoes[state.vis]; }
+  function VAR() { return V().variantes[state.vk] || V().variantes.base; }
+  function fix0Mi() { return C().preco_fixos / 1e6; }                 /* 2 reatores fixos no preço de referência */
+  function fixMi() { return fix0Mi() * state.f; }                       /* 2 reatores fixos no preço escolhido */
+  function bancoMi() { return C().preco_banco_fixo / 1e6 * state.f; }   /* 1 reator fixo (banco) no preço escolhido */
+  function idxPos(grade, x) {
+    var n = grade.length, step = grade[1] - grade[0];
+    var f = (x - grade[0]) / step; f = Math.max(0, Math.min(n - 1, f));
+    var i = Math.min(n - 2, Math.floor(f)); return { i: i, t: f - i };
+  }
+  function interp(arr, p) { var a = arr[p.i], b = arr[p.i + 1]; if (a === null || b === null) return p.t < 0.5 ? a : b; return a + (b - a) * p.t; }
+  /* estatísticas no preço do fixo escolhido: interpola entre as linhas da grade do fixo */
+  function stF(st) {
+    var p = idxPos(FG, state.f), o = {};
+    ['p10', 'p50', 'p90', 'ppos'].forEach(function (k) {
+      var a = st[k][p.i], b = st[k][p.i + 1];
+      o[k] = a.map(function (v, j) { return v + (b[j] - v) * p.t; });
+    });
+    var a = st.pay50[p.i], b = st.pay50[p.i + 1];
+    o.pay50 = a.map(function (v, j) { var w = b[j]; return (v === null || w === null) ? (p.t < 0.5 ? v : w) : Math.round(v + (w - v) * p.t); });
+    return o;
+  }
+  function statsAt(st, grade, preco) {
+    var p = idxPos(grade, preco), o = {};
+    ['p10', 'p50', 'p90', 'ppos'].forEach(function (k) { o[k] = interp(st[k], p); });
+    var a = st.pay50[p.i], b = st.pay50[p.i + 1];
+    o.pay50 = (a === null || b === null) ? (p.t < 0.5 ? a : b) : Math.round(a + (b - a) * p.t);
+    return o;
+  }
+  function eqAt(varo, q) { return interp(varo.equilibrio[q], idxPos(FG, state.f)); }
+
+  /* ---------- SVG ---------- */
+  var NS = 'http://www.w3.org/2000/svg';
+  function S(tag, attrs, parent) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+  function T(parent, x, y, txt, attrs) { var t = S('text', Object.assign({ x: x, y: y }, attrs || {}), parent); t.textContent = txt; return t; }
+  function lin(d0, d1, r0, r1) { return function (v) { return r0 + (v - d0) / (d1 - d0 || 1) * (r1 - r0); }; }
+  function ticks(lo, hi, n) {
+    var span = hi - lo || 1, raw = span / n, mag = Math.pow(10, Math.floor(Math.log10(raw))), norm = raw / mag;
+    var step = (norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10) * mag, out = [];
+    for (var v = Math.ceil(lo / step) * step; v <= hi + step * 1e-6; v += step) out.push(Math.abs(v) < step * 1e-6 ? 0 : v);
+    return { list: out, step: step };
+  }
+  function pathOf(xs, ys) { var d = ''; for (var i = 0; i < xs.length; i++) d += (i ? 'L' : 'M') + xs[i].toFixed(1) + ',' + ys[i].toFixed(1); return d; }
+  function areaOf(xs, lo, hi) {
+    var d = ''; for (var i = 0; i < xs.length; i++) d += (i ? 'L' : 'M') + xs[i].toFixed(1) + ',' + hi[i].toFixed(1);
+    for (var j = xs.length - 1; j >= 0; j--) d += 'L' + xs[j].toFixed(1) + ',' + lo[j].toFixed(1); return d + 'Z';
+  }
+  function frame(host, h, m) {
+    host.innerHTML = '';
+    var w = Math.max(280, host.clientWidth || 600);
+    var svg = S('svg', { viewBox: '0 0 ' + w + ' ' + h, width: w, height: h, role: 'img' }, host);
+    return { svg: svg, w: w, h: h, x0: m.l, x1: w - m.r, y0: h - m.b, y1: m.t };
+  }
+  function tipBox(host) { var d = document.createElement('div'); d.className = 'tip'; d.hidden = true; host.appendChild(d); return d; }
+  function tipRow(color, value, name, dashed) {
+    var r = document.createElement('div'); r.className = 'row';
+    var k = document.createElement('i'); k.style.borderTopColor = color; if (dashed) k.style.borderTopStyle = 'dashed'; r.appendChild(k);
+    var b = document.createElement('b'); b.textContent = value; r.appendChild(b);
+    var s = document.createElement('span'); s.textContent = name; r.appendChild(s); return r;
+  }
+  function placeTip(tip, host, x, y) {
+    tip.hidden = false;
+    var hw = host.clientWidth, tw = tip.offsetWidth;
+    var left = x + 14; if (left + tw > hw) left = x - tw - 14; if (left < 0) left = 0;
+    tip.style.left = left + 'px'; tip.style.top = Math.max(0, y - 10) + 'px';
+  }
+  function hover(svg, f, n, xAt, show, hide) {
+    var hit = S('rect', { x: f.x0, y: f.y1, width: f.x1 - f.x0, height: f.y0 - f.y1, fill: 'transparent', tabindex: 0 }, svg);
+    var cur = -1;
+    function at(i) { cur = Math.max(0, Math.min(n - 1, i)); show(cur); }
+    hit.addEventListener('pointermove', function (ev) {
+      var r = svg.getBoundingClientRect(), x = (ev.clientX - r.left) * (f.w / r.width);
+      var best = 0, bd = 1e9; for (var i = 0; i < n; i++) { var dd = Math.abs(xAt(i) - x); if (dd < bd) { bd = dd; best = i; } }
+      at(best);
+    });
+    hit.addEventListener('pointerleave', hide);
+    hit.addEventListener('focus', function () { at(cur < 0 ? Math.floor(n / 2) : cur); });
+    hit.addEventListener('blur', hide);
+    hit.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowRight') { at(cur + 1); ev.preventDefault(); } else if (ev.key === 'ArrowLeft') { at(cur - 1); ev.preventDefault(); }
+    });
+  }
+  function yAxis(f, sy, tk, fmt) {
+    tk.list.forEach(function (v) {
+      var y = sy(v);
+      S('line', { x1: f.x0, x2: f.x1, y1: y, y2: y, stroke: v === 0 ? '#90a1b9' : '#e2e8f0', 'stroke-width': 1, fill: 'none' }, f.svg);
+      T(f.svg, f.x0 - 8, y + 4, fmt(v), { 'text-anchor': 'end' });
+    });
+  }
+  function sparkline(svg, ys) {
+    var w = 160, h = 64, n = ys.length, sx = lin(0, n - 1, 5, w - 5), sy = lin(0, 1, h - 5, 5);
+    S('path', { d: pathOf(ys.map(function (_, i) { return sx(i); }), ys.map(function (v) { return sy(v); })), fill: 'none', stroke: '#94a3b8', 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
+  }
+
+  /* ---------- cenários ---------- */
+  function buildScen() {
+    var host = el('scen-list'); host.innerHTML = '';
+    ORDEM.forEach(function (k) {
+      var c = D.cenarios[k];
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'scen'; b.setAttribute('aria-pressed', String(k === state.cen));
+      b.dataset.cen = k;
+      b.innerHTML = '<span class="who"><span class="ico"><svg><use href="#' + ICON[k] + '"/></svg></span><span><strong></strong><small></small></span></span>';
+      b.querySelector('strong').textContent = c.nome; b.querySelector('small').textContent = c.base;
+      var sp = S('svg', { class: 'spark', viewBox: '0 0 160 64', 'aria-hidden': 'true' }, b); sparkNeed(sp, c.dia.u);
+      b.addEventListener('click', function () { if (state.cen !== k) { state.cen = k; state.preco = null; save(); render(true); } });
+      host.appendChild(b);
+    });
+  }
+  function save() { try { localStorage.setItem('polivsr-calc', JSON.stringify({ cen: state.cen, vis: state.vis })); } catch (e) {} }
+  function sparkNeed(svg, ys) {
+    /* carga (ou fluxo) que move o cenário ao longo do dia, de zero ao máximo do dia */
+    var mx = Math.max.apply(null, ys) || 1;
+    sparkline(svg, ys.map(function (v) { return v / mx; }));
+  }
+
+  /* ---------- controles ---------- */
+  var slider = el('preco');
+  function setupControls(reset) {
+    var c = C(), g = c.grade, step = c.kv === 500 ? 0.5 : 0.1;
+    slider.min = g[0]; slider.max = g[g.length - 1]; slider.step = step;
+    if (reset || state.preco === null) state.preco = Math.round(c.precos.base / 1e6 / step) * step;
+    slider.value = state.preco;
+    var chips = el('chips'); chips.innerHTML = '';
+    [['base', 'Contratos 2025–26'], ['baixo', 'Faixa baixa'], ['alto', 'Faixa alta'], ['estresse_baixo', 'Nível de 2023']].forEach(function (p) {
+      var v = Math.round(c.precos[p[0]] / 1e6 / step) * step;
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'chip num'; b.dataset.v = v;
+      b.textContent = p[1] + ' · ' + mi(v); b.setAttribute('aria-pressed', String(Math.abs(v - state.preco) < step / 2));
+      b.addEventListener('click', function () { state.preco = v; slider.value = v; render(false); });
+      chips.appendChild(b);
+    });
+    var fs = el('fixo'); fs.min = FG[0]; fs.max = FG[FG.length - 1]; fs.value = state.f;
+    var cf = el('chips-fixo'); cf.innerHTML = '';
+    [[1, 'Referência EPE 2021 + IPCA'], [D.meta.f_nominal_2021, 'EPE 2021 sem correção']].forEach(function (p) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'chip num'; b.dataset.f = p[0];
+      b.textContent = p[1] + ' · ' + mi(c.preco_banco_fixo / 1e6 * p[0]);
+      b.addEventListener('click', function () { state.f = p[0]; fs.value = p[0]; render(false); });
+      cf.appendChild(b);
+    });
+    var sel = el('premissa'); sel.innerHTML = '';
+    Object.keys(V().variantes).forEach(function (k) {
+      var o = document.createElement('option'); o.value = k; o.textContent = V().variantes[k].nome; sel.appendChild(o);
+    });
+    if (!V().variantes[state.vk]) state.vk = 'base';
+    sel.value = state.vk;
+    el('vis-conc').setAttribute('aria-pressed', String(state.vis === 'concessionaria'));
+    el('vis-sin').setAttribute('aria-pressed', String(state.vis === 'sin'));
+    document.querySelectorAll('.scen').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.cen === state.cen)); });
+  }
+  slider.addEventListener('input', function () { state.preco = parseFloat(slider.value); render(false); });
+  el('fixo').addEventListener('input', function (e) { state.f = parseFloat(e.target.value); render(false); });
+  /* abas */
+  var TABS = ['risco', 'preco', 'operacao', 'valor'];
+  function showTab(t, focus) {
+    state.tab = t;
+    TABS.forEach(function (k) {
+      var b = el('tab-' + k), on = k === t;
+      b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; el('pane-' + k).hidden = !on;
+    });
+    if (focus) el('tab-' + t).focus();
+    renderTab(VAR());
+  }
+  TABS.forEach(function (k, i) {
+    var b = el('tab-' + k);
+    b.addEventListener('click', function () { showTab(k); });
+    b.addEventListener('keydown', function (ev) {
+      var j = ev.key === 'ArrowRight' ? i + 1 : ev.key === 'ArrowLeft' ? i - 1 : ev.key === 'Home' ? 0 : ev.key === 'End' ? TABS.length - 1 : null;
+      if (j === null) return; ev.preventDefault(); showTab(TABS[(j + TABS.length) % TABS.length], true);
+    });
+  });
+  document.querySelectorAll('.info-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = el(b.getAttribute('aria-controls')), open = p.hidden; p.hidden = !open; b.setAttribute('aria-expanded', String(open));
+    });
+  });
+  el('premissa').addEventListener('change', function (e) { state.vk = e.target.value; render(false); });
+  ['vis-conc', 'vis-sin'].forEach(function (id) {
+    el(id).addEventListener('click', function (e) { state.vis = e.currentTarget.dataset.vis; save(); render(false, true); });
+  });
+
+  /* ---------- cartões ---------- */
+  function setBig(id, lead, val) {
+    var e = el(id); e.textContent = lead; var s = document.createElement('span'); s.className = 'nw'; s.textContent = val; e.appendChild(s);
+  }
+  function renderCards(s, varo) {
+    var c = C(), premio = state.preco / fixMi() - 1;
+    el('preco-val').textContent = mi(state.preco);
+    el('preco-help').textContent = 'Só o equipamento, sem o vão. Vem de contratos europeus de 2025–26 (sem frete e impostos no Brasil), escalados para ' +
+      nf(0).format(c.mvar_vsr) + ' Mvar e ' + c.kv + ' kV. Prêmio de ' + spct(premio) + ' sobre os dois reatores fixos que ele substitui (' + mi(fixMi()) + ').';
+    document.querySelectorAll('#chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', String(Math.abs(parseFloat(b.dataset.v) - state.preco) < 0.05)); });
+    el('fixo-val').textContent = mi(bancoMi());
+    el('fixo-help').textContent = (c.kv === 500
+      ? 'Só o equipamento: banco de ' + nf(0).format(c.W) + ' Mvar (3 unidades monofásicas de ' + nf(0).format(c.W / 3) + ' Mvar), sem a fase reserva e sem o vão. Referência: EPE-DEE-NT-077/2021 (base de preços da ANEEL de mar/2021) corrigida pelo IPCA. '
+      : 'Só o equipamento: reator de ' + nf(0).format(c.W) + ' Mvar, sem o vão. Não há preço público de 230 kV: parte do 500 kV da EPE com regra de escala (premissa). ') +
+      (Math.abs(state.f - 1) < 0.005 ? 'No preço de referência.' : spct(state.f - 1) + ' sobre a referência.');
+    document.querySelectorAll('#chips-fixo .chip').forEach(function (b) { b.setAttribute('aria-pressed', String(Math.abs(parseFloat(b.dataset.f) - state.f) < 0.006)); });
+    renderInv();
+    el('vis-help').textContent = VIS_HELP[state.vis];
+    el('premissa-help').textContent = VAR_HELP[state.vk] || '';
+    el('unit-note').textContent = 'Unidade comparada: 1 VSR de ' + nf(0).format(c.W) + '–' + nf(0).format(c.mvar_vsr) + ' Mvar no lugar de 2 bancos fixos de ' + nf(0).format(c.W) +
+      ' Mvar, cada um com seu vão (arranjo 2:1, ' + c.kv + ' kV).';
+
+    setBig('vpl-big', 'VPL: ', smi(s.p50));
+    el('vpl-range').textContent = '(Pessimista P10: ' + mi(s.p10) + ' | Otimista P90: ' + mi(s.p90) + ')';
+    var pill = el('vpl-pill'); pill.textContent = 'Chance de compensar: ' + pct(s.ppos);
+    pill.className = 'pill ' + (s.ppos >= 0.5 ? 'ok-dark' : 'bad-dark');
+
+    var eq = eqAt(varo, 'p50'), gmax = c.grade[c.grade.length - 1];
+    if (eq > gmax * 3) el('eq-big').textContent = 'Compensa em qualquer preço da faixa'; else setBig('eq-big', 'Compensa até ', mi(eq));
+    var gap = el('eq-gap');
+    if (eq > gmax * 3) { gap.textContent = 'Com o prêmio na RAP, o preço quase não muda o resultado.'; gap.className = 'sub good'; }
+    else {
+      var folga = eq - state.preco;
+      gap.textContent = folga >= 0 ? 'Folga de ' + mi(folga) + ' sobre o preço simulado.' : 'O preço simulado passa o equilíbrio em ' + mi(-folga) + '.';
+      gap.className = 'sub num ' + (folga >= 0 ? 'good' : 'bad');
+    }
+    el('eq-ref').textContent = 'Com cada reator fixo a ' + mi(bancoMi()) + '. Contratos públicos de 2025–26: ' + mi(c.precos.baixo / 1e6) + ' a ' + mi(c.precos.alto / 1e6) + ' (escalados para este VSR).';
+
+    el('t-pay').textContent = meses(s.pay50);
+    el('t-pay-sub').textContent = s.pay50 === 0 ? 'o VSR já sai mais barato na compra' : (s.pay50 === null ? 'em mais da metade das simulações' : 'mediana das simulações');
+    el('t-man').textContent = nf(0).format(c.oper.manobras_evitadas_ano);
+    el('t-troca').textContent = 'Adiada';
+    el('t-troca-sub').textContent = 'fixo troca a cada ~' + nf(0).format(c.oper.anos_ate_troca_fixo) + ' anos';
+    el('info-impacto').textContent = 'Payback: mês em que a economia acumulada do VSR passa a ser positiva (mediana das simulações). Manobras evitadas: manobras por ano do disjuntor do reator fixo manobrável que deixam de acontecer. ' +
+      'Troca do disjuntor: o do fixo chega ao fim da vida mecânica em cerca de ' + nf(0).format(c.oper.anos_ate_troca_fixo) + ' anos; o do VSR quase não manobra e não precisa ser trocado em 30 anos. ' +
+      'Vão evitado: módulo de conexão de reator (disjuntor, seccionadoras, transformadores de medição, para-raios, proteção, estruturas e obras civis).';
+    el('t-vao').textContent = mi(c.preco_vao / 1e6);
+    el('page-sub').textContent = 'Modelo PoliVSR · ' + nf(0).format(D.meta.simulacoes) + ' simulações de Monte Carlo por cenário · fluxos mensais em 30 anos · ' + D.meta.moeda;
+  }
+
+  /* ---------- investimento no mês zero ---------- */
+  function renderInv() {
+    var c = C(), vk = state.vk, banco = bancoMi(), vao = c.preco_vao / 1e6;
+    var resMvar = c.kv === 500 ? (vk === 'fase_nenhuma' ? 0 : vk === 'fase_comp' ? Math.max(c.W, c.mvar_vsr - c.W) / 3 : c.fase_reserva_mvar) : 0;
+    var res = resMvar * c.preco_mvar_fixo * state.f / 1e6;
+    var fracV = vk === 'pool' ? 0.1 : vk === 'res13' ? 1 / 3 : 0, resV = state.preco * fracV;
+    var fixT = 2 * banco + res + 2 * vao, vsrT = state.preco + resV + vao, dif = fixT - vsrT;
+    var rows = [
+      ['Reatores', '2 × ' + mi(banco), mi(state.preco)],
+      ['Fases reserva', res > 0 ? mi(res) : '—', '—'],
+      ['Reserva do VSR', '—', resV > 0 ? mi(resV) : '—'],
+      ['Vãos de manobra', '2 × ' + mi(vao), mi(vao)],
+      ['Total', mi(fixT), mi(vsrT), 'tot'],
+      ['A favor do VSR', '', smi(dif), 'dif']
+    ];
+    var tb = el('inv-body'); tb.innerHTML = '';
+    rows.forEach(function (r) {
+      if (r[0] === 'Fases reserva' && c.kv !== 500) return;
+      if (r[0] === 'Reserva do VSR' && !fracV) return;
+      var tr = document.createElement('tr'); if (r[3]) tr.className = r[3];
+      [r[0], r[1], r[2]].forEach(function (txt, j) {
+        var td = document.createElement('td'); td.textContent = txt; if (j) td.className = 'r num';
+        if (r[3] === 'dif' && j === 2) td.className = 'r num ' + (dif >= 0 ? 'good' : 'bad');
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+    el('inv-note').textContent = 'Vão de manobra: módulo de conexão de reator (disjuntor, seccionadoras, transformadores de medição, para-raios, proteção, estruturas e obras civis), EPE 2021' +
+      (c.kv === 500 ? '' : ' e Banco de Preços da ANEEL') + ' corrigido pelo IPCA, igual nas duas alternativas. Fixo e vão são referências regulatórias brasileiras; o VSR vem de contratos europeus. Os escopos podem não ser idênticos.';
+  }
+
+  /* ---------- névoa ---------- */
+  function renderFan() {
+    var c = C(), nev = V().nevoa, p = idxPos(c.grade, state.preco);
+    var yrs = nev.anos, n = yrs.length;
+    var vs = {}; ['p10', 'p50', 'p90'].forEach(function (q) { vs[q] = yrs.map(function (_, j) { return nev.vsr[q][p.i][j] + (nev.vsr[q][p.i + 1][j] - nev.vsr[q][p.i][j]) * p.t; }); });
+    var pf = idxPos(FG, state.f), fx = {};
+    ['p10', 'p50', 'p90'].forEach(function (q) { fx[q] = yrs.map(function (_, j) { return nev.fixo[q][pf.i][j] + (nev.fixo[q][pf.i + 1][j] - nev.fixo[q][pf.i][j]) * pf.t; }); });
+    el('fan-note').hidden = state.vk === 'base';
+    var host = el('fan-plot'), f = frame(host, 300, { l: 56, r: 92, t: 12, b: 28 });
+    var ymax = Math.max(Math.max.apply(null, fx.p90), Math.max.apply(null, vs.p90));
+    var ymin = Math.min(Math.min.apply(null, fx.p10), Math.min.apply(null, vs.p10));
+    var pad = (ymax - ymin) * 0.12 || 1, t0 = ticks(Math.max(0, ymin - pad), ymax + pad, 5);
+    var ybot = t0.list[0] > ymin - pad * 0.5 ? Math.max(0, t0.list[0] - t0.step) : t0.list[0];
+    var ytop = t0.list[t0.list.length - 1] < ymax ? t0.list[t0.list.length - 1] + t0.step : t0.list[t0.list.length - 1];
+    var tk = ticks(ybot, ytop, 5);
+    var sx = lin(0, 30, f.x0, f.x1), sy = lin(ybot, ytop, f.y0, f.y1);
+    yAxis(f, sy, tk, function (v) { return nf(tk.step < 1 ? 1 : 0).format(v); });
+    T(f.svg, f.x0 - 8, f.y1 - 2 < 10 ? 10 : f.y1 - 2, '', {});
+    [0, 5, 10, 15, 20, 25, 30].forEach(function (y) { T(f.svg, sx(y), f.y0 + 18, y === 0 ? 'Ano 0' : String(y), { 'text-anchor': 'middle' }); });
+    var X = yrs.map(sx);
+    S('path', { d: areaOf(X, fx.p10.map(sy), fx.p90.map(sy)), fill: '#e7000b', 'fill-opacity': 0.1, stroke: 'none' }, f.svg);
+    S('path', { d: areaOf(X, vs.p10.map(sy), vs.p90.map(sy)), fill: '#009966', 'fill-opacity': 0.12, stroke: 'none' }, f.svg);
+    S('path', { d: pathOf(X, fx.p50.map(sy)), fill: 'none', stroke: '#e7000b', 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, f.svg);
+    S('path', { d: pathOf(X, vs.p50.map(sy)), fill: 'none', stroke: '#009966', 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, f.svg);
+    var yf = sy(fx.p50[n - 1]), yv = sy(vs.p50[n - 1]);
+    var lf = yf, lv = yv; if (Math.abs(lf - lv) < 30) { if (lf <= lv) { lf = (yf + yv) / 2 - 15; lv = lf + 30; } else { lv = (yf + yv) / 2 - 15; lf = lv + 30; } }
+    [[yf, lf, '#e7000b', 'Reator fixo', fx.p50[n - 1]], [yv, lv, '#009966', 'VSR', vs.p50[n - 1]]].forEach(function (a) {
+      S('circle', { cx: f.x1, cy: a[0], r: 4, fill: a[2], stroke: '#fff', 'stroke-width': 2 }, f.svg);
+      if (Math.abs(a[1] - a[0]) > 2) S('line', { x1: f.x1 + 4, y1: a[0], x2: f.x1 + 10, y2: a[1] - 4, stroke: '#90a1b9', 'stroke-width': 1 }, f.svg);
+      T(f.svg, f.x1 + 12, a[1] - 4, a[3], { class: 'lab' });
+      T(f.svg, f.x1 + 12, a[1] + 10, mi(a[4]), {});
+    });
+    var guide = S('line', { x1: 0, x2: 0, y1: f.y1, y2: f.y0, stroke: '#90a1b9', 'stroke-width': 1, visibility: 'hidden' }, f.svg);
+    var d1 = S('circle', { r: 4, fill: '#e7000b', stroke: '#fff', 'stroke-width': 2, visibility: 'hidden' }, f.svg);
+    var d2 = S('circle', { r: 4, fill: '#009966', stroke: '#fff', 'stroke-width': 2, visibility: 'hidden' }, f.svg);
+    var tip = tipBox(host);
+    f.svg.setAttribute('aria-label', 'Custo acumulado descontado do reator fixo e do VSR ao longo de 30 anos');
+    hover(f.svg, f, n, function (i) { return X[i]; }, function (i) {
+      guide.setAttribute('x1', X[i]); guide.setAttribute('x2', X[i]); guide.setAttribute('visibility', 'visible');
+      d1.setAttribute('cx', X[i]); d1.setAttribute('cy', sy(fx.p50[i])); d1.setAttribute('visibility', 'visible');
+      d2.setAttribute('cx', X[i]); d2.setAttribute('cy', sy(vs.p50[i])); d2.setAttribute('visibility', 'visible');
+      tip.innerHTML = ''; var h = document.createElement('div'); h.textContent = 'Ano ' + i; h.style.fontWeight = '700'; h.style.color = '#020618'; tip.appendChild(h);
+      tip.appendChild(tipRow('#e7000b', mi(fx.p50[i]), 'Reator fixo (' + mi(fx.p10[i]) + ' a ' + mi(fx.p90[i]) + ')'));
+      tip.appendChild(tipRow('#009966', mi(vs.p50[i]), 'VSR (' + mi(vs.p10[i]) + ' a ' + mi(vs.p90[i]) + ')'));
+      placeTip(tip, host, X[i] * host.clientWidth / f.w, sy(Math.max(fx.p50[i], vs.p50[i])) * host.clientHeight / f.h);
+    }, function () { tip.hidden = true; [guide, d1, d2].forEach(function (e) { e.setAttribute('visibility', 'hidden'); }); });
+    var tb = el('fan-table'); tb.innerHTML = '';
+    [1, 5, 10, 20, 30].forEach(function (y) {
+      var tr = document.createElement('tr');
+      [['yr', 'Ano ' + y], ['r fx num', mi(fx.p50[y])], ['r vs num', mi(vs.p50[y])], ['r df num', smi(fx.p50[y] - vs.p50[y])]].forEach(function (cdef) {
+        var td = document.createElement('td'); td.className = cdef[0]; td.textContent = cdef[1]; tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  }
+
+  /* ---------- VPL x preço ---------- */
+  function renderPP(varo) {
+    var c = C(), g = c.grade, st = stF(varo.stats), n = g.length;
+    var host = el('pp-plot'), f = frame(host, 280, { l: 56, r: 20, t: 30, b: 32 });
+    var lo = Math.min(0, Math.min.apply(null, st.p10)), hi = Math.max(0, Math.max.apply(null, st.p90));
+    var tk = ticks(lo, hi, 5); var ylo = Math.min(lo, tk.list[0]), yhi = Math.max(hi, tk.list[tk.list.length - 1]);
+    tk = ticks(ylo, yhi, 5);
+    var sx = lin(g[0], g[n - 1], f.x0, f.x1), sy = lin(ylo, yhi, f.y0, f.y1);
+    var pr = c.precos;
+    var bands = [[pr.baixo / 1e6, pr.alto / 1e6, '#009966', 0.08, 'Contratos 2025–26'], [pr.estresse_baixo / 1e6, pr.estresse_alto / 1e6, '#e7000b', 0.08, 'Nível de 2023']];
+    bands.forEach(function (b) {
+      var x0 = sx(Math.max(g[0], b[0])), x1 = sx(Math.min(g[n - 1], b[1])); if (x1 <= x0) return;
+      S('rect', { x: x0, y: f.y1, width: Math.max(2, x1 - x0), height: f.y0 - f.y1, fill: b[2], 'fill-opacity': b[3] }, f.svg);
+      var lw = b[4].length * 6.2, cx = Math.min(Math.max((x0 + x1) / 2, f.x0 + lw / 2), f.w - lw / 2 - 2);
+      T(f.svg, cx, f.y1 - 10, b[4], { 'text-anchor': 'middle' });
+    });
+    yAxis(f, sy, tk, function (v) { return nf(Math.abs(tk.step) < 1 ? 1 : 0).format(v); });
+    var xt = ticks(g[0], g[n - 1], 6);
+    xt.list.forEach(function (v) { T(f.svg, sx(v), f.y0 + 18, nf(0).format(v), { 'text-anchor': 'middle' }); });
+    T(f.svg, f.x1, f.y0 + 30, 'R$ mi', { 'text-anchor': 'end' });
+    var X = g.map(sx);
+    S('path', { d: areaOf(X, st.p10.map(sy), st.p90.map(sy)), fill: '#009966', 'fill-opacity': 0.14, stroke: 'none' }, f.svg);
+    S('path', { d: pathOf(X, st.p50.map(sy)), fill: 'none', stroke: '#009966', 'stroke-width': 2, 'stroke-linejoin': 'round' }, f.svg);
+    var eq = eqAt(varo, 'p50');
+    if (eq >= g[0] && eq <= g[n - 1]) {
+      S('circle', { cx: sx(eq), cy: sy(0), r: 4, fill: '#020618', stroke: '#fff', 'stroke-width': 2 }, f.svg);
+      T(f.svg, sx(eq) + (sx(eq) > f.x1 - 120 ? -8 : 8), sy(0) + (sy(0) > f.y0 - 20 ? -8 : 16), 'Equilíbrio ' + mi(eq), { class: 'lab', 'text-anchor': sx(eq) > f.x1 - 120 ? 'end' : 'start' });
+    }
+    var s = statsAt(st, g, state.preco), xs = sx(state.preco);
+    S('line', { x1: xs, x2: xs, y1: f.y1, y2: f.y0, stroke: '#020618', 'stroke-width': 1 }, f.svg);
+    S('circle', { cx: xs, cy: sy(s.p50), r: 5, fill: '#009966', stroke: '#fff', 'stroke-width': 2 }, f.svg);
+    var guide = S('line', { x1: 0, x2: 0, y1: f.y1, y2: f.y0, stroke: '#90a1b9', 'stroke-width': 1, visibility: 'hidden' }, f.svg);
+    var dot = S('circle', { r: 4, fill: '#009966', stroke: '#fff', 'stroke-width': 2, visibility: 'hidden' }, f.svg);
+    var tip = tipBox(host);
+    f.svg.setAttribute('aria-label', 'VPL do VSR em função do preço do VSR');
+    hover(f.svg, f, n, function (i) { return X[i]; }, function (i) {
+      guide.setAttribute('x1', X[i]); guide.setAttribute('x2', X[i]); guide.setAttribute('visibility', 'visible');
+      dot.setAttribute('cx', X[i]); dot.setAttribute('cy', sy(st.p50[i])); dot.setAttribute('visibility', 'visible');
+      tip.innerHTML = ''; var h = document.createElement('div'); h.textContent = 'VSR a ' + mi(g[i]); h.style.fontWeight = '700'; h.style.color = '#020618'; tip.appendChild(h);
+      tip.appendChild(tipRow('#009966', smi(st.p50[i]), 'VPL mediano'));
+      var r2 = document.createElement('div'); r2.textContent = 'P10 ' + mi(st.p10[i]) + ' · P90 ' + mi(st.p90[i]); tip.appendChild(r2);
+      var r3 = document.createElement('div'); r3.textContent = 'Chance de compensar: ' + pct(st.ppos[i]); tip.appendChild(r3);
+      placeTip(tip, host, X[i] * host.clientWidth / f.w, sy(st.p90[i]) * host.clientHeight / f.h);
+    }, function () { tip.hidden = true; guide.setAttribute('visibility', 'hidden'); dot.setAttribute('visibility', 'hidden'); });
+    var tb = el('pp-table'); tb.innerHTML = '';
+    var rows = [['baixo', 'Faixa baixa 2025–26'], ['base', 'Contratos 2025–26'], ['alto', 'Faixa alta 2025–26'], ['estresse_baixo', 'Nível de 2023']];
+    rows.forEach(function (rw) {
+      var v = pr[rw[0]] / 1e6, ss = statsAt(st, g, v), tr = document.createElement('tr');
+      [['yr', rw[1] + ' · ' + mi(v)], ['r num', spct(v / fixMi() - 1)], ['r num df', smi(ss.p50)], ['r num', pct(ss.ppos)]].forEach(function (cdef) {
+        var td = document.createElement('td'); td.className = cdef[0]; td.textContent = cdef[1]; tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  }
+
+  /* ---------- dia típico de uma subestação ---------- */
+  function renderDay() {
+    var c = C(), d = c.dia, n = d.hora.length, step = d.hora[1] - d.hora[0];
+    var dt = d.data.split('-'); var dataBR = dt[2] + '/' + dt[1] + '/' + dt[0];
+    var lo = d.u_lo, hi = d.u_hi;
+    /* nível do reator manobrável (0 a 1) convertido na carga correspondente pela fórmula do modelo: r = (hi² − u²)/(hi² − lo²) */
+    function uOf(l) { l = Math.max(0, Math.min(1, l)); return Math.sqrt(hi * hi - l * (hi * hi - lo * lo)); }
+    var gw = function (v) { return v / 1000; };
+    el('leg-load').textContent = d.u_nome[0];
+    el('info-dia').textContent = 'Dia típico (' + dataBR + '), subestação de ' + c.kv + ' kV. Linha escura: ' + d.u_nome[0] + ' (' + d.u_nome[1] + '). ' +
+      (state.cen === 'urbano' ? 'É a curva de pato: a carga cai ao meio-dia com a geração solar e sobe no fim da tarde. ' :
+        state.cen === 'campo' ? 'Aqui não há curva de pato: o que move o cenário é o fluxo na interligação. ' : 'Aqui a eólica pesa mais que a solar, então a curva não tem o formato de pato. ') +
+      'Quando a curva desce, as linhas ficam folgadas, sobra energia reativa e é preciso ligar reator. ' +
+      'O eixo da direita mostra o reator ligado: no alto, ' + nf(0).format(d.SB) + ' Mvar (só o reator permanente, ou o VSR no mínimo); embaixo, ' + nf(0).format(d.SB + d.W) +
+      ' Mvar (os 2 reatores, ou o VSR no máximo). Essa escala não é linear: ela põe o reator na altura da carga que o exige, e a sobra de reativo da linha depende do quadrado da carga. ' +
+      'O VSR acompanha a curva em passos de 1/32 da faixa (' + d.taps_modelo + ' trocas de tap nesse dia); o reator fixo só liga ou desliga inteiro (' + d.manobras_fixo + ' manobras). ' +
+      'Dos 2 fixos, um fica sempre ligado e não aparece. ' +
+      (d.bancos_corredor > 1 ? 'No Campo, o modelo representa o corredor com ' + d.bancos_corredor + ' bancos (' + d.manobras_corredor + ' manobras nesse dia); aqui aparece um deles. ' : '') +
+      'Dados a cada ' + (step < 1 ? '30 minutos' : 'hora') + '.';
+    var host = el('day-plot'), f = frame(host, 280, { l: 44, r: 70, t: 14, b: 28 });
+    var ymax = Math.max(hi, Math.max.apply(null, d.u)) * 1.06;
+    var tk = ticks(0, ymax, 4); var ytop = Math.max(ymax, tk.list[tk.list.length - 1]);
+    var sx = lin(0, 24, f.x0, f.x1), sy = lin(0, ytop, f.y0, f.y1);
+    yAxis(f, sy, { list: tk.list, step: tk.step }, function (v) { return nf(tk.step < 1000 ? 1 : 0).format(gw(v)); });
+    T(f.svg, f.x0 - 8, f.y1 - 4 < 10 ? 10 : f.y1 - 4, 'GW', { 'text-anchor': 'end' });
+    [0, 6, 12, 18, 24].forEach(function (h) { T(f.svg, sx(h), f.y0 + 18, String(h).padStart(2, '0') + 'h', { 'text-anchor': 'middle' }); });
+    /* eixo da direita: reator manobrável ligado */
+    [[0, d.SB, '1 reator'], [1, d.SB + d.W, '2 reatores']].forEach(function (t) {
+      var y = sy(uOf(t[0]));
+      S('line', { x1: f.x1, x2: f.x1 + 4, y1: y, y2: y, stroke: '#90a1b9', 'stroke-width': 1 }, f.svg);
+      T(f.svg, f.x1 + 7, y - 1, t[2], { class: 'lab' });
+      T(f.svg, f.x1 + 7, y + 12, nf(0).format(t[1]) + ' Mvar', {});
+    });
+    var XM = d.hora.map(function (h) { return sx(h + step / 2); });
+    function stepPath(levels) {
+      var p = '';
+      for (var i = 0; i < n; i++) {
+        var x = sx(d.hora[i]), x2 = sx(Math.min(24, d.hora[i] + step)), y = sy(uOf(levels[i]));
+        p += (i ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1) + 'L' + x2.toFixed(1) + ',' + y.toFixed(1);
+      }
+      return p;
+    }
+    S('path', { d: areaOf(XM, XM.map(function () { return sy(0); }), d.u.map(sy)), fill: '#314158', 'fill-opacity': 0.07, stroke: 'none' }, f.svg);
+    S('path', { d: pathOf(XM, d.u.map(sy)), fill: 'none', stroke: '#314158', 'stroke-width': 3, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, f.svg);
+    S('path', { d: stepPath(d.A), fill: 'none', stroke: '#e7000b', 'stroke-width': 2, 'stroke-linejoin': 'round' }, f.svg);
+    S('path', { d: stepPath(d.tap), fill: 'none', stroke: '#009966', 'stroke-width': 2, 'stroke-linejoin': 'round' }, f.svg);
+    var guide = S('line', { x1: 0, x2: 0, y1: f.y1, y2: f.y0, stroke: '#90a1b9', 'stroke-width': 1, visibility: 'hidden' }, f.svg);
+    var tip = tipBox(host);
+    f.svg.setAttribute('aria-label', 'Curva de carga de um dia típico e o reator ligado: o VSR acompanha a curva em passos pequenos, o reator fixo só liga ou desliga inteiro');
+    hover(f.svg, f, n, function (i) { return XM[i]; }, function (i) {
+      guide.setAttribute('x1', XM[i]); guide.setAttribute('x2', XM[i]); guide.setAttribute('visibility', 'visible');
+      var hh = Math.floor(d.hora[i]), mm = Math.round((d.hora[i] - hh) * 60);
+      tip.innerHTML = ''; var h = document.createElement('div'); h.textContent = String(hh).padStart(2, '0') + ':' + String(mm).padStart(2, '0'); h.style.fontWeight = '700'; h.style.color = '#020618'; tip.appendChild(h);
+      tip.appendChild(tipRow('#314158', nf(1).format(gw(d.u[i])) + ' GW', d.u_nome[0]));
+      tip.appendChild(tipRow('#e7000b', nf(0).format(d.SB * d.B[i] + d.W * d.A[i]) + ' Mvar', 'reatores fixos (' + (d.B[i] + d.A[i]) + ' ligado' + (d.B[i] + d.A[i] === 1 ? ')' : 's)')));
+      tip.appendChild(tipRow('#009966', nf(d.W < 50 ? 1 : 0).format(d.SB + d.W * d.tap[i]) + ' Mvar', 'VSR'));
+      placeTip(tip, host, XM[i] * host.clientWidth / f.w, 10);
+    }, function () { tip.hidden = true; guide.setAttribute('visibility', 'hidden'); });
+  }
+
+  /* ---------- cascata ---------- */
+  function renderCasc(varo) {
+    var dv = state.preco - fix0Mi(), df = state.f - 1;
+    var rows = varo.cascata.map(function (r) { return { c: COMP[r.c] || r.c, v: r.a + r.bv * dv + r.bf * df }; }).filter(function (r) { return Math.abs(r.v) >= 0.005; });
+    rows.sort(function (a, b) { return b.v - a.v; });
+    var total = rows.reduce(function (s, r) { return s + r.v; }, 0);
+    var m = Math.max.apply(null, rows.map(function (r) { return Math.abs(r.v); }).concat([Math.abs(total)])) || 1;
+    var host = el('casc'); host.innerHTML = '';
+    rows.concat([{ c: 'VPL médio', v: total, total: true }]).forEach(function (r) {
+      var row = document.createElement('div'); row.className = 'casc-row' + (r.total ? ' total' : '');
+      var l = document.createElement('div'); l.className = 'lbl'; l.textContent = r.c; row.appendChild(l);
+      var tr = document.createElement('div'); tr.className = 'trk'; var z = document.createElement('div'); z.className = 'zero'; tr.appendChild(z);
+      var w = Math.abs(r.v) / m * 50;
+      var b = document.createElement('div'); b.className = 'bar ' + (r.v >= 0 ? 'pos' : 'neg'); b.style.width = w + '%';
+      b.style.left = r.v >= 0 ? '50%' : (50 - w) + '%'; b.title = r.c + ': ' + smi(r.v); tr.appendChild(b);
+      row.appendChild(tr);
+      var vtxt = document.createElement('span'); vtxt.className = 'val num'; vtxt.textContent = smi(r.v); row.appendChild(vtxt);
+      host.appendChild(row);
+    });
+  }
+
+  /* ---------- metodologia ---------- */
+  function buildMethod() {
+    var host = el('method'); host.innerHTML = '';
+    function block(title, items) {
+      var d = document.createElement('div'); var h = document.createElement('h3'); h.textContent = title; d.appendChild(h);
+      var ul = document.createElement('ul'); items.forEach(function (it) { var li = document.createElement('li'); li.textContent = it; ul.appendChild(li); }); d.appendChild(ul); host.appendChild(d);
+    }
+    block('Como o modelo funciona', [
+      'Unidade comparada: um VSR com faixa de 50–100% no lugar de dois bancos de reatores fixos (o manobrável e uma fatia igual da compensação permanente), cada banco com seu vão de manobra.',
+      'Camada física: a necessidade de reativo sai da sobra de reativo das linhas, Qc·(1 − (P/SIL)²), com as séries do ONS (DESSEM e intercâmbio N–NE de 2025–26). O fixo liga e desliga em degraus; o VSR troca de tap.',
+      'Camada financeira: 4.000 trajetórias mensais de 30 anos por cenário, com preventiva a cada 72 meses, revisão geral por contagem de ciclos, troca do disjuntor no fim da vida mecânica, falhas maiores e menores (CIGRÉ TB 510), falhas do reator e do OLTC (CIGRÉ TB 939 e 642) e Parcela Variável (ANEEL, Módulo 4 rev.2).',
+      'Taxas: transmissora a 12,11% a.a. real antes de impostos (WACC ANEEL 2026); sistema a 8,5% a.a. real (taxa social de desconto).',
+      'Preço do reator fixo e do vão: EPE-DEE-NT-077/2021 (reator monofásico de 500 kV e 66,6 Mvar a R$ 4,415 mi; conexão de reator de barra a R$ 9,589 mi; base de preços da ANEEL de mar/2021), corrigida pelo IPCA até set/2026. A 500 kV o banco fixo de referência tem fase reserva (3+1R). A 230 kV não há preço público: o reator sai do 500 kV por regra de escala (premissa).',
+      'Os dois preços são só do equipamento; o vão entra à parte, igual nas duas alternativas. O preço do fixo pode ser ajustado de −50% a +60% da referência. Cada fluxo do modelo é linear nos dois preços, então a calculadora usa três rodadas de mesma semente para calcular a grade exata e interpola entre os pontos.',
+      'Gráfico do dia: a carga (ou o fluxo) que move o cenário e o reator ligado numa subestação com 2 reatores fixos (um manobrável e um sempre ligado) contra 1 VSR. O reator aparece na escala da carga pela fórmula do modelo, r = (hi² − u²)/(hi² − lo²): o fixo liga e desliga o banco inteiro; o VSR muda em passos de 1/32 da faixa (33 posições de tap).'
+    ]);
+    block('O que pesa contra o VSR (está no simulador)', [
+      'Preço do VSR no nível do contrato de 2023 da Energinet: o VSR não compensa.',
+      'Reator fixo mais barato que a referência: no Campo, cada 10% a menos no preço do fixo tira cerca de R$ 3,6 mi do VPL; com o preço de 2021 sem correção pela inflação, o VPL mediano fica perto de zero.',
+      'Reforço autorizado com RAP pelo Banco de Preços da ANEEL: negativo para a transmissora, positivo para o sistema.',
+      'OLTC a óleo, fixo sem fase reserva ou reserva do VSR de 1 para 3: o resultado cai perto de zero ou abaixo.',
+      'O preço do VSR é uma estimativa a partir de contratos europeus; a cotação da Hitachi Energy para o caso brasileiro substitui esta faixa.'
+    ]);
+    block('O que o modelo não monetiza', [
+      'Fim dos degraus de tensão a cada manobra, regulação contínua que ajuda a integrar solar e eólica, uso do VSR como reserva flexível em várias posições da rede e menor área ocupada.'
+    ]);
+    var d = document.createElement('div'); var h = document.createElement('h3'); h.textContent = 'Contratos públicos de VSR usados no preço'; d.appendChild(h);
+    var wrap = document.createElement('div'); wrap.className = 'table-wrap'; wrap.style.marginTop = '8px';
+    var tb = document.createElement('table'); tb.innerHTML = '<thead><tr><th>Comprador</th><th>Ano</th><th>VSR</th><th class="r">Preço por unidade</th><th>Uso</th></tr></thead>';
+    var body = document.createElement('tbody');
+    D.contratos.forEach(function (r) {
+      var tr = document.createElement('tr');
+      var td1 = document.createElement('td'); var a = document.createElement('a'); a.href = r.fonte; a.target = '_blank'; a.rel = 'noopener'; a.textContent = r.comprador; td1.appendChild(a); tr.appendChild(td1);
+      var td2 = document.createElement('td'); td2.className = 'num'; td2.textContent = r.ano; tr.appendChild(td2);
+      var td3 = document.createElement('td'); td3.textContent = r.tensao_kV + ' kV, ' + r.mvar_max + ' Mvar'; tr.appendChild(td3);
+      var td4 = document.createElement('td'); td4.className = 'r num'; td4.textContent = r.preco_unit_EUR_mi ? '€ ' + nf(2).format(r.preco_unit_EUR_mi) + ' mi' : r.preco_original; tr.appendChild(td4);
+      var td5 = document.createElement('td'); td5.textContent = r.uso; tr.appendChild(td5);
+      body.appendChild(tr);
+    });
+    tb.appendChild(body); wrap.appendChild(tb); d.appendChild(wrap);
+    var pn = document.createElement('p'); pn.style.marginTop = '8px'; pn.style.fontSize = '12px'; pn.style.color = '#62748e';
+    pn.textContent = 'Escala: preço ∝ Mvar^0,6 × kV^β, β de 0,3 a 1,0 (central 0,5); câmbio de € 1 = R$ ' + nf(2).format(D.meta.eur_brl) + ' (BCB, set/2026). Base = média dos contratos de 2025–26.';
+    d.appendChild(pn); host.appendChild(d);
+  }
+  el('btn-method').addEventListener('click', function (e) {
+    var m = el('method'), open = m.hidden; m.hidden = !open; e.currentTarget.setAttribute('aria-expanded', String(open));
+    e.currentTarget.lastChild.textContent = open ? 'Ocultar metodologia e fontes' : 'Ver metodologia e fontes';
+  });
+
+  /* ---------- render ---------- */
+  function renderTab(varo) {
+    if (state.tab === 'risco') renderFan(); else if (state.tab === 'preco') renderPP(varo);
+    else if (state.tab === 'operacao') renderDay(); else renderCasc(varo);
+  }
+  function render(resetPrice, visChanged) {
+    if (resetPrice || visChanged) setupControls(resetPrice);
+    var varo = VAR(), s = statsAt(stF(varo.stats), C().grade, state.preco);
+    renderCards(s, varo); renderTab(varo);
+  }
+  buildScen(); buildMethod(); setupControls(true); render(false);
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { render(false); }, 120); });
+})();
+</script>
+<script>
+/* Dentro do site (?embed=1): sem o cabeçalho e o rodapé próprios, e os links entre as duas páginas mantêm o modo. */
+(function () {
+  if (!document.documentElement.classList.contains('embed')) return;
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (/^[\w-]+\.html$/.test(h)) { a.setAttribute('href', h + '?embed=1'); a.removeAttribute('target'); a.removeAttribute('rel'); }
+  });
+})();
+</script>

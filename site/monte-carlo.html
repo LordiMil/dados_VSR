@@ -3,6 +3,7 @@
 <title>Monte Carlo PoliVSR</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Como a calculadora O Custo do Fixo sorteia as incertezas: 4.000 futuros de 30 anos por cenário, com os parâmetros sorteados, as faixas e as fontes.">
+<script>try{if(/[?&]embed=1(&|$)/.test(location.search))document.documentElement.classList.add('embed')}catch(e){}</script>
 <style>
 /* Mesmo visual da calculadora O Custo do Fixo: cabeçalho branco, página slate-50, vermelho = reator fixo, verde = VSR.
    Tema claro único, como o site PoliVSR. Leitura de cima para baixo: como funciona → o que sai → o que varia → o que não varia. */
@@ -129,6 +130,14 @@ details.tech h3 { margin-top: 22px; padding-top: 18px; border-top: 1px solid var
 .foot a { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid #cad5e2; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; color: var(--ink); background: var(--surface); }
 .foot a:hover { background: var(--page); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* modo embutido no site (?embed=1) */
+html.embed .site-header { display: none; }
+html.embed main { padding-top: 32px; }
+.embed-back { display: none; }
+html.embed .embed-back { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--ink); text-decoration: none; }
+html.embed .embed-back:hover { text-decoration: underline; }
+.embed-back svg { width: 16px; height: 16px; }
 </style>
 
 <header class="site-header">
@@ -143,6 +152,7 @@ details.tech h3 { margin-top: 22px; padding-top: 18px; border-top: 1px solid var
 
 <main>
   <div class="wrap">
+    <a class="embed-back" href="o-custo-do-fixo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Voltar para a calculadora</a>
     <header class="head">
       <p class="eyebrow">Simulação de Monte Carlo</p>
       <h1>4.000 futuros possíveis para cada cenário</h1>
@@ -397,6 +407,16 @@ details.tech h3 { margin-top: 22px; padding-top: 18px; border-top: 1px solid var
   }
   buildSeg(); buildParams(); render();
   var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(render, 120); });
+})();
+</script>
+<script>
+/* Dentro do site (?embed=1): sem o cabeçalho e o rodapé próprios, e os links entre as duas páginas mantêm o modo. */
+(function () {
+  if (!document.documentElement.classList.contains('embed')) return;
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (/^[\w-]+\.html$/.test(h)) { a.setAttribute('href', h + '?embed=1'); a.removeAttribute('target'); a.removeAttribute('rel'); }
+  });
 })();
 </script>
 

@@ -3,6 +3,7 @@
 <title>O Custo do Fixo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Simulador estocástico PoliVSR: VSR contra reator shunt fixo no SIN, com preços de contratos públicos e 4.000 simulações por cenário.">
+<script>try{if(/[?&]embed=1(&|$)/.test(location.search))document.documentElement.classList.add('embed')}catch(e){}</script>
 <style>
 /* Layout: o mesmo do site PoliVSR (cabeçalho branco fixo, página slate-50, calculadora em duas colunas .8fr / 1.2fr, rodapé slate-200).
    Paleta e tipografia copiadas do site (Tailwind v4: slate, red-600, emerald-600; fonte do sistema). Tema claro único, como o site. */
@@ -264,6 +265,10 @@ td.df { font-weight: 700; color: var(--ink); }
 .foot-nav a:hover { background: var(--line-2); color: var(--brand); }
 .foot-nav svg { width: 24px; height: 24px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* modo embutido no site (?embed=1) */
+html.embed .site-header, html.embed .foot-nav { display: none; }
+html.embed .calc { padding-top: 40px; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1026,6 +1031,16 @@ td.df { font-weight: 700; color: var(--ink); }
   }
   buildScen(); buildMethod(); setupControls(true); render(false);
   var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { render(false); }, 120); });
+})();
+</script>
+<script>
+/* Dentro do site (?embed=1): sem o cabeçalho e o rodapé próprios, e os links entre as duas páginas mantêm o modo. */
+(function () {
+  if (!document.documentElement.classList.contains('embed')) return;
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href');
+    if (/^[\w-]+\.html$/.test(h)) { a.setAttribute('href', h + '?embed=1'); a.removeAttribute('target'); a.removeAttribute('rel'); }
+  });
 })();
 </script>
 
